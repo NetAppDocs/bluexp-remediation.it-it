@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes' 
+summary: 'Scopri le novità di BlueXP: Rimediation and Tagging.' 
+---
+= Novità di BlueXP: Soluzioni e tagging
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Scopri le novità di BlueXP: Rimediation and Tagging.
+
+
+
+== 3 marzo 2022
+
+
+
+=== Ora puoi creare un modello per trovare ambienti di lavoro specifici
+
+Utilizzando l'azione "trova risorse esistenti" è possibile identificare l'ambiente di lavoro e utilizzare altre azioni modello, come la creazione di un volume, per eseguire facilmente azioni sugli ambienti di lavoro esistenti. https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#examples-of-finding-existing-resources-and-enabling-services-using-templates["Fai clic qui per ulteriori informazioni"].
+
+
+
+=== Possibilità di creare un ambiente di lavoro Cloud Volumes ONTAP ha in AWS
+
+Il supporto esistente per la creazione di un ambiente di lavoro Cloud Volumes ONTAP in AWS è stato ampliato per includere la creazione di un sistema ad alta disponibilità oltre a un sistema a nodo singolo. https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment["Scopri come creare un modello per un ambiente di lavoro Cloud Volumes ONTAP"].
+
+
+
+== 9 febbraio 2022
+
+
+
+=== Ora puoi creare un modello per trovare volumi specifici esistenti e abilitare il Cloud Backup
+
+Utilizzando la nuova azione "Find Resource" è possibile identificare tutti i volumi su cui si desidera attivare Cloud Backup, quindi utilizzare l'azione Cloud Backup per abilitare il backup su tali volumi.
+
+Il supporto attuale è per i volumi su sistemi Cloud Volumes ONTAP e ONTAP on-premise. https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#find-existing-volumes-and-activate-bluexp-backup-and-recovery["Fai clic qui per ulteriori informazioni"].
+
+
+
+== 31 ottobre 2021
+
+
+
+=== Ora puoi contrassegnare le tue relazioni di sincronizzazione in modo da poterle raggruppare o classificare per un facile accesso
+
+https://docs.netapp.com/us-en/cloud-manager-app-template/concept-tagging.html["Scopri di più sull'etichettatura delle risorse"].

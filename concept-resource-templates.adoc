@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: concept-resource-templates.html 
+keywords: templates, overview, conceptual, resource templates, application templates, volume templates 
+summary: 'Il servizio di correzione BlueXP consente di standardizzare la creazione di risorse negli ambienti di lavoro in BlueXP. Ad esempio, è possibile codificare i parametri richiesti in un "modello di volume" che viene successivamente applicato quando un amministratore dello storage crea un volume utilizzando il modello. Questo può includere il tipo di disco richiesto, le dimensioni, il protocollo, le policy di snapshot, il cloud provider, e molto altro ancora. È inoltre possibile attivare alcuni servizi, come il backup e il ripristino di BlueXP, per ogni volume creato.' 
+---
+= Scopri di più sulla soluzione BlueXP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il servizio di correzione BlueXP consente di standardizzare la creazione di risorse negli ambienti di lavoro in BlueXP. Ad esempio, è possibile codificare i parametri richiesti in un "modello di volume" che viene successivamente applicato quando un amministratore dello storage crea un volume utilizzando il modello. Questo può includere il tipo di disco richiesto, le dimensioni, il protocollo, le policy di snapshot, il cloud provider, e molto altro ancora. È inoltre possibile attivare alcuni servizi, come il backup e il ripristino di BlueXP, per ogni volume creato.
+
+I modelli consentono agli amministratori dello storage di creare volumi ottimizzati per i requisiti di carico di lavoro di ogni applicazione implementata, ad esempio database, e-mail o servizi di streaming. Inoltre, rende più semplice la vita ai vostri architetti dello storage, sapendo che ogni volume viene creato in modo ottimale per ogni applicazione.
+
+
+
+== Caratteristiche
+
+BlueXP offre le seguenti funzionalità e vantaggi:
+
+* Automatizza e migliora la progettazione e lo sviluppo dell'infrastruttura
+* Fornisce un'unica posizione per attivare diversi servizi NetApp Cloud, come backup e ripristino BlueXP e classificazione BlueXP
+* Identifica le risorse che sono state modificate e non sono più conformi al modello (utilizzando la funzione "drift")
++
+A questo punto, sarà necessario apportare manualmente le modifiche necessarie per ripristinare la conformità della risorsa con il modello. link:task-check-template-compliance.html["Scopri di più sulla deriva"].
+
+
+
+
+
+== Azioni modello disponibili
+
+Un modello è una catena di "azioni" che hanno alcuni valori predefiniti. È possibile creare modelli che includono le seguenti azioni:
+
+*Azioni delle risorse:*
+
+* Creazione di un volume Cloud Volumes ONTAP (su AWS, Azure o GCP)
+* Creare un volume Azure NetApp Files
+* Creare un volume ONTAP on-premise
+* Creare un ambiente di lavoro Cloud Volumes ONTAP (nodo singolo o sistema ha su AWS)
+* Trova le risorse esistenti che soddisfano determinati criteri (in modo da poter applicare un'azione di "servizi" alle risorse in uscita)
+
+
+*Azioni dei servizi:*
+
+* Attivare https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^] On Volumes (non applicabile per Azure NetApp Files)
+* Attivare https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classificazione BlueXP"^] sui volumi
+* Attivare https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["Replica BlueXP"^] On Volumes (non applicabile per Azure NetApp Files)
+
+
+Ad esempio, è possibile creare un modello che crea un volume Cloud Volumes ONTAP. Oppure crea un volume Cloud Volumes ONTAP e abilita il backup e ripristino BlueXP su quel volume. Oppure che crei un volume Cloud Volumes ONTAP, quindi abiliti la classificazione BlueXP per il backup e il ripristino su quel volume.
+
+Nel tempo NetApp aggiungerà altre azioni.
+
+
+
+== Come funziona la soluzione BlueXP
+
+Il servizio di correzione BlueXP è composto da 3 parti. Il modello disponibile "azioni", il modello di applicazione personalizzato e la risorsa implementata come risultato dell'esecuzione del modello. La seguente immagine mostra la relazione tra ciascun componente:
+
+image:diagram_template_flow1.png["Un diagramma dei diversi utenti coinvolti nella creazione e nell'utilizzo dei modelli di applicazione."]
+
+Ad alto livello, i modelli funzionano come segue:
+
+. NetApp definisce le "azioni" dei modelli disponibili.
++
+Ad esempio, un'azione per creare un volume Cloud Volumes ONTAP o Azure NetApp Files.
+
+. L'architetto dello storage seleziona le "azioni" che desidera utilizzare per creare un modello di applicazione, quindi esegue il hardcoding di determinati valori per i parametri elencati.
++
+Ad esempio, selezionano dischi ad alta velocità e una grande quantità di RAM per i volumi Cloud Volumes ONTAP che verranno utilizzati per trasportare i carichi di lavoro per i database Oracle. E richiedono che vengano eseguiti backup per ogni volume.
+
+. Gli amministratori dello storage utilizzano i modelli per creare risorse ottimizzate per le applicazioni per cui verranno utilizzate.
++
+Ad esempio, creano un volume che verrà utilizzato per un database Oracle utilizzando il modello di volume creato per i database.
+
+. Il servizio tiene traccia di alcune impostazioni delle risorse definite nel modello utilizzando la funzione "drift", come determinato dall'architetto dello storage.
+
+
+
+
+== Prezzi e licenze
+
+La funzionalità di correzione di BlueXP non richiede alcuna licenza ed è gratuita per tutti gli utenti di BlueXP.
+
+
+NOTE: I modelli consentono di applicare un servizio cloud a una risorsa creata, ad esempio, abilitare il backup e il ripristino BlueXP su ogni volume. In questo caso, l'utilizzo del servizio di backup e dello spazio di storage a oggetti utilizzato dai file di backup sono a costo.
+
+
+
+== Limitazioni
+
+* Il servizio di correzione BlueXP non è supportato in nessuna delle aree di Gov Cloud o in siti senza accesso a Internet.
+* Non è possibile utilizzare un modello per creare un volume Cloud Volumes ONTAP su un aggregato esistente. Nuovi volumi vengono creati in un nuovo aggregato.
+

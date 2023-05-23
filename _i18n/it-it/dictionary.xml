@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="cc371045494864a1be09aecf8486813b" category="summary">Seleziona una o più "azioni" fornite da NetApp e crea rapidamente un modello applicativo che la tua organizzazione può utilizzare per iniziare a ottimizzare la creazione di risorse.</block>
+  <block id="7b7aa0d4bd1d1332a50f445e21889bc8" category="doc">Crea modelli di applicazione per la tua organizzazione</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="section-title">Avvio rapido</block>
+  <block id="91e06e9a9ef97681b798e2e5e007ba97" category="paragraph">Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Uno</block>
+  <block id="a915908264892de9209e8f5f402e6e50" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Verificare i prerequisiti richiesti</block>
+  <block id="53eecd7f53fddfec88f1dbaf29600d72" category="list-text">Prima che gli utenti possano creare un volume per un sistema Cloud Volumes ONTAP, ONTAP on-premise o Azure NetApp Files utilizzando un modello, assicurarsi di avere accesso a un ambiente di lavoro appropriato in cui verrà implementato il volume.</block>
+  <block id="ede1cce9f240fed5ecc4264bd699cee1" category="inline-link">Backup e ripristino BlueXP</block>
+  <block id="4cc849f381058f76f6b72a1c4279393d" category="inline-link">Classificazione BlueXP</block>
+  <block id="b8266a139fe859025b8bb875c44b1bed" category="list-text">Se intendi aggiungere un'azione del servizio Cloud al tuo modello, ad esempio<block ref="2b39f52a9715f26b8fe862bdca0f5ff1" category="inline-link-rx"></block> oppure<block ref="2c710310de596aa5a81877d014205606" category="inline-link-rx"></block>, assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Due</block>
+  <block id="33a675c8565b9b4c87c8c07929b5c5cf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Avviare il servizio modelli di applicazione</block>
+  <block id="81736c3492216167017a2d56ef452f6f" category="paragraph">Selezionare *Health &gt; Remediation*, fare clic sulla scheda *Editor* e selezionare le azioni da utilizzare nel modello.</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tre</block>
+  <block id="6e6cc05a85425cbeb55920cadd22871b" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Creare il modello selezionando "azioni" e definendo i parametri</block>
+  <block id="ba13d007a4f76ded358c0280157f648b" category="paragraph">Seguire le fasi di creazione e definire le azioni che verranno eseguite dal modello.</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">Requisiti</block>
+  <block id="4b09bdd4ca435f6a4b77b142f9481573" category="paragraph">Leggere i seguenti requisiti per assicurarsi di disporre di una configurazione supportata.</block>
+  <block id="23e0e07c56fc07b2d6bc44d30e5187d4" category="inline-link">Scopri come creare connettori</block>
+  <block id="880e0da9ea31d472fa96b1ad7e4be6ad" category="list-text">Se non si dispone già di un connettore,<block ref="0e90a2191f59a8f46190195b37c75156" category="inline-link-rx"></block> Per AWS, Azure e GCP.</block>
+  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="inline-link">AWS</block>
+  <block id="3a580f142203677f1f0bc30898f63f53" category="inline-link">Azure</block>
+  <block id="c731f72e1d22a7c5e01a7cb789a8885e" category="inline-link">GCP</block>
+  <block id="8f8ea6f463cacff960686b6bd6b3f4a4" category="list-text">Quando si crea un modello di volume Cloud Volumes ONTAP, assicurarsi di disporre di un ambiente di lavoro Cloud Volumes ONTAP per gli utenti. Scopri come avviare un sistema Cloud Volumes ONTAP in<block ref="d48c7204d9a23e0c67e4c63c028fc359" category="inline-link-rx"></block>,<block ref="9980b328a51ea35645f26e6738018d49" category="inline-link-rx"></block>o in<block ref="a2f34fbb7d4cd43b6878f17806ecc00a" category="inline-link-rx"></block>.</block>
+  <block id="b927c65793ede8840d859f745c1070b4" category="inline-link">Scopri un sistema ONTAP on-premise</block>
+  <block id="e30afa6af477c023130a06261e3f1227" category="list-text">Quando si crea un modello di volume ONTAP on-premise, assicurarsi di disporre di un ambiente di lavoro ONTAP on-premise per gli utenti. Scopri come<block ref="73a5fece0c926f1d97e300f9e1e63b86" category="inline-link-rx"></block> In BlueXP.</block>
+  <block id="89bbeb90a25e5540f1875c6148fc07a6" category="inline-link">Creare un ambiente di lavoro Azure NetApp Files</block>
+  <block id="592b06abb0acdfe2b240cddf86e10637" category="list-text">Quando si crea un modello di volume Azure NetApp Files, assicurarsi di disporre di un ambiente di lavoro Azure NetApp Files per gli utenti. Scopri come<block ref="476f1ab3b7492b38993b3c305f1332d8" category="inline-link-rx"></block> In BlueXP.</block>
+  <block id="c9e47ca1ece3aae1869d6fa91d72f8f3" category="list-text">Se si prevede di utilizzare il backup e il ripristino BlueXP per eseguire il backup di un volume nel modello, assicurarsi che l'ambiente abbia attivato il backup e il ripristino BlueXP.</block>
+  <block id="7164aa607c641bad321d653f0f2ef878" category="list-text">Se si prevede di utilizzare la classificazione BlueXP per eseguire la scansione dei volumi nel modello, assicurarsi che l'ambiente abbia attivato la classificazione BlueXP.</block>
+  <block id="56521c58c116e921a830091c61343aca" category="list-text">Se si intende attivare la replica BlueXP nel modello e il modello si applica a un volume ONTAP on-premise, il cluster ONTAP deve disporre di una licenza SnapMirror attiva.</block>
+  <block id="ec83027c05d71f4e7343616a10e8b48e" category="section-title">Esempi di creazione di risorse utilizzando modelli</block>
+  <block id="54efaa09fa271348667d3925486f25d8" category="paragraph">I modelli di risorse consentono di creare nuovi volumi o un nuovo ambiente di lavoro Cloud Volumes ONTAP.</block>
+  <block id="030a036b48378de1f3003036be2d3597" category="section-title">Creare un modello per un volume Cloud Volumes ONTAP</block>
+  <block id="ab93b13353c035a51f382bda0bfbed96" category="inline-link">Come eseguire il provisioning dei volumi Cloud Volumes ONTAP</block>
+  <block id="821f9fc7a9c5e046eb762a4d185a08f7" category="paragraph">Vedere<block ref="154a2016582f1d0d3d1ef7ccb4cc4af7" category="inline-link-rx"></block> Per informazioni dettagliate su tutti i parametri da completare nel modello di volume Cloud Volumes ONTAP.</block>
+  <block id="e9e4c331008e320c9b03b119f438ec84" category="paragraph">Per questo esempio, creeremo un modello denominato "volume CVO per database" e includeremo le seguenti 2 azioni:</block>
+  <block id="6115c1aa690e31fcf33eef72f8accb32" category="list-text">Crea volume Cloud Volumes ONTAP</block>
+  <block id="4611422bf9a4ff570849e7d651f9c0a2" category="paragraph">Creare il volume per l'ambiente AWS, configurarlo con 100 GB di storage, impostare Snapshot Policy su "default" e abilitare l'efficienza dello storage.</block>
+  <block id="4addbe3fd43e1a48fd8eb999d5f3b487" category="list-text">Abilitare il backup e ripristino BlueXP</block>
+  <block id="0e7b1101bfe909f1f24d1bc082d8cb0b" category="paragraph">Creazione di 30 backup giornalieri, 13 settimanali e 3 mensili (utilizzando la policy _3 mesi di conservazione_).</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Fasi</block>
+  <block id="44fbc3f04f1c80f38f04a2c9ae828fad" category="list-text">Selezionare *Health &gt; Remediation*, fare clic sulla scheda *Templates*, quindi fare clic su *Add New Template* (Aggiungi nuovo modello).</block>
+  <block id="12800accdcea8213a17428d96d3f650b" category="paragraph">Viene visualizzata la pagina _Select_a Template_.</block>
+  <block id="ac454ecfe801e40640fcab274d8376c7" category="inline-image-macro">Una schermata che mostra come selezionare l'azione principale che verrà eseguita utilizzando questo modello.</block>
+  <block id="badf0b64af7e4dbccc924f1b86d16441" category="paragraph"><block ref="badf0b64af7e4dbccc924f1b86d16441" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e9d6286a0d87815f2dfb97a9d19be924" category="list-text">Selezionare *Volume per Cloud Volumes ONTAP + Backup* come tipo di risorsa che si desidera creare e fare clic su *Get Started*.</block>
+  <block id="2e40b56b7fa804a6923caf652b7c25aa" category="paragraph">Viene visualizzata la pagina _Crea volume in definizione azione Cloud Volumes ONTAP_.</block>
+  <block id="99d5fcac810e0357f1ce55dabd9aadfd" category="inline-image-macro">Una schermata che mostra un modello CVO vuoto da compilare.</block>
+  <block id="c300df2aa9b635b7e59061b7084d3807" category="paragraph"><block ref="c300df2aa9b635b7e59061b7084d3807" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="801e9079b48c523d52a05513463997fe" category="list-text">*Action Name* (Nome azione): Se si desidera, inserire un nome di azione personalizzato invece del valore predefinito.</block>
+  <block id="7cbfd40e0aecc60c4a4efbc45ba21139" category="list-text">*Contesto:* inserire il contesto dell'ambiente di lavoro Cloud Volumes ONTAP, se necessario.</block>
+  <block id="059515978a375903c4b939adacaa923b" category="paragraph">Quando gli utenti avviano il modello da un ambiente di lavoro esistente, queste informazioni vengono compilate automaticamente.</block>
+  <block id="9723c14ceead0bcb4a1db0b77671f08a" category="paragraph">Quando gli utenti avviano il modello dalla dashboard modelli (non in un contesto di ambiente di lavoro), devono selezionare l'ambiente di lavoro e la SVM in cui verrà creato il volume. Ecco perché questi campi sono contrassegnati come "modificabili".</block>
+  <block id="5ea98d0d0acbef5bd9f5c07ca7a061be" category="list-text">*Dettagli:* inserire il nome e le dimensioni del volume.</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">Campo</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Descrizione</block>
+  <block id="5a33fdd3ad048388d676b3cfe62a76b4" category="cell">Volume Name (Nome volume)</block>
+  <block id="2883dfc230f7a5fee0fceab3e724eed1" category="cell">Fare clic nel campo e selezionare una delle 5 opzioni. È possibile consentire all'amministratore di immettere qualsiasi nome selezionando *Free Text*, oppure specificare che il nome del volume deve avere un determinato prefisso o suffisso, che _contenga_ caratteri specifici o che segua le regole di un'espressione regolare (regex) immessa. Ad esempio, è possibile specificare che "db" sia un prefisso, un suffisso o un contenuto richiesto, richiedendo all'utente di aggiungere nomi di volumi come "db_vol1", "vol1_db" o "vol_db_1".</block>
+  <block id="191fac23c2b2ea4e948178972521292f" category="cell">Volume Size (dimensione volume)</block>
+  <block id="00c8763f564b8663e70d7c5282bfb116" category="cell">È possibile specificare un intervallo di valori consentiti o una dimensione fissa. Questo valore è in GB. Per il nostro esempio possiamo aggiungere un valore fisso *100*.</block>
+  <block id="189f63f277cd73395561651753563065" category="cell">Tag</block>
+  <block id="5c383dfd487b893537243d1ff2b9c575" category="cell">Immettere una coppia nome e valore per un tag che si desidera associare a questo volume. Ad esempio, è possibile aggiungere "Cost Center" come nome del tag e il codice del centro di costo "6655829" come valore. È possibile associare più tag a un volume aggiungendo più coppie nome tag e valore.</block>
+  <block id="8cb0ac47c325f07198a8d894befe84b4" category="list-text">*Protezione:* scegliere se creare copie Snapshot in questo volume selezionando "Default" (predefinito) o un altro criterio oppure scegliere "None" (Nessuno) se non si desidera creare copie Snapshot.</block>
+  <block id="14e9a0afe9a24320a6cbef6a736df90e" category="list-text">*Profilo di utilizzo:* scegliere se applicare o meno le funzionalità di efficienza dello storage NetApp al volume. Ciò include thin provisioning, deduplica e compressione. Per il nostro esempio, Mantieni abilitata l'efficienza dello storage.</block>
+  <block id="9a58906a5890a61a2ba00a2bc5f6a847" category="list-text">*Tipo di disco:* scegliere il provider di cloud storage e il tipo di disco. Per alcune selezioni di dischi, è anche possibile selezionare un valore minimo e massimo di IOPS o throughput (MB/s); in pratica, definire una certa qualità del servizio (QoS).</block>
+  <block id="8a199052157229eefe6d69b9e724047a" category="list-text">*Protocol Options:* selezionare *NFS* o *SMB* per impostare il protocollo del volume. Quindi, fornire i dettagli del protocollo.</block>
+  <block id="5dc73c128ec631156d8581bb645e55cc" category="cell">Campi NFS</block>
+  <block id="8aaaedc342a0dce1d73d33f3fb69a2af" category="cell">Controllo degli accessi</block>
+  <block id="4a3d2f4e3aa9bd79e413c5b9fa744ab3" category="cell">Scegliere se i controlli di accesso sono necessari per accedere al volume.</block>
+  <block id="8dadce9de6b5f104b9f1990b73f191f0" category="cell">Policy di esportazione</block>
+  <block id="565e7c939f0a1769928e7ea0649f804b" category="cell">Creare una policy di esportazione per definire i client nella subnet che possono accedere al volume.</block>
+  <block id="97e382ecf7e6f1064476764cbcc5b429" category="cell">Versione NFS</block>
+  <block id="7d357e387e1a68e43d79ca61a0b67fb9" category="cell">Selezionare la versione NFS per il volume: _NFSv3_ o _NFSv4_, oppure selezionare entrambe le opzioni.</block>
+  <block id="ba1dcdd66cd4d8a61910f9d39950817a" category="cell">Campi SMB</block>
+  <block id="d30b23c0886d5712f5995a7793376942" category="cell">Share Name (Nome condivisione)</block>
+  <block id="6e94b2e72c0376574fc6b13ca0384876" category="cell">Fare clic nel campo e selezionare una delle 5 opzioni. È possibile consentire all'amministratore di immettere qualsiasi nome (testo libero) oppure specificare che il nome della condivisione deve avere un determinato prefisso o suffisso, che contenga_ caratteri specifici o che segua le regole di un'espressione regolare (regex) immessa.</block>
+  <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="cell">Permessi</block>
+  <block id="81075cbf19436268ea82309abe5e2fbf" category="cell">Selezionare il livello di accesso a una condivisione per utenti e gruppi (detti anche elenchi di controllo degli accessi o ACL).</block>
+  <block id="3d0a35be70eebb15d947ea1010db1320" category="cell">Utenti/gruppi</block>
+  <block id="ea73180f9c8cb441163847f36b7e315b" category="cell">Specificare utenti o gruppi Windows locali o di dominio, utenti o gruppi UNIX. Se si specifica un nome utente Windows di dominio, è necessario includere il dominio dell'utente utilizzando il formato dominio/nome utente.</block>
+  <block id="979ea4704bcee326b5ea5d2bc6a4a89b" category="list-text">*Tiering:* scegliere il criterio di tiering che si desidera applicare al volume oppure impostarlo su "None" se non si desidera eseguire il tiering dei dati cold da questo volume allo storage a oggetti.</block>
+  <block id="e8ef245792950f46479876f766e2e142" category="inline-link">policy di tiering dei volumi</block>
+  <block id="b0e17b25c2ac5fdfcde0ef543eb85101" category="inline-link">Tiering dei dati inattivi sullo storage a oggetti</block>
+  <block id="ee33f204180d62cfb217e1aec2a2f775" category="paragraph">Vedere<block ref="51ba3de2fe0f2a8abd8380ab98f33811" category="inline-link-rx"></block> per una panoramica, vedere<block ref="d98e4cd2c7e92258651d80578af83733" category="inline-link-rx"></block> per assicurarsi che l'ambiente sia impostato per il tiering.</block>
+  <block id="dcbae1cdee8a3f08d129ff3de6884125" category="list-text">Fare clic su *Apply* (Applica) dopo aver definito i parametri necessari per questa azione.</block>
+  <block id="7566e7b2ebc49252e3a55e0d5dd8d796" category="paragraph">Se i valori del modello sono stati completati correttamente, nella casella "Crea volume in Cloud Volumes ONTAP" viene aggiunto un segno di spunta verde.</block>
+  <block id="3c8e33af6e4bd2a2c497b3d87616506c" category="list-text">Fare clic sulla casella *Enable Cloud Backup on Volume* (attiva backup cloud su volume) per visualizzare la finestra di dialogo _Enable Cloud Backup on Volume Action Definition_ (attiva backup cloud su volume), in modo da poter inserire i dettagli relativi al backup e al ripristino di BlueXP.</block>
+  <block id="e7b2940e4c4ae2261e85a3d7a22c8cb5" category="inline-image-macro">Una schermata che mostra le azioni aggiuntive che è possibile aggiungere al volume creato.</block>
+  <block id="1d52e1ed02fe4b810c04939e74af1f18" category="paragraph"><block ref="1d52e1ed02fe4b810c04939e74af1f18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f558391a06df755ed33bfad6325d0441" category="list-text">Selezionare la policy di backup *3 mesi di conservazione* per creare 30 backup giornalieri, 13 settimanali e 3 mensili.</block>
+  <block id="ee90c4ccb63dcb129be28139926904d8" category="inline-link-macro">come completare questi campi</block>
+  <block id="102438db076a8d87db11f71b80bc5d27" category="list-text">Sotto i campi Working Environment (ambiente di lavoro) e Volume Name (Nome volume) sono disponibili tre opzioni per indicare quale volume avrà attivato il backup. Vedere <block ref="0f494e6e7e9db827f82823d25be045fa" category="inline-link-macro-rx"></block>.</block>
+  <block id="552bef51024addf6c4f5c63929d33718" category="list-text">Fare clic su *Apply* (Applica) per salvare la finestra di dialogo di backup e ripristino di BlueXP.</block>
+  <block id="46725495896c458f104f504d53b4b320" category="list-text">Inserire il nome del modello *volume CVO per i database* (per questo esempio) in alto a sinistra.</block>
+  <block id="d69be6c531037f06436630d128988a41" category="list-text">Fare clic su *Impostazioni e deriva* per fornire una descrizione più dettagliata in modo che questo modello possa essere distinto da altri modelli simili, in modo da poter attivare la funzione di spostamento per il modello generale, quindi fare clic su *Applica*.</block>
+  <block id="0107177951fcfb1e8290634ec2f0b1ad" category="paragraph">Drift consente a BlueXP di monitorare i valori hard-coded immessi per i parametri durante la creazione di questo modello.</block>
+  <block id="069cf34ab6ca64e85728193a5aab0a4e" category="list-text">Fare clic su *Save Template* (Salva modello).</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Risultato</block>
+  <block id="8b8745414ffb4d1bc70671bfa839ed7d" category="paragraph">Il modello viene creato e si torna alla dashboard modelli dove viene visualizzato il nuovo modello.</block>
+  <block id="5e0cbbeb0c7fbcd015cc8264aa380cf6" category="inline-xref">informazioni sui modelli da fornire agli utenti</block>
+  <block id="0a45425eb0911358963a7a4da437beeb" category="paragraph">Vedere <block ref="2fb234aaf0c174d8c17b6003cc9fc11d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="0723f0287083e700309ab63bd37a0c33" category="section-title">Creare un modello per un volume Azure NetApp Files</block>
+  <block id="38c68ceb833297ed3631cc6cc44141ab" category="paragraph">La creazione di un modello per un volume Azure NetApp Files avviene nello stesso modo in cui viene creato un modello per un volume Cloud Volumes ONTAP.</block>
+  <block id="98165316f4a6a7eb3b2eea00a7c71656" category="inline-link">Come eseguire il provisioning dei volumi Azure NetApp Files</block>
+  <block id="c28223c3f7a03804f44448c7561c5f02" category="paragraph">Vedere<block ref="6525ab64efdc6d693874df3da6739f52" category="inline-link-rx"></block> Per informazioni dettagliate su tutti i parametri da completare nel modello di volume ANF.</block>
+  <block id="31ea9a5156da1667ca8c913660cb04e8" category="paragraph"><block ref="31ea9a5156da1667ca8c913660cb04e8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1198c02b1425b74b6391ffd99cbc74b" category="list-text">Selezionare *modello vuoto* e fare clic su *inizia*.</block>
+  <block id="ddc839fd59d3af096b5f24caa0aac73e" category="list-text">Selezionare *Crea volume in Azure NetApp Files* come tipo di risorsa che si desidera creare e fare clic su *Applica*.</block>
+  <block id="d7f05890785a6be968f73b8eaead7a27" category="paragraph">Viene visualizzata la pagina _Crea volume in definizione azione Azure NetApp Files_.</block>
+  <block id="d64e3f9a180b7c834241b44a88d16f4d" category="inline-image-macro">Una schermata che mostra un modello ANF vuoto da compilare.</block>
+  <block id="bea9505dd83d12b3dd7397d8682eb37b" category="paragraph"><block ref="bea9505dd83d12b3dd7397d8682eb37b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="09ff1b3fa74cf72dc0a62eaa7242effd" category="list-text">*Dettagli volume:* inserire il nome e le dimensioni di un volume e, facoltativamente, specificare i tag per il volume.</block>
+  <block id="c44953330b995fcda50e59d40ea3a049" category="cell">È possibile specificare un intervallo di valori consentiti o una dimensione fissa. Questo valore è in GB.</block>
+  <block id="f727b1e918e496981ef541497e02f03e" category="list-text">*Protocol:* selezionare *NFSv3*, *NFSv4.1* o *SMB* per impostare il protocollo del volume. Quindi, fornire i dettagli del protocollo.</block>
+  <block id="cb4d2c1623299b4c2878da3019af962f" category="cell">Percorso del volume</block>
+  <block id="377c42289584cc56d1ca3a47af882648" category="cell">Selezionare una delle 5 opzioni. È possibile consentire all'amministratore di immettere qualsiasi percorso selezionando *testo libero* oppure specificare che il nome del percorso deve avere un determinato prefisso o suffisso, che _contenga_ caratteri specifici o che segua le regole di un'espressione regolare (regex) immessa.</block>
+  <block id="9f669007b0241e85f918bbf51c094ed1" category="cell">Regole dei criteri di esportazione</block>
+  <block id="bcccd81c3a412f1013995a215560e6f4" category="list-text">*Contesto:* inserire l'ambiente di lavoro Azure NetApp Files, i dettagli di un account Azure NetApp Files nuovo o esistente e altri dettagli.</block>
+  <block id="68049d5b86773fa123aee6b5162b46ba" category="cell">Ambiente di lavoro</block>
+  <block id="66618d802ff15f9772bf7cabf1ccccd5" category="cell">Quando gli utenti amministratori dello storage lanciano il modello da un ambiente di lavoro esistente, queste informazioni vengono compilate automaticamente. Quando gli utenti avviano il modello dalla dashboard modelli (non in un contesto di ambiente di lavoro), devono selezionare l'ambiente di lavoro in cui verrà creato il volume.</block>
+  <block id="baac6f97c8e7e8e6270cc894e6bdbe8c" category="cell">Nome account NetApp</block>
+  <block id="32fe392abad2a40de341773cc015c9ed" category="cell">Immettere il nome che si desidera utilizzare per l'account.</block>
+  <block id="5094b7a12b4988ad4d43027cff543c44" category="cell">ID abbonamento Azure</block>
+  <block id="9d50dad1baec8117f193564ab3e971b7" category="cell">Inserire l'ID dell'abbonamento Azure. Questo è l'ID completo in un formato simile a "2b04f26-7de6-42eb-9234-e2903d7s327".</block>
+  <block id="f447ac856e7e72435904956e3b15f433" category="cell">Regione</block>
+  <block id="bc24e6fad764484fb6365689ca4d656e" category="inline-link">nome della regione interna</block>
+  <block id="db11e34ee53f07b67134b18d34ea5869" category="cell">Immettere la regione utilizzando<block ref="982c814c46363bccb479e928a36b737e" category="inline-link-rx"></block>.</block>
+  <block id="a35ce6a7b02cbfd98e9837032a457dd5" category="cell">Nome gruppo di risorse</block>
+  <block id="01652266b6c049dc9e680639d9932631" category="cell">Immettere il nome del gruppo di risorse che si desidera utilizzare.</block>
+  <block id="0941eb13d6f2381bd092f5083e63aed8" category="cell">Nome del pool di capacità</block>
+  <block id="4fd739db287e5a16b75e3489f92360b2" category="cell">Inserire il nome di un pool di capacità esistente.</block>
+  <block id="9770c6469e9d27585d6c0c389ede7bc3" category="cell">Subnet</block>
+  <block id="4c695379c0a2d8fa6d7f8c59bda94b06" category="cell">Immettere VNET e subnet. Questo valore include il percorso completo, in un formato simile a "/subscriptions/&lt;subscription_id&gt;/resourceGroups/&lt;resource_group&gt;/ providers/Microsoft.Network/virtualNetworks/&lt;vpc_name&gt;/subnets/&lt;subhet_name&gt;".</block>
+  <block id="c8cef9ee8b7303419027647a212fda91" category="list-text">*Snapshot Copy:* inserire l'ID Snapshot di un volume esistente Snapshot se si desidera che questo nuovo volume venga creato utilizzando le caratteristiche di un volume esistente.</block>
+  <block id="18801e3c62d625d360e2e7ea2b62c1b7" category="list-text">Inserire il nome che si desidera utilizzare per il modello in alto a sinistra.</block>
+  <block id="56b6bad4ad8b3fcc1c2572a38f72bbbc" category="section-title">Creare un modello per un volume ONTAP on-premise</block>
+  <block id="d3a13fb50cc9406d1e6091d1a798ff8a" category="inline-link">Come eseguire il provisioning dei volumi ONTAP on-premise</block>
+  <block id="70bc2a664a24295c9ac1f72d4ea305cd" category="paragraph">Vedere<block ref="0c661e3930f1e020e8f43c7a637ae58f" category="inline-link-rx"></block> Per informazioni dettagliate su tutti i parametri da completare nel modello di volume ONTAP on-premise.</block>
+  <block id="abea42b586bcc6693bfcf53290293b41" category="paragraph">Viene visualizzata la pagina _Add New Action_.</block>
+  <block id="4f58f599c7e133b39a2f56df4f449c81" category="inline-image-macro">Una schermata che mostra come selezionare l'azione principale dalla pagina Add New Action (Aggiungi nuova azione).</block>
+  <block id="b9a9d1475979d9d1c4cd0440dd88810d" category="paragraph"><block ref="b9a9d1475979d9d1c4cd0440dd88810d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6c6e50215d08a8e2a4d4b3b967318d88" category="list-text">Selezionare *Crea volume in on-premise ONTAP* come tipo di risorsa da creare e fare clic su *Applica*.</block>
+  <block id="a00fd358a9eee9d23c91c9d79c7b6e51" category="paragraph">Viene visualizzata la pagina _Crea volume in definizione azione ONTAP on-premise_.</block>
+  <block id="75ded3aff94ceea416f4a8ab89a32002" category="inline-image-macro">Una schermata che mostra un modello onpremm ONTAP vuoto da compilare.</block>
+  <block id="89035127115cb3301d3a94b49531ed51" category="paragraph"><block ref="89035127115cb3301d3a94b49531ed51" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b30775865ed56b7c2909b414f5bb5416" category="list-text">*Contesto:* inserire il contesto dell'ambiente di lavoro ONTAP on-premise, se necessario.</block>
+  <block id="27ca463515b4c83e76d5222e013a0079" category="paragraph">Quando gli utenti avviano il modello dalla dashboard modelli (non in un contesto di ambiente di lavoro), devono selezionare l'ambiente di lavoro, la SVM e l'aggregato in cui verrà creato il volume.</block>
+  <block id="6b8f1d602895dd119fb811094bedb73b" category="list-text">*Profilo di utilizzo:* scegliere se applicare o meno le funzionalità di efficienza dello storage NetApp al volume. Ciò include thin provisioning, deduplica e compressione.</block>
+  <block id="40e5030f72431662e47f324512075e1a" category="paragraph">Se i valori del modello sono stati completati correttamente, viene aggiunto un segno di spunta verde alla casella "Crea volume in on-premise ONTAP".</block>
+  <block id="b74bc7581cece8a120da088eb00d917f" category="list-text">Inserire il nome del modello in alto a sinistra.</block>
+  <block id="679e23d213be6214a99d26fb979d6001" category="paragraph">Il modello viene creato e si torna alla dashboard dei modelli dove viene visualizzato il nuovo modello.</block>
+  <block id="216d716a4c08d31f3e40260ee58f2904" category="section-title">Creare un modello per un ambiente di lavoro Cloud Volumes ONTAP</block>
+  <block id="0d489881f98fefa7f8b791c4f4e7d7a1" category="paragraph">È possibile creare un ambiente di lavoro Cloud Volumes ONTAP a nodo singolo o ad alta disponibilità utilizzando i modelli.</block>
+  <block id="07b221aacb78d81a6389d6512f7b46cc" category="list-text">Al momento, questo supporto viene fornito solo per gli ambienti AWS.</block>
+  <block id="cc46cd379c9c1e14c8c28bca9392395f" category="list-text">Questo modello non crea il primo volume nell'ambiente di lavoro. Per creare il volume, è necessario aggiungere un'azione "Crea volume in Cloud Volumes ONTAP" nel modello.</block>
+  <block id="af78f376877c8c8c70d830fc500a2cca" category="inline-link">Come avviare un sistema Cloud Volumes ONTAP a nodo singolo in AWS</block>
+  <block id="27b91813df07253f9b34c2c33a28dc25" category="inline-link">Coppia Cloud Volumes ONTAP ha in AWS</block>
+  <block id="cc8cd5a43afbf50d3c76ca4927c286d1" category="paragraph">Vedere<block ref="17218100ebd265ac766a5fc208b6c6f8" category="inline-link-rx"></block> oppure un<block ref="e59af64db55d6d6b5c59844c08c8e1b5" category="inline-link-rx"></block> per i prerequisiti da applicare e per i dettagli su tutti i parametri da definire in questo modello.</block>
+  <block id="982967d26b8426889a4c2982331cbefe" category="paragraph"><block ref="982967d26b8426889a4c2982331cbefe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40bb655abcddd337fbc3dc9a23c1c92b" category="list-text">Selezionare *Crea ambiente di lavoro in AWS (nodo singolo)* o *Crea ambiente di lavoro in AWS (alta disponibilità)* come tipo di risorsa da creare e fare clic su *Applica*.</block>
+  <block id="e8547bfeacec12f30aa5d7de4fbd86b4" category="paragraph">In questo esempio, viene visualizzata la pagina _Create Working Environment in AWS (nodo singolo)_.</block>
+  <block id="d70355e885e82b6e2a9347467809fc82" category="inline-image-macro">Una schermata che mostra un modello di ambiente di lavoro Cloud Volumes ONTAP vuoto da compilare.</block>
+  <block id="3232ff2033d10cf395332723ec31481e" category="paragraph"><block ref="3232ff2033d10cf395332723ec31481e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ab59d67e05a3f51373ba331faa69f02e" category="list-text">*Dettagli e credenziali*: Selezionare le credenziali AWS da utilizzare, immettere un nome di ambiente di lavoro e aggiungere tag, se necessario.</block>
+  <block id="09eb13e81cc007418ee8fa04feb8088f" category="paragraph">Alcuni dei campi di questa pagina sono esplicativi. La seguente tabella descrive i campi per i quali potrebbero essere necessarie indicazioni:</block>
+  <block id="2daf1cb573c2c61422faf64610cf9402" category="cell">Credenziali</block>
+  <block id="64917fe8c1577c91426bd43a4aef38db" category="cell">Queste sono le credenziali per l'account amministratore del cluster Cloud Volumes ONTAP. È possibile utilizzare queste credenziali per connettersi a Cloud Volumes ONTAP tramite Gestore di sistema di ONTAP o la relativa CLI.</block>
+  <block id="2cebc28eab2cacd2695a37777c14a93f" category="cell">Nome ambiente di lavoro</block>
+  <block id="14938059a03b38f1f630bba556c15624" category="cell">BlueXP utilizza il nome dell'ambiente di lavoro per assegnare un nome sia al sistema Cloud Volumes ONTAP che all'istanza di Amazon EC2. Se si seleziona questa opzione, il nome viene utilizzato anche come prefisso per il gruppo di protezione predefinito. Fare clic nel campo e selezionare una delle 5 opzioni. È possibile consentire all'amministratore di immettere un nome selezionando *testo libero* oppure specificare che il nome dell'ambiente di lavoro deve avere un determinato prefisso o suffisso, che _contenga_ caratteri specifici o che segua le regole di un'espressione regolare (regex) immessa.</block>
+  <block id="ab2bc7358191e02d5aacdd2ddaa4233d" category="inline-link">Documentazione AWS: Contrassegno delle risorse Amazon EC2</block>
+  <block id="42b463e9a7149a42c8aa33ac96a9611d" category="cell">I tag AWS sono metadati per le risorse AWS. BlueXP aggiunge i tag all'istanza di Cloud Volumes ONTAP e a ciascuna risorsa AWS associata all'istanza. Per informazioni sui tag, fare riferimento a.<block ref="9bd250e03cdf80384a24635f16673602" category="inline-link-rx"></block>.</block>
+  <block id="6101eef8fd3b11affed5baa0379eb7b5" category="inline-link">Foglio di lavoro AWS</block>
+  <block id="81a8daeda4f6298d9acccfee2722a672" category="list-text">*Location &amp; Connectivity* (posizione e connettività): Inserire le informazioni di rete registrate in<block ref="57c247bbef8ebe341e2b4a4759be3e19" category="inline-link-rx"></block>. Ciò include AWS Region, VPC, Subnet e Security Group.</block>
+  <block id="6f27ddf091b10f1dfd4ab13be0759ec7" category="paragraph">Se si dispone di un Outpost AWS, è possibile implementare un sistema Cloud Volumes ONTAP a nodo singolo in tale Outpost selezionando il VPC Outpost. L'esperienza è la stessa di qualsiasi altro VPC che risiede in AWS.</block>
+  <block id="e01401f96474df4861317e5b4493deca" category="list-text">*Authentication Method* (metodo di autenticazione): Selezionare il metodo di autenticazione SSH che si desidera utilizzare, ovvero una password o una coppia di chiavi.</block>
+  <block id="94b720129da1fad395a78adb9dd8004f" category="list-text">*Crittografia dei dati*: Non scegliere alcuna crittografia dei dati o crittografia gestita da AWS.</block>
+  <block id="8d4e0ae3c5be71d9c725659a6203fb6f" category="paragraph">Per la crittografia gestita da AWS, è possibile scegliere una chiave Customer Master Key (CMK) diversa dal proprio account o da un altro account AWS.</block>
+  <block id="7238e3ed6732433c6a3fc43c882f2749" category="inline-link">Scopri come configurare AWS KMS per Cloud Volumes ONTAP</block>
+  <block id="2dff4bc0654f658707793fc687e4a17f" category="paragraph"><block ref="aab3f238743393f06eea77a640671e14" category="inline-link-rx"></block>.</block>
+  <block id="84fee0ef7a3aad23dfb27e9c3b17b961" category="list-text">*Charging Method* (metodo di ricarica): Specificare l'opzione di ricarica che si desidera utilizzare con questo sistema.</block>
+  <block id="9dbd3ac8bddbf4313a163e34e79476bf" category="inline-link">Scopri questi metodi di ricarica</block>
+  <block id="3ef29b3dd75ee64739cfbad76da157f1" category="paragraph"><block ref="f9418073b88f5d36a2be20e415620719" category="inline-link-rx"></block>.</block>
+  <block id="8ac4cd210de5bd5fe91a871c186e8be3" category="list-text">*NetApp Support Site account*: Selezionare un account NetApp Support Site.</block>
+  <block id="f6b1eeef6a894819bc1138daa571ecaa" category="list-text">*Pacchetti preconfigurati*: Selezionare uno dei quattro pacchetti preconfigurati che determineranno diversi fattori per i volumi creati nell'ambiente di lavoro.</block>
+  <block id="cb2bbd3723ec0171f93e30cb1d35ebc4" category="list-text">*Configurazione SMB*: Se si prevede di implementare volumi utilizzando SMB in questo ambiente di lavoro, è possibile configurare un server CIFS e i relativi elementi di configurazione.</block>
+  <block id="80a0d065fe120a53a92d1cbae6bd3fa2" category="paragraph">Se i valori del modello sono stati completati correttamente, viene aggiunto un segno di spunta verde alla casella "Create Working Environment in AWS (single node)" (Crea ambiente di lavoro in AWS (nodo singolo)).</block>
+  <block id="daa7684c9693e9b5412a05c7d060a1ef" category="inline-image-macro">pulsante più</block>
+  <block id="abd25867aae2404fdbef96ae0b0057ee" category="inline-xref">Creare un modello per un volume Cloud Volumes ONTAP</block>
+  <block id="520d34c754a3e963e32a0fc19ab1421c" category="list-text">È possibile aggiungere un'altra azione in questo modello per creare un volume per questo ambiente di lavoro. In tal caso, fare clic su <block ref="f928d2751b49d5f69d575bc7f78c5aae" category="inline-image-macro-rx" type="image"></block> e aggiunga questa azione. Scopri come <block ref="f498f1e6b10c72f9f04179db4da15305" category="inline-xref-macro-rx"></block> per ulteriori informazioni.</block>
+  <block id="45a406745a298842b185cafcdaedc62b" category="section-title">Esempi di ricerca di risorse esistenti utilizzando modelli</block>
+  <block id="f7322605429ac37b6517eaccfdebcdfe" category="paragraph">Utilizzando l'azione _Find Existing Resources_ è possibile trovare ambienti di lavoro specifici o volumi esistenti fornendo una varietà di filtri per restringere la ricerca alle risorse a cui si è interessati. Dopo aver individuato le risorse corrette, è possibile aggiungere volumi a un ambiente di lavoro o attivare un servizio cloud sui volumi risultanti.</block>
+  <block id="e5454149dbf8c23363be8d25a5702a73" category="admonition">A questo punto, è possibile trovare i volumi all'interno dei sistemi Cloud Volumes ONTAP, ONTAP on-premise e Azure NetApp Files. Inoltre, è possibile abilitare il backup e il ripristino BlueXP su volumi Cloud Volumes ONTAP e ONTAP on-premise. Ulteriori risorse e servizi saranno disponibili in un secondo momento.</block>
+  <block id="38e15ec3e6bd73e018349ed1f0bf12bb" category="section-title">Trova i volumi esistenti e attiva un servizio cloud</block>
+  <block id="2cb7e274b08a1ada929bdde1e5182fac" category="paragraph">L'attuale funzionalità di azione _trova risorse esistenti_ consente di trovare volumi in ambienti di lavoro Cloud Volumes ONTAP e ONTAP on-premise che non dispongono attualmente di backup e ripristino BlueXP o classificazione BlueXP abilitata. Quando si attiva il backup e il ripristino BlueXP su volumi specifici, questa azione imposta anche il criterio di backup configurato come criterio predefinito per quell'ambiente di lavoro, in modo che tutti i volumi futuri di tali ambienti di lavoro possano utilizzare lo stesso criterio di backup.</block>
+  <block id="6d0c20318ee7bcc13d58fa262e33c7d2" category="inline-image-macro">Una schermata che mostra come selezionare l'azione trova risorse esistenti dalla pagina Aggiungi nuova azione.</block>
+  <block id="0e9d27a36a1187dea1616df501ce108d" category="paragraph"><block ref="0e9d27a36a1187dea1616df501ce108d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="11c981e1d4ed40ea0925d9ae06dae41f" category="list-text">Selezionare *trova risorse esistenti* come tipo di azione da definire e fare clic su *Applica*.</block>
+  <block id="1b733abaf243d15600d33f844e9bdc13" category="paragraph">Viene visualizzata la pagina _Find Existing Resources Action Definition_.</block>
+  <block id="10798727522d9d9973a80cddbbd083ac" category="inline-image-macro">Una schermata che mostra un modello vuoto di ricerca delle risorse esistenti da compilare.</block>
+  <block id="23b2538202f81713f750e06e99508701" category="paragraph"><block ref="23b2538202f81713f750e06e99508701" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d453807788f3b6bbd3ea47f9cbe56875" category="list-text">*Nome azione*: Immettere un nome di azione personalizzato invece del valore predefinito. Ad esempio, "Find Large Volumes on cluster ABC and enable Backup" (trova volumi elevati sul cluster ABC e attiva backup).</block>
+  <block id="463c18d84d5e845ea1d485923b7349ce" category="list-text">*Tipo di risorsa:* selezionare il tipo di risorsa che si desidera trovare. In questo caso è possibile selezionare *volumi in Cloud Volumes ONTAP*.</block>
+  <block id="7d61d7a876b512b9951ebcd6b058cc77" category="paragraph">Questa è l'unica voce richiesta per questa azione. È possibile fare clic su *continua* per visualizzare un elenco di tutti i volumi su tutti i sistemi Cloud Volumes ONTAP del proprio ambiente.</block>
+  <block id="a691937f2bedfbe485e0a5632a3e18ff" category="paragraph">Si consiglia invece di compilare alcuni filtri per ridurre il numero di risultati (in questo caso volumi) su cui applicare l'azione di backup e ripristino di BlueXP.</block>
+  <block id="759a269bf5c05fa6647b728a4b6acab7" category="list-text">Nell'area _contesto_ è possibile selezionare un ambiente di lavoro specifico e altri dettagli relativi a tale ambiente di lavoro.</block>
+  <block id="70b9fbef4c70dff460de52b0d7c1eb40" category="inline-image-macro">Una schermata che mostra i filtri di contesto applicabili al modello trova risorse esistenti.</block>
+  <block id="7a978f856247996229928441e0d8ef1d" category="paragraph"><block ref="7a978f856247996229928441e0d8ef1d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad47acd6a839d467d8e7d8cc0ab575bb" category="list-text">Nell'area _Dettagli_ è possibile selezionare il nome del volume, l'intervallo delle dimensioni del volume e qualsiasi tag assegnato ai volumi.</block>
+  <block id="f3ab419ac906615be19ae0d551c2ddd6" category="paragraph">Per il nome del volume, fare clic nel campo e selezionare una delle 5 opzioni. È possibile consentire all'amministratore di immettere qualsiasi nome selezionando *Free Text*, oppure specificare che il nome del volume deve avere un determinato prefisso o suffisso, che _contenga_ caratteri specifici o che segua le regole di un'espressione regolare (regex) immessa.</block>
+  <block id="8567823797f59455548dc8dd1f03f80e" category="paragraph">Per le dimensioni del volume è possibile specificare un intervallo, ad esempio tutti i volumi compresi tra 100 GiB e 500 GiB.</block>
+  <block id="75aa65993e3f52840fc5b343dbb63651" category="paragraph">Per i tag è possibile restringere ulteriormente la ricerca in modo che i risultati visualizzino solo i volumi con determinate coppie di tasti/valori dei tag.</block>
+  <block id="be9642dda4ebe2b728f2c474b3d3a411" category="inline-image-macro">Una schermata che mostra i filtri Dettagli applicabili al modello trova risorse esistenti.</block>
+  <block id="817d077440da0b77af9b35e673301360" category="paragraph"><block ref="817d077440da0b77af9b35e673301360" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c253b1193d9cac2bb6fdffc90caab002" category="list-text">Fare clic su *continua* e la pagina viene aggiornata per visualizzare i criteri di ricerca definiti nel modello.</block>
+  <block id="9fc88e3f72037f83544b6dc4a0f0e114" category="inline-image-macro">Una schermata che mostra i criteri di ricerca definiti per il modello trova risorse esistenti.</block>
+  <block id="7dd1bb02dcba000872f2025a15ad1520" category="paragraph"><block ref="7dd1bb02dcba000872f2025a15ad1520" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a8bf8eaff65aa0f4ae0660056e385701" category="list-text">Fare clic su *verifica i criteri di ricerca* per visualizzare i risultati correnti.</block>
+  <block id="27d7b10352920ea311d933853a157434" category="inline-image-macro">icona modifica matita</block>
+  <block id="33e49b40585f164240484bc804e648ef" category="list-text">Se i risultati non sono quelli previsti, fare clic su <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> Accanto a _Criteri di ricerca_ e rifinisci ulteriormente la ricerca.</block>
+  <block id="95d491c21e0c934c6282c13d886a25c9" category="list-text">Quando i risultati sono buoni, fare clic su *Done* (fine).</block>
+  <block id="902215290e82837ad3918c6de3db9e64" category="paragraph">L'azione _Find Existing Resources_ completata viene visualizzata nella finestra dell'editor.</block>
+  <block id="9979d1ff76d2ea7068844b0cfd0bdb76" category="list-text">Fare clic sul segno più per aggiungere un'altra azione, selezionare *Enable Cloud Backup on Volume* (attiva backup cloud su volume) e fare clic su *Apply* (Applica).</block>
+  <block id="7ebacdda898134e4d1b0a44a8ce8b373" category="paragraph">L'azione _Enable Cloud Backup on Volume_ viene aggiunta alla finestra.</block>
+  <block id="9bd30f7c4c3061ea1452d2bb94d3ccb5" category="inline-image-macro">Una schermata che mostra i passaggi per aggiungere un'azione di backup e ripristino BlueXP al modello.</block>
+  <block id="c94523d9a61bd23630ae699468b59912" category="paragraph"><block ref="c94523d9a61bd23630ae699468b59912" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="629026899287206b23bf1b8d05d2e57c" category="inline-xref">Aggiunta della funzionalità di backup a un volume</block>
+  <block id="0864e2983319d781f957de96128569d4" category="list-text">È ora possibile definire i criteri di backup come descritto in <block ref="567736f0dbefe603b86c06be6821957e" category="inline-xref-macro-rx"></block> In modo che il modello applichi la policy di backup corretta ai volumi selezionati dall'azione _Find Existing Resources_.</block>
+  <block id="2cd168ea59a502ef9e27e6003134ad57" category="list-text">Fare clic su *Apply* (Applica) per salvare la personalizzazione effettuata nell'azione Backup, quindi fare clic su *Save Template* (Salva modello) al termine dell'operazione.</block>
+  <block id="fb88189ee911a47d2e0e233fefd1523c" category="section-title">Trova gli ambienti di lavoro esistenti</block>
+  <block id="1399c696c7891af3d1972a47be151f0a" category="paragraph">Utilizzando l'azione _Find Existing Resources_ è possibile individuare l'ambiente di lavoro e utilizzare altre azioni modello, come la creazione di un volume, per eseguire facilmente azioni sull'ambiente di lavoro esistente.</block>
+  <block id="ee14a216e8a337c2bb79d6d82521a077" category="paragraph"><block ref="ee14a216e8a337c2bb79d6d82521a077" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="68ad7010ce50e08f51cc603a02813591" category="list-text">*Nome azione*: Immettere un nome di azione personalizzato invece del valore predefinito. Ad esempio, "trova ambienti di lavoro che includono Dallas".</block>
+  <block id="d12d07cdc05a227cd72eb672e87e4f6a" category="list-text">*Tipo di risorsa:* selezionare il tipo di risorsa che si desidera trovare. In questo caso, selezionare *ambienti di lavoro*.</block>
+  <block id="293a4f358df2db5ec8b84c40b989f884" category="paragraph">Questa è l'unica voce richiesta per questa azione. È possibile fare clic su *continua* per visualizzare un elenco di tutti gli ambienti di lavoro del proprio ambiente.</block>
+  <block id="8be93188ada53e1878b3d730f33c567d" category="paragraph">Si consiglia invece di compilare alcuni filtri per ridurre il numero di risultati (in questo caso, gli ambienti di lavoro).</block>
+  <block id="8a6cf07a7afb6950374a6137dd3207ed" category="list-text">Dopo aver definito alcuni filtri nell'area _Dettagli_, è possibile selezionare un ambiente di lavoro specifico.</block>
+  <block id="e4b9d87ee0a05c6ace352d34259ff623" category="list-text">Fare clic su *Continue* (continua) per salvare le impostazioni, quindi fare clic su *Done* (fine).</block>
+  <block id="04589f02205d83ab5273554763f29cef" category="list-text">Inserire il nome del modello in alto a sinistra, quindi fare clic su *Save Template* (Salva modello)</block>
+  <block id="1c2460f99ff766a130c121d2511fc817" category="section-title">Esempi di attivazione dei servizi mediante modelli</block>
+  <block id="27361520eb7e5cef0ef9294b8be31f53" category="paragraph">I modelli di servizio consentono di attivare i servizi di backup e ripristino BlueXP, classificazione BlueXP o replica BlueXP (SnapMirror) su un volume appena creato.</block>
+  <block id="d09587f155f4de501e417ae05bd6c246" category="section-title">Aggiungere la funzionalità di backup a un volume</block>
+  <block id="2379567db82c15355e3be04068b7b974" category="paragraph">Quando si crea un modello di volume, è possibile aggiungere il modello che si desidera creare periodicamente per il backup del volume utilizzando<block ref="2b39f52a9715f26b8fe862bdca0f5ff1" category="inline-link-rx"></block> servizio.</block>
+  <block id="8e50b75e57684da1ad2c63f7281c1bb2" category="admonition">Questa azione non è applicabile ai volumi Azure NetApp Files.</block>
+  <block id="cc7c4a3dbe40e7192b900e2b4a3f22d4" category="inline-image-macro">Una schermata della pagina per abilitare la funzionalità di backup per i volumi.</block>
+  <block id="3a5623787eadb0de7109dbf1472e4723" category="paragraph"><block ref="3a5623787eadb0de7109dbf1472e4723" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="390ceefd694c59851dd3cce7b5560a77" category="list-text">*Policy*: Selezionare il criterio di backup che si desidera utilizzare.</block>
+  <block id="2ec2f9ba216ad598e0f2a06ca8613ab2" category="list-text">*Context*: Per impostazione predefinita, le variabili vengono compilate per l'ambiente di lavoro, la VM di storage e il volume per indicare che verranno creati backup per il volume creato in precedenza in questo stesso modello. Quindi, se questo è quello che vuoi fare, sei tutto a posto.</block>
+  <block id="45c479a3827985134b6c11fc5b56fe19" category="inline-link-macro">Completare i campi di contesto</block>
+  <block id="55ec93141dffeda07c8ca26ba1fa8f75" category="paragraph">Se si desidera creare backup per un volume diverso, è possibile inserire questi dati manualmente. Scopri come <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> per indicare un volume diverso.</block>
+  <block id="1af1dabe0aa1f41e5209035cdc7e766d" category="list-text">Fare clic su *Apply* (Applica) per salvare le modifiche.</block>
+  <block id="a38d0b0e90841cea024d72c117a2426b" category="section-title">Aggiungere la funzionalità di classificazione BlueXP a un volume</block>
+  <block id="9c586aa01408a40b2537cb097a8ab12b" category="paragraph">Quando si crea un modello di volume, è possibile aggiungere il modello che si desidera sottoporre a scansione per verificare la conformità e la classificazione del volume utilizzando<block ref="2c710310de596aa5a81877d014205606" category="inline-link-rx"></block> servizio.</block>
+  <block id="b6af640e26399bc8467a4465b802ea47" category="inline-image-macro">Una schermata della pagina per abilitare la funzionalità di scansione per i volumi.</block>
+  <block id="3f95813bf3f9fe4ef1653df2a79b2b7d" category="paragraph"><block ref="3f95813bf3f9fe4ef1653df2a79b2b7d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="273ef973fddf0605397f60b2a725e43e" category="list-text">*Context*: Per impostazione predefinita, le variabili vengono compilate per l'ambiente di lavoro, il nome del volume, l'UUID del volume, il percorso del volume e il protocollo per indicare che si intende eseguire la scansione dei dati per il volume creato in precedenza in questo stesso modello. Quindi, se questo è quello che vuoi fare, sei tutto a posto.</block>
+  <block id="38c9050a05ab7ae3bc16a77a1ce8e787" category="paragraph">Se si desidera eseguire la scansione dei dati per un volume diverso, è possibile inserire questi dati manualmente. Scopri come <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> per indicare un volume diverso.</block>
+  <block id="85f23a277d881512b055e09978ab9bb3" category="section-title">Aggiunta della funzionalità di replica BlueXP a un volume</block>
+  <block id="3ffe2e9dffcfea6ba0652c1f11e54fc1" category="inline-link">Replica BlueXP</block>
+  <block id="cd74e17bd5681fa22dbf78c857904d85" category="paragraph">Quando si crea un modello di volume, è possibile aggiungere il modello che si desidera replicare i dati nel volume in un altro volume utilizzando<block ref="85f98efc20d83de4c171ca5859337904" category="inline-link-rx"></block> servizio. È possibile replicare i dati in un cluster Cloud Volumes ONTAP o in un cluster ONTAP on-premise.</block>
+  <block id="dd9f9bc105ce1ce8a95ece4914938335" category="paragraph">La funzionalità di replica di BlueXP è composta da tre parti: Selezione del volume di origine, selezione del volume di destinazione e definizione delle impostazioni di replica. Ciascuna sezione viene descritta di seguito.</block>
+  <block id="4da2d6a9396d0b82185925638b423b25" category="list-text">*Source Details* (Dettagli origine): Immettere i dettagli relativi al volume di origine che si desidera replicare:</block>
+  <block id="0ea58076a2176d7f136c88f75243998b" category="inline-image-macro">Una schermata della pagina per definire la posizione del volume di origine della replica BlueXP.</block>
+  <block id="8d46514284e4823c32c3dc4f228097be" category="paragraph"><block ref="8d46514284e4823c32c3dc4f228097be" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a91218a8b9b25c1cc8cec554d31e45c0" category="list-text">Per impostazione predefinita, le prime tre variabili vengono compilate per l'ambiente di lavoro, la VM di storage e il volume per indicare che si intende replicare il volume creato in precedenza in questo stesso modello. Quindi, se questo è quello che vuoi fare, sei tutto a posto.</block>
+  <block id="7983c642c200e679fc182d6cda6332be" category="paragraph">Se si desidera replicare un volume diverso, è possibile inserire questi dati manualmente. Scopri come <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> per indicare un volume diverso.</block>
+  <block id="735ed24f376bc25cac548556f145fddd" category="list-text">La replica BlueXP richiede che gli ambienti di lavoro di origine e di destinazione siano connessi tramite le proprie LIF intercluster. Inserire l'indirizzo IP LIF dell'intercluster per l'ambiente di lavoro di origine.</block>
+  <block id="174102b086067ead19a50d7ce2f8211a" category="paragraph">Per ottenere queste informazioni: Fare doppio clic sull'ambiente di lavoro, fare clic sull'icona del menu e fare clic su informazioni.</block>
+  <block id="af686206beaeefe98fe2a5a5cac4ffec" category="list-text">*Destination Details* (Dettagli destinazione): Immettere i dettagli relativi al volume di destinazione che verrà creato dall'operazione di replica:</block>
+  <block id="bf9302d5ec948558541e41a62beedd9c" category="inline-image-macro">Una schermata della pagina per definire la posizione del volume di destinazione della replica BlueXP.</block>
+  <block id="96fbe8bac41fbc54b4d3dc5810151c73" category="paragraph"><block ref="96fbe8bac41fbc54b4d3dc5810151c73" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="99b3d3bf418d271f350304cf1acdcd45" category="list-text">Selezionare l'ambiente di lavoro in cui verrà creato il volume.</block>
+  <block id="faccd2324eec8e1960bb88fd7aa8cdb6" category="list-text">Selezionare la VM di storage su cui risiedere il volume.</block>
+  <block id="34a5bd93b44b1a265bd952eb2c9f4c52" category="list-text">Quando si replica un volume in un cluster Cloud Volumes ONTAP (non in un cluster ONTAP on-premise), è necessario specificare il provider di destinazione (AWS, Azure o GCP).</block>
+  <block id="744304af5427c93a0de90b14d5d0a697" category="list-text">Quando si replica un volume in un cluster Cloud Volumes ONTAP, è possibile specificare se il tiering del volume è attivato nel volume di destinazione.</block>
+  <block id="8658f363929ef58e4d7bb3ba3dfa8f72" category="list-text">Per il nome del volume di destinazione, fare clic nel campo e selezionare una delle 5 opzioni. È possibile consentire all'amministratore di immettere qualsiasi nome selezionando *Free Text*, oppure specificare che il nome del volume deve avere un determinato prefisso o suffisso, che _contenga_ caratteri specifici o che segua le regole di un'espressione regolare (regex) immessa.</block>
+  <block id="52f5e1349d4967b257361efa47dda020" category="list-text">La replica BlueXP richiede che gli ambienti di lavoro di origine e di destinazione siano connessi tramite le proprie LIF intercluster. Inserire l'indirizzo IP LIF dell'intercluster per l'ambiente di lavoro di destinazione.</block>
+  <block id="7fcd5d25a42a71b6edb4a94ce9593493" category="list-text">Selezionare l'aggregato su cui risiedere il volume.</block>
+  <block id="cd5d05c14061b6263cc650d83d3d5659" category="list-text">Quando si replica un volume in un cluster Cloud Volumes ONTAP (non in un cluster ONTAP on-premise), è necessario specificare il tipo di disco da utilizzare per il nuovo volume.</block>
+  <block id="4d10b6637923bf1b343d93d2f5f97467" category="list-text">*Replication Details* (Dettagli replica): Inserire i dettagli relativi al tipo e alla frequenza dell'operazione di replica:</block>
+  <block id="a88290295d6f404ecce4fa651a053f2b" category="inline-image-macro">Una schermata della pagina per definire le impostazioni di replica di BlueXP per la relazione.</block>
+  <block id="caa72fb108e3bc60f82a1df87c43573d" category="paragraph"><block ref="caa72fb108e3bc60f82a1df87c43573d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e05b02199241577d21f467e3a216fc1" category="inline-link">policy di replica</block>
+  <block id="23647b4aee667229f438bac6d37c6f14" category="list-text">Selezionare<block ref="fce626f96b8a582bd914af9774e3f4bd" category="inline-link-rx"></block> che si desidera utilizzare.</block>
+  <block id="28b7ceda6afe52e7cddb056ae1cc1b42" category="list-text">Scegliere una copia singola o una pianificazione di replica ricorrente.</block>
+  <block id="a890fcd17657bbd0255d609a9ac66f87" category="inline-link-macro">Scopri come si presenta questo aspetto nel report Drift</block>
+  <block id="8abfe8e6c06581937c37ec49be54c6d7" category="list-text">Attivare il monitoraggio dello stato di salute della replica se si desidera che il report drift includa lo stato di salute della replica della relazione SnapMirror insieme al ritardo, allo stato e all'ultimo tempo di trasferimento. <block ref="1eb00ed04881df5d17ae6b01acb7f8fb" category="inline-link-macro-rx"></block>.</block>
+  <block id="a17ec67a32a0998705df91c25c3b8420" category="list-text">Selezionare se si desidera impostare un limite di velocità di trasferimento, quindi immettere la velocità massima (in kilobyte al secondo) alla quale trasferire i dati. È possibile immettere un valore fisso oppure specificare un valore minimo e un valore massimo e lasciare che l'amministratore dello storage selezioni un valore in tale intervallo.</block>
+  <block id="e03c4d2a8455ec2482acf1f509382257" category="section-title">Cosa fare dopo aver creato il modello</block>
+  <block id="856a9d1850ea33e764f9c6e201455be4" category="paragraph">Dopo aver creato un modello, è necessario informare gli amministratori dello storage di utilizzare il modello durante la creazione di nuovi volumi e ambienti di lavoro.</block>
+  <block id="73d6735a0765fae8b09bab1a9aa14293" category="inline-link-macro">Creazione di risorse utilizzando modelli</block>
+  <block id="916d7a2812bff61e120f6cb051a97f08" category="paragraph">È possibile indicarli a. <block ref="00987a40189f413ef051200970901187" category="inline-link-macro-rx"></block> per ulteriori informazioni.</block>
+  <block id="a0aa6f0787dc9e06db535b8b92d3da0a" category="section-title">Modificare o eliminare un modello</block>
+  <block id="ffb2a1eed8ad8c67507aad3d1a39caa3" category="paragraph">È possibile modificare un modello se è necessario modificare uno dei parametri. Dopo aver salvato le modifiche, tutte le risorse future create dal modello utilizzeranno i nuovi valori dei parametri.</block>
+  <block id="47ea4ecfbdf34424db879d30ee9d311b" category="paragraph">È inoltre possibile eliminare un modello se non è più necessario. L'eliminazione di un modello non influisce sulle risorse create con il modello. Tuttavia, non è possibile eseguire alcun controllo di conformità Drift dopo l'eliminazione del modello.</block>
+  <block id="b44b7e1f0ab25d2be436ede5d937b8c0" category="inline-image-macro">Una schermata che mostra come modificare un modello o eliminare un modello.</block>
+  <block id="e11c8770592f0241028d35b02f4f9619" category="paragraph"><block ref="e11c8770592f0241028d35b02f4f9619" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3b35f794b6029f799ac51ebc0e6aa73" category="section-title">Eseguire una copia di un modello</block>
+  <block id="03332676c38cbd1189f2240710881e3a" category="paragraph">È possibile creare una copia di un modello esistente. Ciò consente di risparmiare molto tempo nel caso in cui si desideri creare un nuovo modello molto simile a un modello esistente. È sufficiente creare il duplicato con un nuovo nome e modificare il modello per modificare le coppie di elementi che rendono unico il modello.</block>
+  <block id="763165e5bc9a9a1c445da7d2ef9edaf1" category="inline-image-macro">Una schermata che mostra come duplicare un modello.</block>
+  <block id="45a0059a48c059287929332e05648327" category="paragraph"><block ref="45a0059a48c059287929332e05648327" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a544a99893c9e6b1097d852c3f8c8436" category="summary">Il servizio di correzione BlueXP consente di standardizzare la creazione di risorse negli ambienti di lavoro in BlueXP. Ad esempio, è possibile codificare i parametri richiesti in un "modello di volume" che viene successivamente applicato quando un amministratore dello storage crea un volume utilizzando il modello. Questo può includere il tipo di disco richiesto, le dimensioni, il protocollo, le policy di snapshot, il cloud provider, e molto altro ancora. È inoltre possibile attivare alcuni servizi, come il backup e il ripristino di BlueXP, per ogni volume creato.</block>
+  <block id="b5b4d5d12eb80fff06c501695b37c685" category="doc">Scopri di più sulla soluzione BlueXP</block>
+  <block id="29c77a5a00dda7efae90c176f1eaa37b" category="paragraph">I modelli consentono agli amministratori dello storage di creare volumi ottimizzati per i requisiti di carico di lavoro di ogni applicazione implementata, ad esempio database, e-mail o servizi di streaming. Inoltre, rende più semplice la vita ai vostri architetti dello storage, sapendo che ogni volume viene creato in modo ottimale per ogni applicazione.</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">Caratteristiche</block>
+  <block id="1032d262f842b007c559af1cf0e96a67" category="paragraph">BlueXP offre le seguenti funzionalità e vantaggi:</block>
+  <block id="3a07949495aa0f10524a38b2f8b42ff9" category="list-text">Automatizza e migliora la progettazione e lo sviluppo dell'infrastruttura</block>
+  <block id="e3aea2348dd4f146b5c5f81c162d1f44" category="list-text">Fornisce un'unica posizione per attivare diversi servizi NetApp Cloud, come backup e ripristino BlueXP e classificazione BlueXP</block>
+  <block id="b56e74814d72e13b8bd9eb4561010dba" category="list-text">Identifica le risorse che sono state modificate e non sono più conformi al modello (utilizzando la funzione "drift")</block>
+  <block id="535863b7811f106bde3e7f273a118764" category="inline-link-macro">Scopri di più sulla deriva</block>
+  <block id="5bd5bf968b8be74cc15838b062223bc7" category="paragraph">A questo punto, sarà necessario apportare manualmente le modifiche necessarie per ripristinare la conformità della risorsa con il modello. <block ref="070f7b254d8faecc6fc5a699202bdab9" category="inline-link-macro-rx"></block>.</block>
+  <block id="04d8b8693a17205c619758eaa8d300e2" category="section-title">Azioni modello disponibili</block>
+  <block id="1521fcd4ef1bd7f293c2968ccf8c8162" category="paragraph">Un modello è una catena di "azioni" che hanno alcuni valori predefiniti. È possibile creare modelli che includono le seguenti azioni:</block>
+  <block id="d7b818155971ac6a308c49db2d58706d" category="paragraph">*Azioni delle risorse:*</block>
+  <block id="afc7000b969456a3160fc4505fb2cc0b" category="list-text">Creazione di un volume Cloud Volumes ONTAP (su AWS, Azure o GCP)</block>
+  <block id="13a5ac55db7d05c915e23a24a2096643" category="list-text">Creare un volume Azure NetApp Files</block>
+  <block id="aa2021a9b8c47541aa967f65a329bdea" category="list-text">Creare un volume ONTAP on-premise</block>
+  <block id="4850ffe766acbb8beb6c7c24ebcfaf4b" category="list-text">Creare un ambiente di lavoro Cloud Volumes ONTAP (nodo singolo o sistema ha su AWS)</block>
+  <block id="d1287a3b275ab8ba01a5fff6e4888348" category="list-text">Trova le risorse esistenti che soddisfano determinati criteri (in modo da poter applicare un'azione di "servizi" alle risorse in uscita)</block>
+  <block id="de66c35536cd0fdc78f33d76a51b81ab" category="paragraph">*Azioni dei servizi:*</block>
+  <block id="323cdb54390926759b1ef2c2f8b3d501" category="list-text">Attivare<block ref="2b39f52a9715f26b8fe862bdca0f5ff1" category="inline-link-rx"></block> On Volumes (non applicabile per Azure NetApp Files)</block>
+  <block id="a42ceab68fd0ff5bf4b503951f8c32ed" category="list-text">Attivare<block ref="2c710310de596aa5a81877d014205606" category="inline-link-rx"></block> sui volumi</block>
+  <block id="12dab2db205f6f073384ed24600f3294" category="list-text">Attivare<block ref="85f98efc20d83de4c171ca5859337904" category="inline-link-rx"></block> On Volumes (non applicabile per Azure NetApp Files)</block>
+  <block id="7cd3aca74bfb8a3594c0b5243d8efcd6" category="paragraph">Ad esempio, è possibile creare un modello che crea un volume Cloud Volumes ONTAP. Oppure crea un volume Cloud Volumes ONTAP e abilita il backup e ripristino BlueXP su quel volume. Oppure che crei un volume Cloud Volumes ONTAP, quindi abiliti la classificazione BlueXP per il backup e il ripristino su quel volume.</block>
+  <block id="3fb67d827d434a38ea3f2b8aca181ada" category="paragraph">Nel tempo NetApp aggiungerà altre azioni.</block>
+  <block id="affd4f6eb73b60f9a6a799c009261a82" category="section-title">Come funziona la soluzione BlueXP</block>
+  <block id="4b77b7c05fa8d98f83a3beb44bf88064" category="paragraph">Il servizio di correzione BlueXP è composto da 3 parti. Il modello disponibile "azioni", il modello di applicazione personalizzato e la risorsa implementata come risultato dell'esecuzione del modello. La seguente immagine mostra la relazione tra ciascun componente:</block>
+  <block id="f5afa7cf8be08a4f697b8293dad144b2" category="inline-image-macro">Un diagramma dei diversi utenti coinvolti nella creazione e nell'utilizzo dei modelli di applicazione.</block>
+  <block id="ecfa39b6560418cfe2345a90c8e7e31b" category="paragraph"><block ref="ecfa39b6560418cfe2345a90c8e7e31b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fed74dbc8e98acceae8b4538b3ad2067" category="paragraph">Ad alto livello, i modelli funzionano come segue:</block>
+  <block id="83fe213d4e31bface1f9e62afb1dec57" category="list-text">NetApp definisce le "azioni" dei modelli disponibili.</block>
+  <block id="d5faf5a6584d91a0f5b4616090f2ec8c" category="paragraph">Ad esempio, un'azione per creare un volume Cloud Volumes ONTAP o Azure NetApp Files.</block>
+  <block id="1ad8e87e4651a2cc69c46159a02233b3" category="list-text">L'architetto dello storage seleziona le "azioni" che desidera utilizzare per creare un modello di applicazione, quindi esegue il hardcoding di determinati valori per i parametri elencati.</block>
+  <block id="2c0f798d8b592eb8938ac2f2c3e3a12a" category="paragraph">Ad esempio, selezionano dischi ad alta velocità e una grande quantità di RAM per i volumi Cloud Volumes ONTAP che verranno utilizzati per trasportare i carichi di lavoro per i database Oracle. E richiedono che vengano eseguiti backup per ogni volume.</block>
+  <block id="480b6a5d9ee4db8a0ae283b6de8df01f" category="list-text">Gli amministratori dello storage utilizzano i modelli per creare risorse ottimizzate per le applicazioni per cui verranno utilizzate.</block>
+  <block id="f8f85ac75a9d32ac7e4bd19a88c88489" category="paragraph">Ad esempio, creano un volume che verrà utilizzato per un database Oracle utilizzando il modello di volume creato per i database.</block>
+  <block id="537f35739e01ac333f01ac9b4cbc3e9f" category="list-text">Il servizio tiene traccia di alcune impostazioni delle risorse definite nel modello utilizzando la funzione "drift", come determinato dall'architetto dello storage.</block>
+  <block id="8c3c2e38ab977ab43a9ebd00e29973df" category="section-title">Prezzi e licenze</block>
+  <block id="71b4565980fc9926e76b80d4954934b3" category="paragraph">La funzionalità di correzione di BlueXP non richiede alcuna licenza ed è gratuita per tutti gli utenti di BlueXP.</block>
+  <block id="cee48f920658308cb7e4b5d3a7f4b59c" category="admonition">I modelli consentono di applicare un servizio cloud a una risorsa creata, ad esempio, abilitare il backup e il ripristino BlueXP su ogni volume. In questo caso, l'utilizzo del servizio di backup e dello spazio di storage a oggetti utilizzato dai file di backup sono a costo.</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">Limitazioni</block>
+  <block id="63259a0b3eae7652a0de9d3e92907940" category="list-text">Il servizio di correzione BlueXP non è supportato in nessuna delle aree di Gov Cloud o in siti senza accesso a Internet.</block>
+  <block id="5853165343224a78fee94389519a9b28" category="list-text">Non è possibile utilizzare un modello per creare un volume Cloud Volumes ONTAP su un aggregato esistente. Nuovi volumi vengono creati in un nuovo aggregato.</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Le note legali forniscono l'accesso a dichiarazioni di copyright, marchi, brevetti e altro ancora.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marchi</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, il logo NETAPP e i marchi elencati nella pagina dei marchi NetApp sono marchi di NetApp, Inc. Altri nomi di società e prodotti potrebbero essere marchi dei rispettivi proprietari.</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevetti</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Un elenco aggiornato dei brevetti di proprietà di NetApp è disponibile all'indirizzo:</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Direttiva sulla privacy</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
+  <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">Avviso per BlueXP</block>
+  <block id="e8a6d0f19a957eac14b9917a6c92899b" category="list-text"><block ref="e8a6d0f19a957eac14b9917a6c92899b" category="inline-link-rx"></block></block>
+  <block id="06671a41421557bc8120e9c0432d0846" category="inline-link-macro">Avviso per il ripristino di BlueXP</block>
+  <block id="73d5b5afc4a2cdcc8daaa40ba4ef5910" category="list-text"><block ref="73d5b5afc4a2cdcc8daaa40ba4ef5910" category="inline-link-macro-rx"></block></block>
+  <block id="243263104c829e77835d632f591230d5" category="summary">Prima di aprire un caso di supporto con il supporto tecnico NetApp, è necessario aggiungere un account NetApp Support Site a BlueXP e registrarsi per il supporto.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Registrati per ricevere assistenza</block>
+  <block id="8bf30fadf784022b073adb9233678a71" category="paragraph">Prima di aprire un caso di supporto con il supporto tecnico NetApp, è necessario aggiungere un account NetApp Support Site (NSS) a BlueXP e quindi registrarsi per il supporto.</block>
+  <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">Supporto per le soluzioni cloud provider</block>
+  <block id="be845c219bb74b14349ffa6e27e7aef3" category="paragraph">Per il supporto tecnico sulle seguenti soluzioni di cloud provider integrate in BlueXP, fare riferimento alla sezione "Assistenza" nella documentazione BlueXP relativa a tale prodotto.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX per ONTAP</block>
+  <block id="5bf5309465f91318228a7f956b826348" category="list-text"><block ref="5bf5309465f91318228a7f956b826348" category="inline-link-macro-rx"></block></block>
+  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
+  <block id="0e2bc9c853e0af52ead12823c025e58b" category="list-text"><block ref="0e2bc9c853e0af52ead12823c025e58b" category="inline-link-macro-rx"></block></block>
+  <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Cloud Volumes Service per Google Cloud</block>
+  <block id="02efcbea18b9485a78a41871dce1e64d" category="list-text"><block ref="02efcbea18b9485a78a41871dce1e64d" category="inline-link-macro-rx"></block></block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Panoramica sulla registrazione del supporto</block>
+  <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">Esistono due forme di registrazione per attivare i diritti di supporto:</block>
+  <block id="2322ca552c2b0ebe090c8485519246a8" category="list-text">Registrazione dell'abbonamento al supporto per l'ID account BlueXP (il numero di serie a 20 cifre 960xxxxxxxxx nella pagina Support Resources di BlueXP).</block>
+  <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">Questa funzione funge da unico ID di abbonamento al supporto per qualsiasi servizio all'interno di BlueXP. Ogni abbonamento al supporto a livello di account BlueXP deve essere registrato.</block>
+  <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">Registrazione dei numeri di serie Cloud Volumes ONTAP associati a un abbonamento nel mercato del provider cloud (si tratta di numeri di serie 909201xxxxxxxx a 20 cifre).</block>
+  <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">Questi numeri seriali sono comunemente denominati _numeri seriali PAYGO_ e vengono generati da BlueXP al momento dell'implementazione di Cloud Volumes ONTAP.</block>
+  <block id="9d4125dc88bb9db6eb4be939905761ce" category="paragraph">La registrazione di entrambi i tipi di numeri di serie offre funzionalità come l'apertura di ticket di supporto e la generazione automatica dei casi.</block>
+  <block id="98bc603dcb6d5a57d540b13b541fa41a" category="paragraph">La modalità di registrazione dipende dal fatto che tu sia un cliente o un partner nuovo o esistente.</block>
+  <block id="e5646198d2e01aab2cec9ef946f9c53a" category="list-text">Cliente o partner esistente</block>
+  <block id="76928f97884b4332b83c5be9b99d93d3" category="paragraph">In qualità di cliente o partner NetApp esistente, puoi utilizzare il tuo account SSO NetApp Support Site (NSS) per eseguire queste registrazioni di cui sopra. Nel Support Dashboard, BlueXP fornisce una pagina *NSS Management* dove è possibile aggiungere il proprio account NSS. Una volta aggiunto l'account NSS, BlueXP registra automaticamente questi numeri di serie.</block>
+  <block id="4e6af37fb81d50483d832d4de6e2b26a" category="inline-xref">Scopri come aggiungere il tuo account NSS</block>
+  <block id="8d80298f51b7ff2da78e26e60195c7a3" category="paragraph"><block ref="cbec7c1a4a2acff5e84457dd449ac01d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="1c91f3adc957364cb01d33e100ee1ea3" category="list-text">Novità di NetApp</block>
+  <block id="679f2cae4657f177cc89458d49c97e5f" category="paragraph">Se sei nuovo di NetApp, devi completare una registrazione unica del numero di serie del tuo ID account BlueXP sul sito di registrazione del supporto di NetApp. Una volta completata la registrazione e creato un nuovo account NSS, puoi utilizzare questo account in BlueXP per effettuare la registrazione automatica.</block>
+  <block id="00fc9d0c515c69ea2c368521453d982e" category="inline-xref">Scopri come registrarti a NetApp</block>
+  <block id="97454ce87333f7ebd50ee38b8126fb39" category="paragraph"><block ref="37544f11913357c4e8c8a4ec607ae247" category="inline-xref-macro-rx"></block>.</block>
+  <block id="a92ec860f505b318fd0f0eba6165d607" category="section-title">Aggiungere un account NSS a BlueXP</block>
+  <block id="f2575f6d19024f7288cf78d7dc5b3db9" category="paragraph">Support Dashboard consente di aggiungere e gestire gli account NetApp Support Site da utilizzare con BlueXP.</block>
+  <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">Se disponi di un account a livello di cliente, puoi aggiungere uno o più account NSS.</block>
+  <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">Se disponi di un account partner o reseller, puoi aggiungere uno o più account NSS, ma non possono essere aggiunti insieme agli account a livello di cliente.</block>
+  <block id="1afe19576f77bb0073c93359ed2cbb18" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona Guida e selezionare *supporto*.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Schermata del menu Help (Guida) in cui Support (Assistenza) è la prima opzione elencata</block>
+  <block id="868d9aa88f16ea923af1d15eac5d2647" category="paragraph"><block ref="868d9aa88f16ea923af1d15eac5d2647" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d17d6b5dafebab6b7659da8850737e70" category="list-text">Fare clic su *Gestione NSS &gt; Aggiungi account NSS*.</block>
+  <block id="8aaf101e623c543c7eef3c65f6233366" category="list-text">Quando richiesto, fare clic su *Continue* per essere reindirizzati a una pagina di accesso Microsoft.</block>
+  <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp utilizza Microsoft Azure Active Directory come provider di identità per i servizi di autenticazione specifici per il supporto e la concessione di licenze.</block>
+  <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">Nella pagina di accesso, fornire l'indirizzo e-mail e la password registrati del NetApp Support Site per eseguire il processo di autenticazione.</block>
+  <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">Queste azioni consentono a BlueXP di utilizzare il tuo account NSS per download di licenze, verifica dell'aggiornamento software e registrazioni di supporto future.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Tenere presente quanto segue:</block>
+  <block id="ec084bb25ed5b934c09b361069c246b2" category="list-text">L'account NSS deve essere un account a livello di cliente (non un account guest o temporaneo). Puoi avere più account NSS a livello di cliente.</block>
+  <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">Se si tratta di un account di livello partner, può essere presente un solo account NSS. Se si tenta di aggiungere account NSS a livello di cliente ed esiste un account a livello di partner, viene visualizzato il seguente messaggio di errore:</block>
+  <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">"Il tipo di cliente NSS non è consentito per questo account, in quanto esistono già utenti NSS di tipo diverso."</block>
+  <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">Lo stesso vale se si dispone di account NSS a livello di cliente preesistenti e si tenta di aggiungere un account a livello di partner.</block>
+  <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">Una volta effettuato l'accesso, NetApp memorizzerà il nome utente NSS.</block>
+  <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">Un'icona di tre punti orizzontali</block>
+  <block id="452cd4df7b0d5eb1156519a2f3b0206b" category="paragraph">Si tratta di un ID generato dal sistema che viene mappato all'e-mail. Nella pagina *NSS Management*, è possibile visualizzare l'e-mail da <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> menu.</block>
+  <block id="fd02e84624a2fdfd58787131aa2820b5" category="list-text">Se è necessario aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Update Credentials* (Aggiorna credenziali) in <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> menu.</block>
+  <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">Questa opzione richiede di effettuare nuovamente l'accesso. Il token per questi account scade dopo 90 giorni. Verrà inviata una notifica per avvisare l'utente.</block>
+  <block id="ad56c7289bc13dcf4f78c285f7f03878" category="section-title">Registrati con NetApp</block>
+  <block id="f1bac79c2c71fbd93863b9fbd718094c" category="paragraph">La modalità di registrazione al supporto NetApp dipende dal fatto che si disponga già di un account NetApp Support Site (NSS).</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Cliente esistente con un account NSS</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">Se sei un cliente NetApp con un account NSS, devi semplicemente registrarti per ricevere supporto tramite BlueXP.</block>
+  <block id="25b94e7b58140f12be91fa8fd935fa59" category="list-text">Se non l'hai ancora fatto, Aggiungi il tuo account NSS a BlueXP.</block>
+  <block id="819aff12752b7e6a1828e755c7664de7" category="list-text">Nella pagina *risorse*, fare clic su *Registra per il supporto*.</block>
+  <block id="e8a3d9970b8fc1d92caaf33d9e116bd4" category="inline-image-macro">Una schermata che mostra il numero di serie di un account e l'opzione Registra per il supporto</block>
+  <block id="113f9cd7bac6f4faa6b8d58e3e099a8e" category="paragraph"><block ref="113f9cd7bac6f4faa6b8d58e3e099a8e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente esistente ma nessun account NSS</block>
+  <block id="cc1d3c161bcf25e6445c2fc771647849" category="paragraph">Se sei già un cliente NetApp con licenze e numeri di serie esistenti ma _no_ account NSS, devi solo creare un account NSS.</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Modulo di registrazione per l'utente del sito di supporto NetApp</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Creare un account NetApp Support Site completando il<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Assicurarsi di selezionare il livello utente appropriato, che in genere è *cliente/utente finale NetApp*.</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">Assicurarsi di copiare il numero di serie dell'account BlueXP (960xxxx) utilizzato in precedenza per il campo del numero di serie. In questo modo, l'elaborazione dell'account sarà più rapida.</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Novità di NetApp</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Se sei nuovo di NetApp e non disponi di un account NSS, segui i passaggi riportati di seguito.</block>
+  <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">Individuare il numero di serie dell'ID account nella pagina Support Registration (registrazione supporto).</block>
+  <block id="ef5e63bb6b6827440a13cc2ec7e9cf56" category="paragraph"><block ref="ef5e63bb6b6827440a13cc2ec7e9cf56" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Sito per la registrazione del supporto NetApp</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Selezionare<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> E selezionare *non sono un cliente NetApp registrato*.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Compilare i campi obbligatori (con asterischi rossi).</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">Nel campo *Product Line*, selezionare *Cloud Manager*, quindi selezionare il provider di fatturazione appropriato.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">Copia il numero di serie del tuo account dal punto 2 precedente, completa il controllo di sicurezza, quindi conferma di aver letto la Global Data Privacy Policy di NetApp.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">Viene immediatamente inviata un'e-mail alla casella di posta fornita per finalizzare questa transazione sicura. Controllare le cartelle di spam se l'e-mail di convalida non arriva in pochi minuti.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Confermare l'azione dall'interno dell'e-mail.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">La conferma invia la tua richiesta a NetApp e ti consiglia di creare un account NetApp Support Site.</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Assicurarsi di copiare il numero di serie dell'account (960xxxx) utilizzato in precedenza per il campo del numero di serie. In questo modo, l'elaborazione dell'account sarà più rapida.</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Al termine</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp dovrebbe contattarti durante questo processo. Si tratta di un esercizio di assunzione per i nuovi utenti.</block>
+  <block id="1c0e45ef07d0dbc13ca2394d5e285fd7" category="paragraph">Una volta ottenuto l'account NetApp Support Site, è possibile accedere a BlueXP per aggiungere questo account NSS per le registrazioni future.</block>
+  <block id="6d28d54ad9c4f6685bb752801088510b" category="summary">È possibile visualizzare, aggiungere, modificare ed eliminare i tag assegnati alle risorse esistenti utilizzando il servizio BlueXP Tagging. Ciò consente di organizzare e semplificare la gestione delle risorse.</block>
+  <block id="9b07b7a435eb3748887ec84eac33cf64" category="doc">Gestisci i tag per le tue risorse</block>
+  <block id="f02ce38105e0bd4e1492a696a42fc111" category="section-title">Cercare le risorse che hanno determinati tag</block>
+  <block id="572b98a402ed12dbaca0370b0814a61c" category="paragraph">Se si desidera visualizzare tutte le risorse che hanno un determinato tag o un determinato tag e valore della chiave, è possibile cercare tali tag. È possibile eseguire ricerche in tutte le risorse o solo all'interno di determinate categorie di risorse.</block>
+  <block id="10b56653c6ddbf81d7d4419364238254" category="list-text">Selezionare *Health &gt; Remediation* e fare clic sulla scheda *Tags*.</block>
+  <block id="8a4ccdfb1d164c3e3a6da2758ea59afa" category="list-text">Se necessario, scegliere le credenziali per un provider cloud specifico nel campo *Select credentials* (Seleziona credenziali).</block>
+  <block id="f58ddfd9537b922f14de15f169e66a44" category="list-text">Nel campo _tipo di risorsa_, selezionare la risorsa, ad esempio *ONTAP:CVO:VOLUME* per eseguire la ricerca in tutti i volumi Cloud Volumes ONTAP.</block>
+  <block id="55048905cb51ad2998c06b578a1e485e" category="list-text">Nel campo _Tag Key_, selezionare il tag, ad esempio *env* per limitare la ricerca ai volumi con il tag "env".</block>
+  <block id="57adb397c0fe3b63204853bc9186e49e" category="list-text">Nel campo _Tag Value_, selezionare il valore della chiave, ad esempio *Production* per limitare la ricerca ai volumi con il nome del tag "env" e il valore del tag "Production".</block>
+  <block id="6b02683fa96542dc90cc0d413eec17d1" category="inline-image-macro">Una schermata che mostra la selezione di un singolo set di criteri di ricerca per restituire una risorsa con una chiave tag e un valore tag specifici.</block>
+  <block id="901753ca5c92cd91b11940a9fac8569a" category="paragraph"><block ref="901753ca5c92cd91b11940a9fac8569a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="03e94c53a1f4fdaa62202db4528531d6" category="list-text">Fare clic su <block ref="3fd7363714f2e2423924118bfd6b7147" category="inline-image-macro-rx" type="image"></block> Per aggiungere questi criteri di ricerca all'area di ricerca.</block>
+  <block id="f0586e3a2b694cbeec93e35dd7f9e28e" category="inline-image-macro">Una schermata dei criteri di ricerca dei tag aggiunti alla riga di ricerca.</block>
+  <block id="05f475f79d5cf10dced9154d17d0b41c" category="paragraph"><block ref="05f475f79d5cf10dced9154d17d0b41c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="604b0f66d5091b97f5e89f0d8da1d314" category="list-text">Una volta completata la ricerca, fare clic su *Cerca* e i risultati della ricerca vengono visualizzati nella sezione risorse.</block>
+  <block id="88248f0ac65beba333e31aa507b13202" category="inline-image-macro">Una schermata dei risultati per le risorse che soddisfano i criteri di ricerca dei tag.</block>
+  <block id="3e5ec3afb8a45d440659ebaabc265963" category="paragraph"><block ref="3e5ec3afb8a45d440659ebaabc265963" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fb5a5dce727f3d71f986467d11667dcb" category="paragraph">Se si desidera aggiungere altri criteri di ricerca, seguire nuovamente i passaggi da 3 a 6, quindi fare clic su *Cerca*.</block>
+  <block id="a6e513182fed1ef73b8c8b9327893161" category="section-title">Regole di ricerca</block>
+  <block id="b01996a98368a45c3a5d4d8738338eae" category="paragraph">Quando si definisce la ricerca, si applicano le seguenti regole:</block>
+  <block id="c3bdabf571c3082715580eb6be3e2ca2" category="list-text">Dopo aver scelto un tipo di risorsa, è possibile lasciare vuoti i campi Tag Key Field (campo chiave tag) e Tag Value (valore tag) se si desidera elencare tutte le risorse che hanno qualsiasi valore chiave e qualsiasi valore chiave.</block>
+  <block id="f9b300b7e39032247e57d7ad64986d1d" category="list-text">È possibile scegliere una singola ricerca oppure definire più ricerche per perfezionare i risultati nella sezione Resource.</block>
+  <block id="659ca7552f6a8fe6a78aea2256b3c46f" category="list-text">Quando si definiscono più set di criteri di ricerca:</block>
+  <block id="1545b6e4202e3be562a850752e48b452" category="list-text">Se i criteri per due ricerche sono relativi a diversi tipi di risorse, questa viene trattata come un'operazione "OR" e il risultato mostra le risorse di entrambe le ricerche. Ad esempio, la ricerca seguente restituisce tutti i volumi Azure NetApp Files con il valore del tag "ambiente:demo" e tutti i volumi Cloud Volumes ONTAP con il valore del tag "ambiente:demo".</block>
+  <block id="9213e2140560ed1d8608498467b31c23" category="paragraph"><block ref="9213e2140560ed1d8608498467b31c23" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bbaf8508cb8ab19b7d4c993760f453ae" category="list-text">Se i criteri per due ricerche sono per lo stesso tipo di risorsa, questa viene trattata come un'operazione "AND" e il risultato mostra solo le risorse che corrispondono a *entrambe* ricerche. Ad esempio, la ricerca seguente restituisce volumi Azure NetApp Files con il valore del tag "ambiente:demo" e "Gruppo:Finanza".</block>
+  <block id="8ae0853ee1ff58fc47451430f34aa261" category="paragraph"><block ref="8ae0853ee1ff58fc47451430f34aa261" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1e76587827a2c444b42731f500f5f7b9" category="list-text">Se sono stati definiti più criteri di ricerca e si decide di rimuoverne uno, fare clic su <block ref="45d4efe5d85352e2c35a12e8ace91564" category="inline-image-macro-rx" type="image"></block> Per rimuoverlo dall'area di ricerca.</block>
+  <block id="79eb09e7fc546bf99c72cd7650e9fbb4" category="section-title">Aggiungere tag alle risorse esistenti</block>
+  <block id="3e44cde650bf6f59b09127a99de693cc" category="paragraph">È possibile applicare tag a una singola risorsa o a più risorse. Le risorse potrebbero avere tag esistenti o non avere tag correnti.</block>
+  <block id="4b6fca08a3864d4de4c51a0388dbf758" category="inline-link-macro">Vedere l'elenco delle risorse che è possibile contrassegnare in questo momento.</block>
+  <block id="77d77a7d08e31270683303811b271c71" category="paragraph"><block ref="77d77a7d08e31270683303811b271c71" category="inline-link-macro-rx"></block></block>
+  <block id="0625a37343409c38dad5c4f59fbd1548" category="list-text">Dalla scheda *Tag*, creare i criteri di ricerca e fare clic su *Cerca*.</block>
+  <block id="073ac7d814e9437e4970cec883c2f383" category="list-text">Selezionare la risorsa o le risorse da contrassegnare.</block>
+  <block id="527c3932c7cf0390db001df885ea8f28" category="list-text">Per selezionare tutte le risorse della pagina, selezionare la casella nella riga del titolo (<block ref="b0be32365b13649b2a4ad63a5c5db9d7" category="inline-image-macro-rx" type="image"></block>).</block>
+  <block id="af03b66389cfbec8c481c73a89728046" category="list-text">Per selezionare più risorse, selezionare la casella corrispondente a ciascuna risorsa (<block ref="f3b0afa317fb06ade03449dd632d08e0" category="inline-image-macro-rx" type="image"></block>).</block>
+  <block id="cb5c297ef8dc3fe424475fa62b79e3e8" category="list-text">Per selezionare una singola risorsa, fare clic su <block ref="e7e0e095d9ce72479b1102c3b9ff5a5b" category="inline-image-macro-rx" type="image"></block> per la risorsa.</block>
+  <block id="cff1dfada6d6b7b98fd30ee02a0d1db9" category="inline-image-macro">Una schermata che mostra come selezionare una singola risorsa, più risorse o tutte le risorse.</block>
+  <block id="b57ec2fd08f04b37b6a4067b53b493c2" category="paragraph"><block ref="b57ec2fd08f04b37b6a4067b53b493c2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="953499073a80db33d37fc0e65d574cd3" category="list-text">Fare clic su *Manage Tags* (Gestisci tag) per visualizzare la finestra di dialogo _Resource Tags_. In questa finestra di dialogo verranno visualizzati tutti i tag esistenti.</block>
+  <block id="6628e1b5975a42c2be2ff5186caf860c" category="inline-image-macro">Una schermata che mostra la finestra di dialogo del tag delle risorse in cui è possibile visualizzare i tag attualmente assegnati e aggiungere nuovi tag.</block>
+  <block id="9a25b58325689888cd22d9f62778dd88" category="paragraph"><block ref="9a25b58325689888cd22d9f62778dd88" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1fb12afa3bbd8081db730626d9cf128e" category="list-text">Fare clic su *Add New Tag* (Aggiungi nuovo tag) per visualizzare una riga vuota di tag Key e Tag Value (valore tag) nella finestra di dialogo.</block>
+  <block id="c69b390a7a1622a148e2febd4ca307bf" category="list-text">Inserire la chiave del tag e il valore del tag. Aggiungere altri tag in questo momento se si desidera aggiungere altri tag a questa risorsa, quindi fare clic su *Review and Apply* (Rivedi e applica).</block>
+  <block id="fb8530a1e792fa11ae22927c4489794a" category="list-text">Se le modifiche sono corrette nella pagina _review_, fare clic su *Save* (Salva) per aggiungere il nuovo tag alla risorsa o a tutte le risorse selezionate.</block>
+  <block id="55b2371e859e7dd661d62883c0e93f48" category="section-title">Modificare i valori dei tag per una risorsa</block>
+  <block id="8500d002f3036b9ac76b10f3975fa5b6" category="paragraph">È possibile modificare i tag assegnati alle risorse e il valore del tag applicato a un tag esistente.</block>
+  <block id="c6d44c78dac6303ee6c3d0525ffa451c" category="list-text">Selezionare la risorsa o le risorse su cui si desidera modificare i tag.</block>
+  <block id="96be093270f8207adaa28aaa45ee837b" category="list-text">Fare clic su *Manage Tags* (Gestisci tag) per visualizzare la finestra di dialogo _Resource Tags_.</block>
+  <block id="1400af94919e7ee1a09ca726e8b85d80" category="inline-image-macro">Una schermata che mostra come modificare un tag da una risorsa o da più risorse.</block>
+  <block id="ad331f4f30c579537be3c11e0e0dc081" category="paragraph"><block ref="ad331f4f30c579537be3c11e0e0dc081" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac9723812108c87763a081c3ff4f1c08" category="list-text">Inserire un nuovo valore per il valore del tag e fare clic su *Review and Apply* (Rivedi e applica).</block>
+  <block id="4cb2f4e76ebfa58ef36c58684a15abd0" category="list-text">Se la modifica appare corretta nella pagina _review_, fare clic su *Save* e il valore del tag viene modificato per la risorsa o per tutte le risorse selezionate.</block>
+  <block id="06b4175113796fd327444f906e00e5b0" category="section-title">Eliminare i tag dalle risorse</block>
+  <block id="a3b429240e21705b5497678d9a1a450d" category="paragraph">È possibile eliminare una coppia tag key/value da una singola risorsa o da più risorse.</block>
+  <block id="442b989d73b53c1398a30d27048bd411" category="list-text">Selezionare la risorsa o le risorse da cui si desidera rimuovere i tag.</block>
+  <block id="25aa36d137bcf84c1df93b9abee71af1" category="inline-image-macro">Una schermata che mostra come eliminare un tag da una risorsa o da più risorse.</block>
+  <block id="01c2aeb5ca936bbe9aa0ad9699706a64" category="paragraph"><block ref="01c2aeb5ca936bbe9aa0ad9699706a64" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c2b9a18179af322bffbbd1fc093f0e6a" category="list-text">Fare clic su <block ref="ccf4df3a8e9a80d7b6ff904049041296" category="inline-image-macro-rx" type="image"></block> Per la coppia tag key/value che si desidera eliminare e la riga viene rimossa, quindi fare clic su *Review and Apply* (Rivedi e applica).</block>
+  <block id="6f195138d995bb3980eb20df6cd6b372" category="list-text">Se la modifica appare corretta nella pagina _review_, fare clic su *Save* (Salva) e la coppia tag key/value viene rimossa dalla risorsa o da tutte le risorse selezionate.</block>
+  <block id="2603b912f5fde0329947b49c922b5a4d" category="summary">Seleziona uno dei modelli applicativi creati dalla tua organizzazione per creare ambienti di lavoro o volumi ottimizzati per carichi di lavoro e applicazioni specifici. I modelli consentono inoltre di attivare il backup e ripristino BlueXP, la classificazione BlueXP e la replica BlueXP (SnapMirror) sui volumi o sui volumi esistenti.</block>
+  <block id="2d26910773af1a0f9d4d48400c5c93b1" category="doc">Creare o modificare le risorse utilizzando i modelli</block>
+  <block id="9ca35cb1b30a084cd819111a15c64e77" category="paragraph">Seleziona uno dei modelli applicativi creati dalla tua organizzazione per creare ambienti di lavoro o volumi ottimizzati per carichi di lavoro e applicazioni specifici. I modelli consentono inoltre di attivarli<block ref="2b39f52a9715f26b8fe862bdca0f5ff1" category="inline-link-rx"></block>,<block ref="2c710310de596aa5a81877d014205606" category="inline-link-rx"></block>, e.<block ref="85f98efc20d83de4c171ca5859337904" category="inline-link-rx"></block> sui volumi creati o sui volumi esistenti.</block>
+  <block id="5f29105c4fcb4fd7664c9b573f2325b4" category="paragraph">I modelli consentono di creare volumi per sistemi Cloud Volumes ONTAP, Azure NetApp Files e ONTAP on-premise.</block>
+  <block id="e0fb2c2abefd11630ebc42b8a6eb3570" category="list-text">Prima di creare un volume per un sistema Cloud Volumes ONTAP, ONTAP on-premise o Azure NetApp Files utilizzando un modello, assicurarsi di avere accesso a un ambiente di lavoro appropriato in cui verrà implementato il volume.</block>
+  <block id="7753d3ec576dc9efc0f80fc6b9f48f97" category="list-text">Se il modello attiva un servizio cloud sul volume, ad esempio<block ref="2b39f52a9715f26b8fe862bdca0f5ff1" category="inline-link-rx"></block> oppure<block ref="2c710310de596aa5a81877d014205606" category="inline-link-rx"></block>, assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.</block>
+  <block id="a687989eefccb6d7024bfaee46859103" category="paragraph">Selezionare *Health &gt; Remediation* (Salute &gt; rimedio) e fare clic sulla scheda *Templates* (modelli).</block>
+  <block id="8798137d952922eb0808160ad81122c0" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Creare la risorsa eseguendo il modello e definendo i parametri</block>
+  <block id="8e11a084ad23a73bf5ea573d54dded8e" category="paragraph">Selezionare il modello, fare clic su *Esegui modello* e immettere i valori nei campi modificabili per creare la risorsa.</block>
+  <block id="72e3ca24265542fce89dd834f12f4619" category="list-text">Quando si crea un volume Cloud Volumes ONTAP, assicurarsi di disporre di un ambiente di lavoro Cloud Volumes ONTAP.</block>
+  <block id="be34f1201bb3e74c3a66c39a92d09bee" category="list-text">Quando si crea un volume ONTAP on-premise, assicurarsi di disporre di un ambiente di lavoro ONTAP on-premise.</block>
+  <block id="05c907c9bac7ddec874ec0fcb09aad0c" category="list-text">Quando si crea un volume Azure NetApp Files, assicurarsi di disporre di un ambiente di lavoro Azure NetApp Files.</block>
+  <block id="07975f258f3cd721da70af18c68fa13b" category="list-text">Se il modello attiva un servizio cloud sul volume, ad esempio <block ref="2b39f52a9715f26b8fe862bdca0f5ff1" category="inline-link-rx"></block>,<block ref="2c710310de596aa5a81877d014205606" category="inline-link-rx"></block>, o.<block ref="85f98efc20d83de4c171ca5859337904" category="inline-link-rx"></block>, assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.</block>
+  <block id="b2da214653ffb084521bfa6c178ff811" category="section-title">Selezionare ed eseguire un modello di volume</block>
+  <block id="7e74b3cdfd5537c5b51af1069f462892" category="paragraph">Esistono diversi modi per selezionare ed eseguire un modello per creare nuovi volumi:</block>
+  <block id="41ff95e1ea070071cb2436d312ea3115" category="list-text">Eseguire il modello di volume dall'ambiente di lavoro</block>
+  <block id="7d732f0050089fa03a5ccaf0ef3972e8" category="list-text">Eseguire il modello di volume dalla dashboard modelli</block>
+  <block id="2b408048493f7891ab8a18339cbef7b1" category="paragraph">Indipendentemente dal metodo scelto, i dettagli sui parametri del volume richiesti da definire sono disponibili nelle seguenti sezioni:</block>
+  <block id="1d4cf496ca25a3cab66cbc73d2b1c000" category="inline-link">Come eseguire il provisioning dei volumi Cloud Volumes ONTAP</block>
+  <block id="2be95708ec7ad744a5fa35812c4330a3" category="list-text"><block ref="2be95708ec7ad744a5fa35812c4330a3" category="inline-link-rx"></block></block>
+  <block id="96483bf24dd5d282884c28a8c230bfde" category="inline-link">Come eseguire il provisioning dei volumi Azure NetApp Files</block>
+  <block id="ed7e85ad682d7c827abfc065cc610813" category="list-text"><block ref="ed7e85ad682d7c827abfc065cc610813" category="inline-link-rx"></block></block>
+  <block id="df4a9164b01ccf35f74c9520638ad0b7" category="inline-link">Come eseguire il provisioning dei volumi ONTAP on-premise</block>
+  <block id="4bf3ac864f59b573779a4b8a188e0a66" category="list-text"><block ref="4bf3ac864f59b573779a4b8a188e0a66" category="inline-link-rx"></block></block>
+  <block id="c07fd60a71244d7a4ab72c83beb068d6" category="section-title">Eseguire un modello di volume dall'ambiente di lavoro</block>
+  <block id="2342f0281f4d2a90f7477ed651c18e7f" category="paragraph">È possibile aggiungere un volume a un ambiente di lavoro esistente dalla pagina _Working Environment_ e dalla pagina _Volume Details_.</block>
+  <block id="847533f76f2539591f2ed541ef5ef72e" category="list-text">Dalla pagina _Working Environment_ o dalla pagina _Volume Details_, fare clic su *Add Volume from Template* (Aggiungi volume da modello).</block>
+  <block id="0ac913640e05ca365f5a393962934e01" category="inline-image-macro">Due screenshot che mostrano come gli utenti possono creare nuovi volumi da un modello.</block>
+  <block id="2d892e3cbbb0b29eb197061deb0539cd" category="paragraph"><block ref="2d892e3cbbb0b29eb197061deb0539cd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="866e23a1c4ed5bf233d7e358044b8e25" category="paragraph">Viene visualizzata la _dashboard modelli_ che elenca solo i modelli applicabili all'ambiente di lavoro selezionato, ad esempio mostra solo i modelli Cloud Volumes ONTAP.</block>
+  <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">Icona Altro</block>
+  <block id="0107b14a93ef1d128a47eab0a257362b" category="list-text">Fare clic su <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> E *Esegui modello*.</block>
+  <block id="ef7dd761a51f95d983604b03095ba47b" category="inline-image-macro">Una schermata che mostra come eseguire un modello dalla dashboard modelli.</block>
+  <block id="764523b69b476a762d8f6178a65eee14" category="paragraph"><block ref="764523b69b476a762d8f6178a65eee14" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f505856a4a971e934b73488d7faffec5" category="paragraph">Viene visualizzata la pagina _Add Volume from Template_.</block>
+  <block id="190737142dd783de87873656b362e980" category="list-text">Immettere i valori nei campi modificabili per creare il volume e fare clic su *Esegui modello*.</block>
+  <block id="6e3b3a4e03da2c7a0fbae4147925038b" category="inline-image-macro">Una schermata che mostra i parametri da definire per creare il volume da un modello.</block>
+  <block id="3e4296163753c591705e041795661a6c" category="paragraph"><block ref="3e4296163753c591705e041795661a6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="29dfbe5727531f456e16c418443650fb" category="section-title">Eseguire un modello di volume dalla dashboard modelli</block>
+  <block id="79a5be6184496e04a800701c03275ada" category="paragraph">È possibile aggiungere un volume a un ambiente di lavoro esistente dalla _dashboard modelli_.</block>
+  <block id="ab5def1a97337779a1bc393108327177" category="paragraph">Viene visualizzata la _Dashboard modelli_.</block>
+  <block id="596f8bd98917485511472f81dd61ef9e" category="list-text">Per il modello che si desidera utilizzare, fare clic su <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> E *Esegui modello*.</block>
+  <block id="034adad7c67d2e9a9dd3a8019b40eb84" category="paragraph"><block ref="034adad7c67d2e9a9dd3a8019b40eb84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a918532ef256d4238d742eaee5308f7f" category="paragraph">Viene visualizzata la pagina _Run Template_.</block>
+  <block id="80ff21e45244c476e2be6b71de223d38" category="list-text">Immettere i valori nei campi modificabili per creare il volume e fare clic su *Esegui modello*.</block>
+  <block id="dbe672112d3378110db8fa7757b6ec30" category="paragraph"><block ref="dbe672112d3378110db8fa7757b6ec30" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0008e4b80c15d6d38bd1f6234a51330c" category="paragraph">Quando si esegue il modello dalla dashboard, è necessario selezionare l'ambiente di lavoro e altre variabili (ad esempio, la VM di storage e/o l'aggregato). Quando si esegue il modello dall'ambiente di lavoro, l'ambiente di lavoro viene compilato automaticamente.</block>
+  <block id="9ab493f5de85b8e5a3705fe61fdf293d" category="section-title">Selezionare ed eseguire un modello di ambiente di lavoro</block>
+  <block id="01a2a85f3cd4ec0dcb3da1124102db42" category="paragraph">È possibile creare un nuovo ambiente di lavoro dalla _Dashboard modelli_ se l'azienda ha creato un modello per questa funzionalità.</block>
+  <block id="6602afb860a6cca23c3b75bf601365eb" category="inline-link">Avvio di Cloud Volumes ONTAP in AWS</block>
+  <block id="03fdeb1a058aa425a68019c66e34e6ca" category="paragraph">In caso di domande sui dettagli necessari per creare l'ambiente di lavoro, vedere<block ref="497bfdbba9caf2f6a6f7d799eda40dc3" category="inline-link-rx"></block>.</block>
+  <block id="6195381a3e6e204f9315912ad2e31d58" category="paragraph"><block ref="6195381a3e6e204f9315912ad2e31d58" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4532596496eaadd10e82985d53d942d9" category="list-text">Immettere i valori nei campi modificabili per creare l'ambiente di lavoro e il primo volume, quindi fare clic su *Esegui modello*.</block>
+  <block id="f208614ddd4a42d1fe01800107447f9d" category="inline-image-macro">Una schermata che mostra i parametri da definire per creare l'ambiente di lavoro da un modello.</block>
+  <block id="c1f52c2315cb68ab5da30355d493efa8" category="paragraph"><block ref="c1f52c2315cb68ab5da30355d493efa8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="798178653cd4f1b33a2dc3600f51d489" category="section-title">Selezionare ed eseguire un modello che trovi le risorse esistenti</block>
+  <block id="51fa4f80c02ff60f7bc1abbc7d99d4bc" category="paragraph">Se l'azienda ha creato un modello che utilizza questa funzionalità, è possibile eseguire un modello per individuare determinate risorse (ad esempio, i volumi) e attivare un servizio cloud su tali risorse (ad esempio, backup e ripristino BlueXP). Quando si esegue il modello, è possibile apportare alcune modifiche di lieve entità in modo da applicare il servizio cloud solo alle risorse appropriate.</block>
+  <block id="f256ffa6b4a4136dfb85dcf69983ada2" category="paragraph"><block ref="f256ffa6b4a4136dfb85dcf69983ada2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="026ba222ebdf2fd2c82a0d12c610c566" category="paragraph">Viene visualizzata la pagina _Run Template_ che esegue immediatamente la ricerca definita nel modello per trovare i volumi corrispondenti ai criteri.</block>
+  <block id="89c185a4d78a8567859db775ed13246b" category="list-text">Visualizzare l'elenco dei volumi restituiti nell'area _Volume Results_.</block>
+  <block id="b1fcd481a40253a09785803da0077de9" category="inline-image-macro">Una schermata che mostra come i volumi restituiti dai criteri di ricerca Find Resource.</block>
+  <block id="1dc5726bf39154cb21baff6b494f9fad" category="paragraph"><block ref="1dc5726bf39154cb21baff6b494f9fad" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="44af46a339b6fd8425ddaac900e73f6f" category="list-text">Se i risultati sono quelli previsti, selezionare la casella di controllo per ciascun volume per il quale si desidera attivare il backup e il ripristino di BlueXP utilizzando i criteri della sezione _Enable Cloud Backup on Volume_ del modello e fare clic su *Run Template* (Esegui modello).</block>
+  <block id="f3b757371a9961d5ce7c320198eb268b" category="paragraph">Se i risultati non sono quelli previsti, fare clic su <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> Accanto a _Criteri di ricerca_ e perfezionare ulteriormente la ricerca.</block>
+  <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">Risultati</block>
+  <block id="08ea921bf1012f71a17a32a3fc1b9db6" category="paragraph">Il modello verrà eseguito e attiverà il backup e il ripristino BlueXP su ciascun volume controllato in base ai criteri di ricerca.</block>
+  <block id="ad065cba81dd0205f37aa602c122c6aa" category="paragraph">Qualsiasi errore verrà richiamato nella pagina _esecuzione del modello_ ed è possibile risolvere i problemi, se necessario.</block>
+  <block id="ff1a821ec32f5470f851de8ef3edd6a9" category="summary">Il servizio di correzione BlueXP (AppTemplate) consente di standardizzare la creazione di risorse per gli ambienti di lavoro BlueXP.</block>
+  <block id="510f57bbfca743348ff245cb08dc02e3" category="doc">Documentazione di risoluzione dei problemi BlueXP</block>
+  <block id="f3fb1dceef01486d91492939582c9e23" category="summary">Scopri le novità di BlueXP: Rimediation and Tagging.</block>
+  <block id="a8d3fe6a91db602634ae243a55423c5f" category="doc">Novità di BlueXP: Soluzioni e tagging</block>
+  <block id="983a4e7f5913304ec713a249baf7be47" category="section-title">3 marzo 2022</block>
+  <block id="400480e0d45c783abec0a0fffbb005a6" category="section-title">Ora puoi creare un modello per trovare ambienti di lavoro specifici</block>
+  <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link">Fai clic qui per ulteriori informazioni</block>
+  <block id="d92cd2c19989d78fa305aa796b16eb3e" category="paragraph">Utilizzando l'azione "trova risorse esistenti" è possibile identificare l'ambiente di lavoro e utilizzare altre azioni modello, come la creazione di un volume, per eseguire facilmente azioni sugli ambienti di lavoro esistenti.<block ref="9d92075da3fbaa4669bd5d845665bbc5" category="inline-link-rx"></block>.</block>
+  <block id="411448f8702bbfa858b0a2ba2ee94014" category="section-title">Possibilità di creare un ambiente di lavoro Cloud Volumes ONTAP ha in AWS</block>
+  <block id="6eed6fdcaa0bf2c22f0c8e78ff686d29" category="inline-link">Scopri come creare un modello per un ambiente di lavoro Cloud Volumes ONTAP</block>
+  <block id="9f1c9f721b531a16a189c619276f3969" category="paragraph">Il supporto esistente per la creazione di un ambiente di lavoro Cloud Volumes ONTAP in AWS è stato ampliato per includere la creazione di un sistema ad alta disponibilità oltre a un sistema a nodo singolo.<block ref="35471ca8d19c78b8fa96525b636e5efc" category="inline-link-rx"></block>.</block>
+  <block id="17fc50243c5a80f407e83d268bcab18e" category="section-title">9 febbraio 2022</block>
+  <block id="f1f7e50301c1e57e30e795fa8928ee8f" category="section-title">Ora puoi creare un modello per trovare volumi specifici esistenti e abilitare il Cloud Backup</block>
+  <block id="98b343467576e58f6658965bc67f83c1" category="paragraph">Utilizzando la nuova azione "Find Resource" è possibile identificare tutti i volumi su cui si desidera attivare Cloud Backup, quindi utilizzare l'azione Cloud Backup per abilitare il backup su tali volumi.</block>
+  <block id="12c7b4f361520fac32769892a3adb104" category="paragraph">Il supporto attuale è per i volumi su sistemi Cloud Volumes ONTAP e ONTAP on-premise.<block ref="cf92aa38511759ce0275086447e2bfa9" category="inline-link-rx"></block>.</block>
+  <block id="784044bd2af30d58bbb0dbcea3adbad6" category="section-title">31 ottobre 2021</block>
+  <block id="70c889b200c3ef8dbb491ca542d1d091" category="section-title">Ora puoi contrassegnare le tue relazioni di sincronizzazione in modo da poterle raggruppare o classificare per un facile accesso</block>
+  <block id="049ebb609707e4c76f578eb98777ffdc" category="inline-link">Scopri di più sull'etichettatura delle risorse</block>
+  <block id="00b4c4979fe8d65dc663ea7c82a1b1c2" category="paragraph"><block ref="ddc85a18edb3f9e32810e603b7ef9eb7" category="inline-link-rx"></block>.</block>
+  <block id="cfd52dcb30bb7d2ea88bc2c66e2ccc0f" category="summary">BlueXP consente di applicare tag alle risorse _esistenti_ per organizzare e gestire tali risorse. I tag sono metadati che è possibile utilizzare per raggruppare le risorse per identificare applicazioni, ambienti, regioni, codici di fatturazione, cloud provider, e molto altro ancora.</block>
+  <block id="bed434cdb82938c37e10ec775ee39334" category="doc">Scopri di più sull'etichettatura</block>
+  <block id="40fa3ed3deb11f4523fb01c3e53cd533" category="paragraph">I tag sono costituiti da un *tag key* e da un *tag value*. Ad esempio, è possibile creare una chiave di tag denominata "ambiente" e aggiungere i valori di tag "produzione" e "Test". Una volta applicate alle risorse, è possibile cercare e visualizzare rapidamente le risorse corrispondenti alla coppia chiave/valore.</block>
+  <block id="8b560c81adceb205c323088796c3a9c7" category="inline-link-macro">Modelli BlueXP creati</block>
+  <block id="2e163db3e69e348e895ac4042c0f4c9c" category="paragraph">Quando si crea un ambiente di lavoro o un volume Azure NetApp Files, è possibile aggiungere coppie tag key/value alle _nuove_ risorse. È inoltre possibile definire le coppie di tag chiave/valore in <block ref="cf5b7c6993b005a6e69e2b6094f6daa8" category="inline-link-macro-rx"></block> Per gli amministratori dello storage e i tecnici DevOps.</block>
+  <block id="126a062727c3057b3a937eb69aaa1597" category="paragraph">È possibile aggiungere nuovi tag utilizzando il servizio Tagging ed è possibile modificarli o eliminarli.</block>
+  <block id="5e30e27f68a75ca7a2e3182f2dd12b16" category="paragraph">Il servizio Tagging offre le seguenti caratteristiche e vantaggi:</block>
+  <block id="3ea3f03a9826c525b7f8e89cf5f45bb0" category="list-text">Creare chiavi di tag e valori di tag che corrispondano ai termini utilizzati nell'ambiente</block>
+  <block id="39aff6391798a3cbbbd4f8b8cd74dc8c" category="list-text">Organizza le risorse nel tuo ambiente per semplificare il monitoraggio e la gestione</block>
+  <block id="9a9d09dff347b4f762cb3ea1cb1761a1" category="list-text">Aggiungere, rimuovere e modificare le chiavi dei tag e i valori dei tag in base al tipo di risorsa</block>
+  <block id="4aeb19e9643ca4bd7c08134d7f5d73ad" category="list-text">Assegnare tag alle risorse e alle risorse ONTAP nel proprio ambiente da AWS e Azure.</block>
+  <block id="7ed5899669a5929914b723a2baef182d" category="paragraph">La possibilità di assegnare tag alle risorse non richiede alcuna licenza ed è libera di essere utilizzata da tutti gli utenti BlueXP con il ruolo account Admin o Workspace Admin.</block>
+  <block id="9b3643d929067c43445625ecc4b23130" category="section-title">Risorse che è possibile contrassegnare</block>
+  <block id="b087cfd5a6751cde85bc43abdbea1db3" category="paragraph">È possibile applicare tag alle seguenti risorse.</block>
+  <block id="27703c8f150ac4bb0a3a83a7857353af" category="cell">Provider</block>
+  <block id="c2ba7e785c49050f48da9aacc45c2b85" category="cell">Servizio</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">Risorsa</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="cell">Cloud Volumes ONTAP</block>
+  <block id="4d69d42719426a48d653efcd0d9add65" category="cell">Volume di storage VM aggregato</block>
+  <block id="342ce22b061856522db3129652a55efb" category="cell">ONTAP on-premise</block>
+  <block id="bd7a9717d29c5ddcab1bc175eda1e298" category="cell">Volume</block>
+  <block id="808c50beba133531e42fe04b9b13b86d" category="cell">NetApp-Service</block>
+  <block id="d8e87c0927539672f54462c837be0b7f" category="cell">Sincronizza</block>
+  <block id="fbc97786af4bf30dc5b07809a950792c" category="cell">Relazione</block>
+  <block id="81b22456f78954c460ce2f531b5e048f" category="cell">EC2</block>
+  <block id="44418c8dd436ba2904b49d544d4c90b8" category="cell">Volume subnet VPC del gruppo di sicurezza dell'istanza</block>
+  <block id="a623a8d0366bf079411aa30be45b2d10" category="cell">Calcolo</block>
+  <block id="0f8732d258fffa0be0320d1a4e5bdccb" category="cell">Macchina virtuale Snapshot</block>
+  <block id="eec89088ee408b80387155272b113256" category="cell">Rete</block>
+  <block id="6c096562a66b477196cc713915b16952" category="cell">Rete virtuale del gruppo di sicurezza</block>
+  <block id="dd23acac46f17cbfd4d5541f8ee3c7a1" category="cell">Gruppo di risorse</block>
+  <block id="8c4aa541ee911e8d80451ef8cc304806" category="cell">Storage</block>
+  <block id="add55592acf21be3b81edc0cbd46b3c5" category="cell">Account storage</block>
+  <block id="d9a17c1c9e8ef6866e4dbeef41c741b2" category="cell">Istanza</block>
+  <block id="30edf70db68aa84f05d3e72326807b0c" category="cell">Bucket</block>
+  <block id="aa00eddbc27bae0a6cb4210ab565c4df" category="paragraph">Per informazioni sui tag AWS EC2, fare riferimento a.<block ref="9bd250e03cdf80384a24635f16673602" category="inline-link-rx"></block>.</block>
+  <block id="d25af39a1cc1d41b4b78226055c6969d" category="inline-link">Documentazione di Azure: Tagging delle risorse Azure</block>
+  <block id="cd3891a596fb71f2018f9febccdc9311" category="paragraph">Per informazioni sui tag Azure, fare riferimento a.<block ref="132818a7eea2f1dd8c5e1c57244359ed" category="inline-link-rx"></block>.</block>
+  <block id="044bd5bc02d27eb17ed3cc5a11be4f3b" category="inline-link">Documentazione Google Cloud: Contrassegno delle risorse Google Cloud</block>
+  <block id="3b0992b7e8536fc1e15651502081b6e6" category="paragraph">Per informazioni sulle etichette Google, fare riferimento a.<block ref="5b102b4e66babd115f4b84c9458d0cfc" category="inline-link-rx"></block>.</block>
+  <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="section-title">Prerequisiti</block>
+  <block id="2e555eb89efbc4fa0651bd1f644cf78e" category="section-title">Verificare le autorizzazioni di AWS Connector</block>
+  <block id="d912e080eacd169b9c6ec8ad804b0fe2" category="paragraph">Se il connettore è stato creato utilizzando BlueXP versione 3.9.10 o successiva, l'impostazione è completa. Se il connettore è stato creato utilizzando una versione precedente di BlueXP, è necessario aggiungere alcune autorizzazioni necessarie per il ruolo BlueXP IAM per contrassegnare le istanze di AWS EC2:</block>
+  <block id="f684df81e4cb924eb887af3d63731c28" category="section-title">Verificare le autorizzazioni di Azure Connector</block>
+  <block id="61e852c379d0f3c7c2f47bcd0152539d" category="paragraph">Se il connettore è stato creato utilizzando BlueXP versione 3.9.10 o successiva, l'impostazione è completa. Se il connettore è stato creato utilizzando una versione precedente di BlueXP, è necessario aggiungere alcune autorizzazioni necessarie per il ruolo IAM dell'operatore BlueXP per contrassegnare le risorse Azure:</block>
+  <block id="2a6cf45576e45e1753cb8e4a3218f9bf" category="section-title">Regole e restrizioni sui tag</block>
+  <block id="310e25dd524b7da8c8ff6eb8edf50e5f" category="paragraph">Quando si creano le chiavi dei tag e i valori dei tag, si applicano le seguenti regole:</block>
+  <block id="47c6baf2a93fb70987f8d50230d68450" category="list-text">Lunghezza massima della chiave: 128 caratteri</block>
+  <block id="00b61ace6d8de8337a462fc4b2ca3c47" category="list-text">Lunghezza massima del valore della chiave: 256 caratteri</block>
+  <block id="ccf8bf5880815b88f3f09c36d316225e" category="list-text">Caratteri tag e tag validi: Lettere, numeri, spazi e caratteri speciali (_, @, &amp;, *, ecc.)</block>
+  <block id="451514576a381fcadab95c07d22ca563" category="list-text">I tag sono sensibili al maiuscolo/minuscolo.</block>
+  <block id="392a91200b1b67f84f30feca1ddfdf35" category="list-text">Numero massimo di tag per risorsa: 30</block>
+  <block id="377d030d59bcd66d28017369cb57f768" category="list-text">Per ogni risorsa, ogni chiave di tag deve essere univoca</block>
+  <block id="ddddcee4ac303defe9ce2211f2d4acc6" category="section-title">Esempi di tag</block>
+  <block id="897356954c2cd3d41b221e3f24f99bba" category="cell">Chiave</block>
+  <block id="c82a6100dace2b41087ba6cf99a5976a" category="cell">Valori</block>
+  <block id="aa9f9a8454a370443372f6259447844e" category="cell">Env</block>
+  <block id="0c36db035cf92c76b7ade068ae9b8d68" category="cell">test di produzione</block>
+  <block id="269e78d1f721be5126be1f09bb4b091b" category="cell">Dal</block>
+  <block id="f6ab9ceccae969405a9121790a11420d" category="cell">eng. vendite finanziarie</block>
+  <block id="b6f4a2ec6356bbd56d49f2096bf9d3d3" category="cell">Proprietario</block>
+  <block id="329185ee9cca0721a94429c99d157bdf" category="cell">storage di amministrazione</block>
+  <block id="f56a22734fbef43dcef97b492e9cd352" category="summary">Esistono alcune funzionalità che è possibile utilizzare per la creazione di un modello che consentono di passare valori tra azioni (ad esempio un nome di volume), diramazioni condizionali per la connessione di azioni (abilitare i backup su un nuovo volume) e che consentono agli utenti di personalizzare le risorse quando si utilizza il modello.</block>
+  <block id="889ecb758e53f24c9efd4553bc09c14a" category="doc">Blocchi di base del modello</block>
+  <block id="4312f94678a5f3a99677eff317710d96" category="section-title">Controlli speciali del modello</block>
+  <block id="d5e78bfdae44e43da50bb405d5cd401f" category="paragraph">Prima di iniziare a creare il modello, è necessario comprendere alcune opzioni speciali che è possibile impostare durante la pre-compilazione di un valore per un parametro in un modello.</block>
+  <block id="f7951f72b872a8abe85b8d46142331e7" category="inline-image-macro">Una schermata delle opzioni modificabili e modificabili che è possibile impostare per i valori dei parametri.</block>
+  <block id="f20206d79ec146d281beed50d8e29708" category="paragraph"><block ref="f20206d79ec146d281beed50d8e29708" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="92c1f46b9da02a5d7bbcff6543bd9588" category="section-title">Casella di controllo modificabile</block>
+  <block id="3f8e4e6365aa394b3479fdef75fe9f72" category="paragraph">Selezionare questa casella per consentire all'amministratore dello storage di eseguire l'override del valore precompilato immesso nel modello. In questo modo, l'amministratore dello storage può fornire un suggerimento per il valore da utilizzare, ma può personalizzare il valore durante la creazione della risorsa.</block>
+  <block id="c1740fe5b39f93f6c892f09718e037b2" category="paragraph">Se deselezionata, l'utente non può modificare il valore e il valore hard-coded nel modello viene sempre utilizzato quando l'amministratore implementa una risorsa.</block>
+  <block id="c476134c72fb48531290a4040a823edc" category="section-title">Casella di controllo di spostamento</block>
+  <block id="d2d3ce785dba13fa31c8dfdc4f170942" category="paragraph">Selezionare questa casella per consentire a BlueXP di monitorare il valore hard-coded immesso per un parametro quando viene creata una risorsa con il modello. In seguito, è possibile eseguire un report di spostamento per verificare quali campi configurati con Drift non sono più conformi alle impostazioni del modello.</block>
+  <block id="b24825d81b9d78c2ec0b3766ce0f0e29" category="paragraph">Se deselezionata, l'utente può modificare il valore in qualsiasi valore dopo la creazione della risorsa.</block>
+  <block id="dc61d8962272ba87fc289d3611028a92" category="admonition">Affinché la funzione di deriva funzioni, dopo aver definito la deriva per alcuni parametri nel modello, è necessario attivare la funzione di deriva per il modello. Questa è l'ultima fase della creazione di un modello. La deriva non funziona se è abilitata per un parametro ma non è stata abilitata sul modello.</block>
+  <block id="14425fa948dd33c64b1ac596d827664d" category="section-title">Utilizzando un'espressione regolare (regex) nei campi</block>
+  <block id="789deba0d8cee492441e0edbdd3b1443" category="paragraph">All'interno dei modelli sono presenti alcuni campi che consentono di inserire un regex per definire il valore che l'amministratore può inserire nel campo, ad esempio "Nome volume" e "Nome condivisione".</block>
+  <block id="92d0236acb01b23304b36e13b20df879" category="inline-image-macro">Schermata dell'utilizzo di un regex per definire i valori consentiti per un nome di volume.</block>
+  <block id="8618076424bfb56bff4b8d378642afb7" category="paragraph"><block ref="8618076424bfb56bff4b8d378642afb7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd79c94f5c040103b6ee92a27142a209" category="paragraph">Ad esempio, se si immette "^[a-za-Z][0-9a-za-Z_]{0,149}" come regex per il nome del volume, significa che "_il nome deve iniziare con un carattere alfabetico, può contenere solo numeri, lettere o il carattere di sottolineatura e deve essere di 150 o meno caratteri_".</block>
+  <block id="d9b7b2a8c18514b566365444476ee67b" category="section-title">Passare i valori tra le azioni del modello</block>
+  <block id="67fcd325c1008f4842433ab60267ce04" category="paragraph">I modelli hanno la possibilità di utilizzare le informazioni di un'azione precedente per popolare un campo in un'azione futura. Ad esempio, quando si definisce il nome del volume su cui sarà attivata la funzionalità di backup e ripristino di BlueXP, è possibile richiedere all'azione di backup di utilizzare il valore immesso dall'amministratore dello storage come nome del volume dall'azione Create Cloud Volumes ONTAP.</block>
+  <block id="1414dbf601cc2d8b389d90d0181fa2f3" category="paragraph">Il servizio di risoluzione dei problemi BlueXP può utilizzare tre tipi di informazioni:</block>
+  <block id="79bc4a04a5f308a67f608558bf0e314a" category="list-text">Valore di input - valore effettivo immesso dall'amministratore dello storage in un campo in un'azione modello precedente.</block>
+  <block id="362fe13e1711f8ee61db2bea123b8a0d" category="list-text">Valore di output - valore generato da BlueXP dopo la creazione di una risorsa da un'azione modello precedente.</block>
+  <block id="cb1be534cc7a13fb27acf340f07c83b6" category="list-text">Inserire il proprio valore - si tratta di un valore inserito; non è possibile accedervi da un'azione precedente nel modello.</block>
+  <block id="13d21f84cc6b91e10f2cd7acb6c7bdac" category="paragraph">Ad esempio, per abilitare la scansione di conformità su un volume, il servizio di classificazione BlueXP richiede sia il "nome del volume" inserito dall'amministratore dello storage (il valore Input) sia il "uid del volume" generato da BlueXP quando crea il volume (il valore Output).</block>
+  <block id="4034767319b5f3df4aea5544dd69e564" category="paragraph">L'illustrazione seguente mostra come inserire queste informazioni nella sezione azione di classificazione BlueXP del modello.</block>
+  <block id="a4d99746ded90308d15ecf5dc8850229" category="inline-image-macro">Un'illustrazione che mostra come utilizzare un valore inserito in un'azione precedente per popolare un campo in un'altra azione.</block>
+  <block id="eefa405d25c68122a3d10c7be99b3fed" category="paragraph"><block ref="eefa405d25c68122a3d10c7be99b3fed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1e7ffb254a56e57a7a94185e202f98b7" category="section-title">Utilizzare le condizioni per eseguire diverse azioni in base alle istruzioni logiche</block>
+  <block id="933e850f0252230afcc3081c478f82cb" category="paragraph">Le condizioni indicano al modello di eseguire diverse azioni a seconda che la condizione sia vera o falsa quando l'amministratore dello storage esegue il modello. Per aggiungere una condizione, selezionare l'azione *Logical If*:</block>
+  <block id="80f465f960c99f0bf9c9dda68bd2ff80" category="inline-image-macro">Una schermata che illustra come aggiungere istruzioni condizionali nei modelli.</block>
+  <block id="2f732de965d52c1cf23ba8cc9dbdc7b1" category="paragraph"><block ref="2f732de965d52c1cf23ba8cc9dbdc7b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5e78b88524f6c807a9f2ad88b3f0fb57" category="paragraph">Ad esempio, se un volume ha una capacità superiore a 50 GB, potrebbe essere necessario attivare il backup e il ripristino di BlueXP su tale volume. Se il volume ha una capacità inferiore, il backup e ripristino BlueXP non è attivato. È possibile implementare questa operazione nel modello come illustrato di seguito.</block>
+  <block id="33c54d424758d4a84004512c33514f85" category="inline-image-macro">Una schermata che mostra come le condizioni possono essere utilizzate nel modello per attivare in modo condizionale il backup e il ripristino di BlueXP.</block>
+  <block id="140d54cd657106e902568fa28a521cf1" category="paragraph"><block ref="140d54cd657106e902568fa28a521cf1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d94635611474af73ec85b190b28449bd" category="paragraph">Le condizioni sono composte da due parti:</block>
+  <block id="01928da743a4e955b96a5b859c5f4bc4" category="list-text">Rules (regole) - l'elemento che si sta verificando è vero o falso.</block>
+  <block id="07876d2610f838d9cb19ae7aeadd98be" category="list-text">E/o dichiarazione - consente di utilizzare più regole per perfezionare ulteriormente l'aggiunta di ulteriori azioni.</block>
+  <block id="c962626fb4ad9b65cc3a4217695f094c" category="paragraph">Una regola è composta da tre parti:</block>
+  <block id="7960c7072233e2369dad8e54b3c23d04" category="paragraph">*Campo di origine* - la posizione da cui si otterrà il valore da confrontare.</block>
+  <block id="46b1885cab50ba7f852ee7e4296586b1" category="list-text">Get input value from action (Ottieni valore di input da azione) - il valore effettivo immesso dall'amministratore dello storage in un campo in un'azione modello precedente.</block>
+  <block id="57b9871adc92cb08516da8d18bf96f74" category="list-text">Get output value from action (Ottieni valore di output dall'azione) - il valore BlueXP generato dopo la creazione di una risorsa da un'azione modello precedente.</block>
+  <block id="ac2e89a4baae83530e11a9c64165f130" category="list-text">Immetti valore - questo è un valore inserito; non è possibile accedervi da un'azione precedente nel modello. Può trattarsi di un valore di una risorsa già esistente, ad esempio un volume esistente.</block>
+  <block id="f7d6dca310f4edc482b1d3bd0cdfb18f" category="paragraph">*Operatore* - l'operatore utilizzato per il confronto. Le opzioni sono *uguale*, *non uguale*, *maggiore di*, *minore di*, *maggiore o uguale*, *minore o uguale*.</block>
+  <block id="67547dca721bdbf95912a7906fe534d0" category="paragraph">*Valore campo* - il valore effettivo che si sta confrontando. Le opzioni sono le stesse del _campo di origine_.</block>
+  <block id="b0d1e1e2323f9c0a905de14efcf597fc" category="paragraph">Un'istruzione and/OR consente di aggiungere in modo condizionale ulteriori azioni per gli utenti quando eseguono il modello in base alla valutazione di più regole come vero o Falso. *E* richiedono che tutte le regole siano vere o false, e *o* richiede che solo una delle regole sia vera o falsa.</block>
+  <block id="ebb6a65b01a975d2a1a81fadb941a41c" category="paragraph">Quando si utilizza un'istruzione and e OR con le regole, il processo di valutazione segue un ordine matematico standard in cui "AND" precede "OR". Ad esempio:</block>
+  <block id="d53609834d8e761d8b38e21f9aa36fda" category="list-text">&lt;Rule1&gt; O &lt;Rule2&gt; AND &lt;Rule3&gt;</block>
+  <block id="313a2072e1da794cb340b46d310d902f" category="paragraph">Questa dichiarazione viene valutata nel seguente ordine: &lt;Rule1&gt; O (&lt;Rule2&gt; AND &lt;Rule3&gt;)</block>
+  <block id="5dd11df101133565c34a0a5cfef5f86e" category="summary">BlueXP può monitorare i valori dei parametri utilizzati quando una risorsa è stata creata con un modello utilizzando la funzione "drift". Drift identifica le risorse che sono state modificate e che non sono più conformi alle impostazioni del modello.</block>
+  <block id="738c328d0087a068339b3d63cd01f51a" category="doc">Verificare le risorse per la conformità dei modelli</block>
+  <block id="214a61ce436e46b661501acdeee5221c" category="paragraph">A questo punto, il drift identifica i parametri modificati in una risorsa -- è necessario apportare manualmente le modifiche alla risorsa per riportarla alla conformità con il modello. In futuro saremo in grado di inviare notifiche quando una risorsa non è conforme o addirittura di invertire la modifica di un utente in modo che tutte le risorse create da un modello vengano riportate automaticamente alla conformità.</block>
+  <block id="2ab3e4cd0d86d65f9d51ef66c0c979a1" category="section-title">Come funziona la deriva</block>
+  <block id="270a79863849b0f5a1fb6e3ca8c5e8cf" category="paragraph">La deriva identifica i parametri non conformi come segue:</block>
+  <block id="2f4767232b378f442b114c6df47c9e64" category="list-text">Quando si crea un modello, si attiva la funzione di spostamento per alcuni parametri che non si desidera vengano modificati dagli utenti. Ad esempio, potrebbe essere necessario creare copie Snapshot utilizzando la policy "Default" per tutti i volumi creati da un modello.</block>
+  <block id="176d49d1e84215b444f439fea07a3329" category="inline-image-macro">Una schermata che mostra come attivare la deriva su un singolo parametro in un modello.</block>
+  <block id="311336fcea41c68a3d16c7293d66a166" category="paragraph"><block ref="311336fcea41c68a3d16c7293d66a166" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1b69884668207d8257a2c199585d3c4" category="list-text">Attivare la funzione di spostamento per il modello, quindi salvarlo.</block>
+  <block id="a58a17de18b8ff4081df6a8a029fddef" category="inline-image-macro">Una schermata che mostra come abilitare la deriva per il modello.</block>
+  <block id="65439c70b898804017251c3d89e4b9a1" category="paragraph"><block ref="65439c70b898804017251c3d89e4b9a1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a89edd795717fc5788fde97a150cdbfd" category="list-text">Gli amministratori dello storage eseguono il modello per creare volumi.</block>
+  <block id="702cc5e5b03abb2b13b06653993301cd" category="list-text">In seguito, un amministratore dello storage modifica un volume e disattiva le copie Snapshot.</block>
+  <block id="372533b812476a88b7d5ef31e459c351" category="list-text">Viene eseguito il drift check su tutti i modelli e il servizio di correzione BlueXP confronta l'impostazione del modello Snapshot Copies con l'impostazione corrente del volume. Tutti i valori non conformi vengono contrassegnati in modo da poter correggere l'impostazione errata.</block>
+  <block id="6f1e06cdf469f6c9e2d5664f82d4cd46" category="section-title">Drift Dashboard</block>
+  <block id="eb00a81284bf83afa086db3e1e91383f" category="paragraph">La Dashboard Dashboard Drift mostra il numero totale di risorse (ad esempio, volumi) create utilizzando i modelli, il numero ancora conforme al modello, il numero non conforme (drift) e il numero creato con Drift disattivato.</block>
+  <block id="cd8046669abc4a37bf25067917da6cf9" category="inline-image-macro">Una schermata del Drift Dashboard per il servizio di correzione BlueXP.</block>
+  <block id="e7ec4c4152826f2deedfea467894a855" category="paragraph"><block ref="e7ec4c4152826f2deedfea467894a855" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="812ce4d3a07734d12cdaa3ed2010e22f" category="list-text">I controlli nella parte superiore di ciascuna colonna consentono di ordinare i risultati in ordine numerico o alfabetico.</block>
+  <block id="0359e3c0b32dfd6306bd3d50e3c2de03" category="list-text">Il <block ref="3fd7363714f2e2423924118bfd6b7147" category="inline-image-macro-rx" type="image"></block> Consente di filtrare i risultati in base al nome del modello, alla policy e allo stato di spostamento e al tipo di azione. Ad esempio:</block>
+  <block id="dc2aed6b9b1f1b0a6c08ee34faba057f" category="inline-image-macro">Una schermata che mostra come utilizzare il widget di filtro per perfezionare l'elenco delle risorse.</block>
+  <block id="226b350675cf80a6c8ef906f3d514866" category="paragraph"><block ref="226b350675cf80a6c8ef906f3d514866" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b50b58694b4498c8af71d92940ef4b4a" category="list-text">La barra di ricerca consente di cercare un nome di volume o modello specifico.</block>
+  <block id="2289aac3f042b380f68ae94d3b80edcc" category="list-text">Per ulteriori informazioni sulla risorsa effettiva (o volume), ad esempio l'ambiente di lavoro e la VM di storage, fare clic su <block ref="a74720392297d66ac1ab9a90296912c9" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="b652d688fe7bd49013e097debd62377d" category="inline-image-macro">Una schermata che mostra i dettagli relativi a un volume nella dashboard di spostamento.</block>
+  <block id="f94f5da3d864a2802ec18ef34e31c632" category="paragraph"><block ref="f94f5da3d864a2802ec18ef34e31c632" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6ce5c8ea7a5fe26d49cc620ef72e8bf" category="section-title">Compilare il Dashboard Drift</block>
+  <block id="5ae7cb61db9467082e9eea24cffa5c5d" category="paragraph">È necessario eseguire il controllo della deriva su un modello prima di inserire i valori nel Dashboard Drift.</block>
+  <block id="6f2802bd954a52da9413653f06974328" category="paragraph">È possibile eseguire il controllo deriva per tutti i modelli dalla dashboard modelli:</block>
+  <block id="d3b285f784c0ba93aec0e96991c6426b" category="inline-image-macro">Una schermata che mostra come eseguire il controllo della deriva per tutti i modelli.</block>
+  <block id="6800c3ab10609f87e92b1c2d671d818a" category="paragraph"><block ref="6800c3ab10609f87e92b1c2d671d818a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58e7eda3b48d7587cdb37980702881b8" category="paragraph">È possibile eseguire il controllo della deriva su un singolo modello dalla dashboard modelli:</block>
+  <block id="30055c2914e5982a3d4520c8d7341dae" category="inline-image-macro">Una schermata che mostra come eseguire il controllo della deriva per un singolo modello.</block>
+  <block id="09ba0e6ca6c933763f67961bc73d1c49" category="paragraph"><block ref="09ba0e6ca6c933763f67961bc73d1c49" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b36ada9c7c56f786c71fdfbea02d95d3" category="section-title">Creare un report di deriva per le risorse non conformi</block>
+  <block id="aeb389bbf15541824e09549764a991ad" category="paragraph">È possibile visualizzare un report di deriva per una singola risorsa o eseguire un report per scaricare un report per tutte le risorse. Utilizzando questo report è possibile assegnare azioni agli amministratori di sistema per apportare modifiche che ripristinino la conformità delle risorse con il modello.</block>
+  <block id="a5a5986754b343a286af80fd084ea988" category="paragraph">È possibile fare clic sull'icona Drift di una risorsa nel Dashboard Drift per visualizzare un elenco dei parametri di ogni risorsa non conforme.</block>
+  <block id="ecbe0476f7995436a619fbec67b150ea" category="inline-image-macro">Una schermata di un report di deriva per una singola risorsa.</block>
+  <block id="e278cbaa988c388eb4f070a874cc7c84" category="paragraph"><block ref="e278cbaa988c388eb4f070a874cc7c84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f5aeece6a8367e0a2a950b59ac5d280f" category="paragraph">Per visualizzare un report di deriva per le risorse create dai modelli, fare clic su <block ref="6ba48bcb767669a826177023eada095d" category="inline-image-macro-rx" type="image"></block> Per scaricare un file .CSV. Il report di deriva riflette ciò che viene attualmente filtrato nella pagina e non mostra tutte le risorse a meno che non siano stati applicati filtri nella pagina.</block>
+  <block id="af859a8aacc30e0bb1648f64ed76f23d" category="section-title">Dettagli sullo stato di salute della replica BlueXP nel report di drift</block>
+  <block id="dccc80768bfca83f2c18a964a2ada6e0" category="inline-link-macro">Attivazione della replica BlueXP su un volume utilizzando modelli</block>
+  <block id="3c66700164b4cb085d6e086bf6b7d73b" category="paragraph">Quando <block ref="438903b5e6182d9d4cc41396268e5cbc" category="inline-link-macro-rx"></block>, È possibile scegliere di visualizzare informazioni di replica più dettagliate nel report drift attivando la funzione drift nel campo "Enable Replication Health monitoring" (attiva monitoraggio dello stato di salute della replica). Se attivato, il report di deriva mostra se la relazione di replica di BlueXP è sana o non sana (con deriva), oltre al tempo di ritardo di SnapMirror, allo stato e all'ultimo tempo di trasferimento.</block>
+  <block id="6ffc1ecbaefdcfbed3ede7fdb124aa93" category="paragraph">Questa schermata mostra i dettagli della replica per una relazione SnapMirror non corretta nel report di deriva.</block>
+  <block id="16c2c563a9c70bc38dcd5058d89852a7" category="inline-image-macro">Una schermata del report Drift che mostra i dettagli della replica per una relazione SnapMirror non funzionante.</block>
+  <block id="dda535bed967fed0495f552c6c54b14e" category="paragraph"><block ref="dda535bed967fed0495f552c6c54b14e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9986dfbd663475bd0b9a159d82e3587" category="paragraph">*Nota:* poiché la replica viene applicata inizialmente al volume, lo stato di salute viene restituito come "Falso", il che significa che non è integro. Dopo alcuni minuti viene visualizzato lo stato reale della replica.</block>
+  <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp fornisce supporto per BlueXP in diversi modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) e un forum della community. La registrazione al supporto include il supporto tecnico remoto via web ticketing.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Richiedi assistenza</block>
+  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">NetApp fornisce supporto per BlueXP e i suoi servizi cloud in diversi modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) e un forum della community. La registrazione al supporto include il supporto tecnico remoto via web ticketing.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Utilizzare le opzioni di supporto automatico</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Queste opzioni sono disponibili gratuitamente, 24 ore su 24, 7 giorni su 7:</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Knowledge base</block>
+  <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
+  <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">Cercare nella Knowledge base di BlueXP articoli utili per la risoluzione dei problemi.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Community</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">Unisciti alla community BlueXP per seguire le discussioni in corso o crearne di nuove.</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentazione</block>
+  <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">La documentazione BlueXP attualmente visualizzata.</block>
+  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">Mailto:ng-cloudmanager-feedback@netapp.com[email di feedback]</block>
+  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">Diamo valore al tuo contributo. Invia un feedback per aiutarci a migliorare BlueXP.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Crea un caso con il supporto NetApp</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Oltre alle opzioni di supporto autonomo sopra descritte, puoi collaborare con uno specialista del supporto NetApp per risolvere eventuali problemi dopo l'attivazione del supporto.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Prima di iniziare</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Scopri come registrarti per il supporto</block>
+  <block id="1012a287397c66025d7748edf06a36e2" category="paragraph">Per utilizzare la funzione *Crea un caso*, è necessario prima eseguire una registrazione una tantum del numero di serie dell'ID account BlueXP (ad es. 960xxxx) con NetApp. <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>.</block>
+  <block id="6254a4afeeb76765a127fe74d31c1b3d" category="list-text">In BlueXP, fare clic su *Guida &gt; supporto*.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Nella pagina *risorse*, scegliere una delle opzioni disponibili in supporto tecnico:</block>
+  <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">Fai clic su *Chiamaci* per parlare con qualcuno al telefono. Viene visualizzata una pagina su netapp.com che elenca i numeri di telefono che è possibile chiamare.</block>
+  <block id="5be2e1dfe4bf215289731df45ec8157b" category="list-text">Fare clic su *Crea un caso* per aprire un ticket con uno specialista del supporto NetApp:</block>
+  <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">*NetApp Support Site account*: Selezionare l'account NSS applicabile associato alla persona che apre il caso di supporto. Questa persona sarà il contatto principale a cui NetApp dovrà contattare, oltre alle e-mail aggiuntive fornite di seguito.</block>
+  <block id="d950fb930d7f7e6bfdda1b91b4639a02" category="paragraph">Se non vedi il tuo account NSS, puoi accedere alla scheda *NSS Management* nella sezione Support di BlueXP per aggiungerlo.</block>
+  <block id="d63bf50426f4c712554faec55b30c548" category="list-text">*Servizio*: Selezionare il servizio a cui è associato il problema. Ad esempio, BlueXP quando si tratta di un problema di supporto tecnico relativo a flussi di lavoro o funzionalità all'interno del servizio.</block>
+  <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">*Ambiente di lavoro*: Se applicabile allo storage, selezionare *Cloud Volumes ONTAP* o *on-premise* e quindi l'ambiente di lavoro associato.</block>
+  <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">L'elenco degli ambienti di lavoro rientra nell'ambito dell'account, dell'area di lavoro e del connettore BlueXP selezionato nel banner superiore del servizio.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Priorità caso*: Scegliere la priorità per il caso, che può essere bassa, Media, alta o critica.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Per ulteriori informazioni su queste priorità, passare il mouse sull'icona delle informazioni accanto al nome del campo.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Descrizione del problema*: Fornire una descrizione dettagliata del problema, inclusi eventuali messaggi di errore o procedure di risoluzione dei problemi che sono state eseguite.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*Indirizzi e-mail aggiuntivi*: Inserisci indirizzi e-mail aggiuntivi se desideri informare qualcun altro del problema.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Allegato (opzionale)*: Carica fino a cinque allegati, uno alla volta.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Gli allegati sono limitati a 25 MB per file. Sono supportate le seguenti estensioni di file: Txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx e csv.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Schermata del modulo Crea un caso che consente di creare un caso con il supporto NetApp.</block>
+  <block id="a2ff30886e1baf1e7d5045b5fc24f5b9" category="paragraph"><block ref="a2ff30886e1baf1e7d5045b5fc24f5b9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Viene visualizzata una finestra a comparsa con il numero del caso di supporto. Uno specialista del supporto NetApp esaminerà il tuo caso e ti contatterà al più presto.</block>
+  <block id="04e15da1deae9568b4dcda64fbb0c8d5" category="paragraph">Per una cronologia dei casi di supporto, fare clic su *Impostazioni &gt; Cronologia* e cercare le azioni denominate "Crea caso di supporto". Un pulsante all'estrema destra consente di espandere l'azione per visualizzare i dettagli.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">È possibile che venga visualizzato il seguente messaggio di errore quando si tenta di creare un caso:</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"Non sei autorizzato a creare un caso per il servizio selezionato"</block>
+  <block id="fa6b601b2fb4e3e5c7b466ecb8bd70ac" category="paragraph">Questo errore potrebbe indicare che l'account NSS e la società di registrazione a cui è associato non sono la stessa società di registrazione per il numero di serie dell'account BlueXP (ad es. 960xxxx) o il numero di serie dell'ambiente di lavoro. Puoi consultare l'elenco degli account NSS nella parte superiore del modulo *Crea un caso* per trovare la corrispondenza giusta oppure richiedere assistenza utilizzando una delle seguenti opzioni:</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Utilizza la chat integrata nel prodotto</block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Inviare un caso non tecnico all'indirizzo<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Gestire i casi di supporto (anteprima)</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">È possibile visualizzare e gestire i casi di supporto attivi e risolti direttamente da BlueXP. Puoi gestire i casi associati al tuo account NSS e alla tua azienda.</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">La gestione del caso è disponibile come anteprima. Intendiamo perfezionare questa esperienza e aggiungere miglioramenti alle prossime release. Inviaci un feedback utilizzando la chat in-product.</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">La dashboard di gestione dei casi nella parte superiore della pagina offre due visualizzazioni:</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">La vista a sinistra mostra il totale dei casi aperti negli ultimi 3 mesi dall'account NSS dell'utente fornito.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">La vista a destra mostra il totale dei casi aperti negli ultimi 3 mesi a livello aziendale in base all'account NSS dell'utente.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">I risultati della tabella riflettono i casi correlati alla vista selezionata.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">È possibile aggiungere o rimuovere colonne di interesse e filtrare il contenuto di colonne come priorità e Stato. Altre colonne offrono funzionalità di ordinamento.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Per ulteriori informazioni, consulta la procedura riportata di seguito.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">A livello di caso, offriamo la possibilità di aggiornare le note del caso o chiudere un caso che non è già in stato chiuso o in attesa di chiusura.</block>
+  <block id="34b1296d31cefa72dae9b3a364b1f444" category="list-text">Fare clic su *Gestione casi* e, se richiesto, aggiungere l'account NSS a BlueXP.</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">La pagina *Gestione del caso* mostra i casi aperti relativi all'account NSS associato all'account utente BlueXP. Si tratta dello stesso account NSS visualizzato nella parte superiore della pagina *gestione NSS*.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Se si desidera, modificare le informazioni visualizzate nella tabella:</block>
+  <block id="27635a52fe4c34c39ffc6430f4244ec6" category="list-text">In *Organization's Cases* (casi dell'organizzazione), fare clic su *View* (Visualizza) per visualizzare tutti i casi associati alla società.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">Modificare l'intervallo di date scegliendo un intervallo di date esatto o scegliendo un intervallo di tempo diverso.</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">Una schermata dell'opzione sopra la tabella nella pagina di gestione del caso che consente di scegliere un intervallo di date esatto o gli ultimi 7 giorni, 30 giorni o 3 mesi.</block>
+  <block id="7fcba8aeefa9960d3fc3fa08b360ba2e" category="paragraph"><block ref="7fcba8aeefa9960d3fc3fa08b360ba2e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtrare il contenuto delle colonne.</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">Schermata dell'opzione di filtro nella colonna Status (Stato) che consente di filtrare i casi che corrispondono a uno stato specifico, ad esempio attivo o chiuso.</block>
+  <block id="37709be3a43df07d5975287545d0ba12" category="paragraph"><block ref="37709be3a43df07d5975287545d0ba12" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">L'icona più visualizzata nella tabella</block>
+  <block id="1614dc8e47c0492434152c990d6c1040" category="list-text">Modificare le colonne visualizzate nella tabella facendo clic su <block ref="effeab06130cddc8360822b2b706805b" category="inline-image-macro-rx" type="image"></block> e quindi scegliere le colonne che si desidera visualizzare.</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">Una schermata che mostra le colonne che è possibile visualizzare nella tabella.</block>
+  <block id="5de408d7cbad49634fb25f9047498132" category="paragraph"><block ref="5de408d7cbad49634fb25f9047498132" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Un'icona con tre punti che compare nell'ultima colonna della tabella</block>
+  <block id="98efef1c8a47ed5791b41944e8ff4ec2" category="list-text">Gestire un caso esistente facendo clic su <block ref="a0b152b50a56901a75affebabc26ed61" category="inline-image-macro-rx" type="image"></block> e selezionando una delle opzioni disponibili:</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Visualizza caso*: Visualizza tutti i dettagli relativi a un caso specifico.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Aggiorna note sul caso*: Fornisci ulteriori dettagli sul problema oppure seleziona *carica file* per allegare fino a un massimo di cinque file.</block>
+  <block id="f791bc685c526af8296381acff10f6a0" category="list-text">*Chiudi caso*: Fornisci i dettagli sul motivo per cui stai chiudendo il caso e fai clic su *Chiudi caso*.</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Una schermata che mostra le azioni che è possibile eseguire dopo aver selezionato il menu nell'ultima colonna della tabella.</block>
+  <block id="e9a5c374fb47ed2ae5cc6108fb36d829" category="paragraph"><block ref="e9a5c374fb47ed2ae5cc6108fb36d829" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c60b09ae2c96c9e21869de6d6df59453" category="sidebar">Documenti per la risoluzione dei problemi BlueXP</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Note di rilascio</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Inizia subito</block>
+  <block id="89bd41d8bc97392a23a93ae863b454bb" category="sidebar">Utilizzare la soluzione BlueXP</block>
+  <block id="d878dbf9ab702cfef892ea35b53108d3" category="sidebar">Utilizzare modelli per standardizzare la creazione delle risorse</block>
+  <block id="52b2438a3d1515af5b3918e6d0fa443d" category="sidebar">Creazione di modelli per la tua organizzazione</block>
+  <block id="1ff123cfbf88ad9c58cfd44c2b72c291" category="sidebar">Eseguire modelli per creare risorse</block>
+  <block id="4a37630008b707a26bac4e9b9d2d91bc" category="sidebar">Organizzare le risorse utilizzando tag</block>
+  <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">Concetti</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conoscenza e supporto</block>
+  <block id="35f98b47133ad8954f63b25aef2dad3a" category="sidebar">Ulteriori informazioni su Tagging</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Novità</block>
+  <block id="12b8ed36a576a6d4769c8d350b438a8a" category="sidebar">Creare modelli</block>
+  <block id="59cccee54a9c1422dca33d7662d37b76" category="sidebar">Ambiente di lavoro Cloud Volumes ONTAP</block>
+  <block id="f829fef4575b38109cd246bafbd6718e" category="sidebar">Volume Cloud Volumes ONTAP</block>
+  <block id="217aec976bd66d37571f1fe0e44a4e77" category="sidebar">Volume Azure NetApp Files</block>
+  <block id="21dc3aafb4a3e393dccd900e9ba42118" category="sidebar">Volume ONTAP on-premise</block>
+  <block id="bdada2beda611e5479ba79eddd7f3b9f" category="sidebar">Aggiunta di funzionalità di backup, classificazione o replica a un volume</block>
+  <block id="c8ca3079f96c0e324b876d7055a67c46" category="sidebar">Creare risorse utilizzando modelli</block>
+  <block id="70deba7f047a2bcc0d20e5ef94a2abf8" category="sidebar">Volume per CVO, on-premise e ANF</block>
+  <block id="f8de1ec8d7766950989e3205a63d91d9" category="sidebar">Gestire le risorse utilizzando modelli e tag</block>
+  <block id="e85920abe34a4184988f078bd1e73279" category="sidebar">Verifica delle risorse per la conformità dei modelli (deriva)</block>
+  <block id="441c6d31d8063270a27b242c68cc0e6e" category="sidebar">Eseguire un modello che trovi le risorse esistenti</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blog e community</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
+  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
+  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">Tutta la documentazione BlueXP</block>
+</blocks>

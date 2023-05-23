@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: task-using-tags.html 
+keywords: tags, resource tags, volume tags, add tags, delete tags, view tags 
+summary: È possibile visualizzare, aggiungere, modificare ed eliminare i tag assegnati alle risorse esistenti utilizzando il servizio BlueXP Tagging. Ciò consente di organizzare e semplificare la gestione delle risorse. 
+---
+= Gestisci i tag per le tue risorse
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare, aggiungere, modificare ed eliminare i tag assegnati alle risorse esistenti utilizzando il servizio BlueXP Tagging. Ciò consente di organizzare e semplificare la gestione delle risorse.
+
+
+
+== Cercare le risorse che hanno determinati tag
+
+Se si desidera visualizzare tutte le risorse che hanno un determinato tag o un determinato tag e valore della chiave, è possibile cercare tali tag. È possibile eseguire ricerche in tutte le risorse o solo all'interno di determinate categorie di risorse.
+
+.Fasi
+. Selezionare *Health > Remediation* e fare clic sulla scheda *Tags*.
+. Se necessario, scegliere le credenziali per un provider cloud specifico nel campo *Select credentials* (Seleziona credenziali).
+. Nel campo _tipo di risorsa_, selezionare la risorsa, ad esempio *ONTAP:CVO:VOLUME* per eseguire la ricerca in tutti i volumi Cloud Volumes ONTAP.
+. Nel campo _Tag Key_, selezionare il tag, ad esempio *env* per limitare la ricerca ai volumi con il tag "env".
+. Nel campo _Tag Value_, selezionare il valore della chiave, ad esempio *Production* per limitare la ricerca ai volumi con il nome del tag "env" e il valore del tag "Production".
++
+image:screenshot_tags_search_single_1.png["Una schermata che mostra la selezione di un singolo set di criteri di ricerca per restituire una risorsa con una chiave tag e un valore tag specifici."]
+
+. Fare clic su image:screenshot_plus_icon.gif[""] Per aggiungere questi criteri di ricerca all'area di ricerca.
++
+image:screenshot_tags_search_single_2.png["Una schermata dei criteri di ricerca dei tag aggiunti alla riga di ricerca."]
+
+. Una volta completata la ricerca, fare clic su *Cerca* e i risultati della ricerca vengono visualizzati nella sezione risorse.
++
+image:screenshot_tags_search_single_result.png["Una schermata dei risultati per le risorse che soddisfano i criteri di ricerca dei tag."]
+
++
+Se si desidera aggiungere altri criteri di ricerca, seguire nuovamente i passaggi da 3 a 6, quindi fare clic su *Cerca*.
+
+
+
+
+
+=== Regole di ricerca
+
+Quando si definisce la ricerca, si applicano le seguenti regole:
+
+* Dopo aver scelto un tipo di risorsa, è possibile lasciare vuoti i campi Tag Key Field (campo chiave tag) e Tag Value (valore tag) se si desidera elencare tutte le risorse che hanno qualsiasi valore chiave e qualsiasi valore chiave.
+* È possibile scegliere una singola ricerca oppure definire più ricerche per perfezionare i risultati nella sezione Resource.
+* Quando si definiscono più set di criteri di ricerca:
++
+** Se i criteri per due ricerche sono relativi a diversi tipi di risorse, questa viene trattata come un'operazione "OR" e il risultato mostra le risorse di entrambe le ricerche. Ad esempio, la ricerca seguente restituisce tutti i volumi Azure NetApp Files con il valore del tag "ambiente:demo" e tutti i volumi Cloud Volumes ONTAP con il valore del tag "ambiente:demo".
++
+image:screenshot_tags_search_or.png[""]
+
+** Se i criteri per due ricerche sono per lo stesso tipo di risorsa, questa viene trattata come un'operazione "AND" e il risultato mostra solo le risorse che corrispondono a *entrambe* ricerche. Ad esempio, la ricerca seguente restituisce volumi Azure NetApp Files con il valore del tag "ambiente:demo" e "Gruppo:Finanza".
++
+image:screenshot_tags_search_and.png[""]
+
+
+
+* Se sono stati definiti più criteri di ricerca e si decide di rimuoverne uno, fare clic su image:button_delete_tag_search.png[""] Per rimuoverlo dall'area di ricerca.
+
+
+
+
+== Aggiungere tag alle risorse esistenti
+
+È possibile applicare tag a una singola risorsa o a più risorse. Le risorse potrebbero avere tag esistenti o non avere tag correnti.
+
+link:concept-tagging.html#resources-that-you-can-tag["Vedere l'elenco delle risorse che è possibile contrassegnare in questo momento."]
+
+.Fasi
+. Dalla scheda *Tag*, creare i criteri di ricerca e fare clic su *Cerca*.
+. Selezionare la risorsa o le risorse da contrassegnare.
++
+** Per selezionare tutte le risorse della pagina, selezionare la casella nella riga del titolo (image:button_select_all_resources.png[""]).
+** Per selezionare più risorse, selezionare la casella corrispondente a ciascuna risorsa (image:button_backup_1_volume.png[""]).
+** Per selezionare una singola risorsa, fare clic su image:button_select_1_resource.png["pulsante più"] per la risorsa.
++
+image:screenshot_tags_how_2_select_resources.png["Una schermata che mostra come selezionare una singola risorsa, più risorse o tutte le risorse."]
+
+
+
+. Fare clic su *Manage Tags* (Gestisci tag) per visualizzare la finestra di dialogo _Resource Tags_. In questa finestra di dialogo verranno visualizzati tutti i tag esistenti.
++
+image:screenshot_tags_resource_tags_dialog.png["Una schermata che mostra la finestra di dialogo del tag delle risorse in cui è possibile visualizzare i tag attualmente assegnati e aggiungere nuovi tag."]
+
+. Fare clic su *Add New Tag* (Aggiungi nuovo tag) per visualizzare una riga vuota di tag Key e Tag Value (valore tag) nella finestra di dialogo.
+. Inserire la chiave del tag e il valore del tag. Aggiungere altri tag in questo momento se si desidera aggiungere altri tag a questa risorsa, quindi fare clic su *Review and Apply* (Rivedi e applica).
+. Se le modifiche sono corrette nella pagina _review_, fare clic su *Save* (Salva) per aggiungere il nuovo tag alla risorsa o a tutte le risorse selezionate.
+
+
+
+
+== Modificare i valori dei tag per una risorsa
+
+È possibile modificare i tag assegnati alle risorse e il valore del tag applicato a un tag esistente.
+
+.Fasi
+. Dalla scheda *Tag*, creare i criteri di ricerca e fare clic su *Cerca*.
+. Selezionare la risorsa o le risorse su cui si desidera modificare i tag.
+. Fare clic su *Manage Tags* (Gestisci tag) per visualizzare la finestra di dialogo _Resource Tags_.
++
+image:screenshot_tags_modify_tag.png["Una schermata che mostra come modificare un tag da una risorsa o da più risorse."]
+
+. Inserire un nuovo valore per il valore del tag e fare clic su *Review and Apply* (Rivedi e applica).
+. Se la modifica appare corretta nella pagina _review_, fare clic su *Save* e il valore del tag viene modificato per la risorsa o per tutte le risorse selezionate.
+
+
+
+
+== Eliminare i tag dalle risorse
+
+È possibile eliminare una coppia tag key/value da una singola risorsa o da più risorse.
+
+.Fasi
+. Dalla scheda *Tag*, creare i criteri di ricerca e fare clic su *Cerca*.
+. Selezionare la risorsa o le risorse da cui si desidera rimuovere i tag.
+. Fare clic su *Manage Tags* (Gestisci tag) per visualizzare la finestra di dialogo _Resource Tags_.
++
+image:screenshot_tags_delete_tag.png["Una schermata che mostra come eliminare un tag da una risorsa o da più risorse."]
+
+. Fare clic su image:button_delete_tag_pair.png[""] Per la coppia tag key/value che si desidera eliminare e la riga viene rimossa, quindi fare clic su *Review and Apply* (Rivedi e applica).
+. Se la modifica appare corretta nella pagina _review_, fare clic su *Save* (Salva) e la coppia tag key/value viene rimossa dalla risorsa o da tutte le risorse selezionate.
+

@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: reference-template-building-blocks.html 
+keywords: templates, conditions, conditional actions, template controls, passing values 
+summary: 'Esistono alcune funzionalità che è possibile utilizzare per la creazione di un modello che consentono di passare valori tra azioni (ad esempio un nome di volume), diramazioni condizionali per la connessione di azioni (abilitare i backup su un nuovo volume) e che consentono agli utenti di personalizzare le risorse quando si utilizza il modello.' 
+---
+= Blocchi di base del modello
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Esistono alcune funzionalità che è possibile utilizzare per la creazione di un modello che consentono di passare valori tra azioni (ad esempio un nome di volume), diramazioni condizionali per la connessione di azioni (abilitare i backup su un nuovo volume) e che consentono agli utenti di personalizzare le risorse quando si utilizza il modello.
+
+
+
+== Controlli speciali del modello
+
+Prima di iniziare a creare il modello, è necessario comprendere alcune opzioni speciali che è possibile impostare durante la pre-compilazione di un valore per un parametro in un modello.
+
+image:screenshot_template_options.png["Una schermata delle opzioni modificabili e modificabili che è possibile impostare per i valori dei parametri."]
+
+
+
+=== Casella di controllo modificabile
+
+Selezionare questa casella per consentire all'amministratore dello storage di eseguire l'override del valore precompilato immesso nel modello. In questo modo, l'amministratore dello storage può fornire un suggerimento per il valore da utilizzare, ma può personalizzare il valore durante la creazione della risorsa.
+
+Se deselezionata, l'utente non può modificare il valore e il valore hard-coded nel modello viene sempre utilizzato quando l'amministratore implementa una risorsa.
+
+
+
+=== Casella di controllo di spostamento
+
+Selezionare questa casella per consentire a BlueXP di monitorare il valore hard-coded immesso per un parametro quando viene creata una risorsa con il modello. In seguito, è possibile eseguire un report di spostamento per verificare quali campi configurati con Drift non sono più conformi alle impostazioni del modello.
+
+Se deselezionata, l'utente può modificare il valore in qualsiasi valore dopo la creazione della risorsa.
+
+
+NOTE: Affinché la funzione di deriva funzioni, dopo aver definito la deriva per alcuni parametri nel modello, è necessario attivare la funzione di deriva per il modello. Questa è l'ultima fase della creazione di un modello. La deriva non funziona se è abilitata per un parametro ma non è stata abilitata sul modello.
+
+
+
+=== Utilizzando un'espressione regolare (regex) nei campi
+
+All'interno dei modelli sono presenti alcuni campi che consentono di inserire un regex per definire il valore che l'amministratore può inserire nel campo, ad esempio "Nome volume" e "Nome condivisione".
+
+image:screenshot_template_regex.png["Schermata dell'utilizzo di un regex per definire i valori consentiti per un nome di volume."]
+
+Ad esempio, se si immette "^[a-za-Z][0-9a-za-Z_]{0,149}" come regex per il nome del volume, significa che "_il nome deve iniziare con un carattere alfabetico, può contenere solo numeri, lettere o il carattere di sottolineatura e deve essere di 150 o meno caratteri_".
+
+
+
+== Passare i valori tra le azioni del modello
+
+I modelli hanno la possibilità di utilizzare le informazioni di un'azione precedente per popolare un campo in un'azione futura. Ad esempio, quando si definisce il nome del volume su cui sarà attivata la funzionalità di backup e ripristino di BlueXP, è possibile richiedere all'azione di backup di utilizzare il valore immesso dall'amministratore dello storage come nome del volume dall'azione Create Cloud Volumes ONTAP.
+
+Il servizio di risoluzione dei problemi BlueXP può utilizzare tre tipi di informazioni:
+
+* Valore di input - valore effettivo immesso dall'amministratore dello storage in un campo in un'azione modello precedente.
+* Valore di output - valore generato da BlueXP dopo la creazione di una risorsa da un'azione modello precedente.
+* Inserire il proprio valore - si tratta di un valore inserito; non è possibile accedervi da un'azione precedente nel modello.
+
+
+Ad esempio, per abilitare la scansione di conformità su un volume, il servizio di classificazione BlueXP richiede sia il "nome del volume" inserito dall'amministratore dello storage (il valore Input) sia il "uid del volume" generato da BlueXP quando crea il volume (il valore Output).
+
+L'illustrazione seguente mostra come inserire queste informazioni nella sezione azione di classificazione BlueXP del modello.
+
+image:screenshot_template_variable_input_output.png["Un'illustrazione che mostra come utilizzare un valore inserito in un'azione precedente per popolare un campo in un'altra azione."]
+
+
+
+== Utilizzare le condizioni per eseguire diverse azioni in base alle istruzioni logiche
+
+Le condizioni indicano al modello di eseguire diverse azioni a seconda che la condizione sia vera o falsa quando l'amministratore dello storage esegue il modello. Per aggiungere una condizione, selezionare l'azione *Logical If*:
+
+image:screenshot_template_select_condition.png["Una schermata che illustra come aggiungere istruzioni condizionali nei modelli."]
+
+Ad esempio, se un volume ha una capacità superiore a 50 GB, potrebbe essere necessario attivare il backup e il ripristino di BlueXP su tale volume. Se il volume ha una capacità inferiore, il backup e ripristino BlueXP non è attivato. È possibile implementare questa operazione nel modello come illustrato di seguito.
+
+image:screenshot_template_condition_example.png["Una schermata che mostra come le condizioni possono essere utilizzate nel modello per attivare in modo condizionale il backup e il ripristino di BlueXP."]
+
+Le condizioni sono composte da due parti:
+
+* Rules (regole) - l'elemento che si sta verificando è vero o falso.
+* E/o dichiarazione - consente di utilizzare più regole per perfezionare ulteriormente l'aggiunta di ulteriori azioni.
+
+
+Una regola è composta da tre parti:
+
+*Campo di origine* - la posizione da cui si otterrà il valore da confrontare.
+
+* Get input value from action (Ottieni valore di input da azione) - il valore effettivo immesso dall'amministratore dello storage in un campo in un'azione modello precedente.
+* Get output value from action (Ottieni valore di output dall'azione) - il valore BlueXP generato dopo la creazione di una risorsa da un'azione modello precedente.
+* Immetti valore - questo è un valore inserito; non è possibile accedervi da un'azione precedente nel modello. Può trattarsi di un valore di una risorsa già esistente, ad esempio un volume esistente.
+
+
+*Operatore* - l'operatore utilizzato per il confronto. Le opzioni sono *uguale*, *non uguale*, *maggiore di*, *minore di*, *maggiore o uguale*, *minore o uguale*.
+
+*Valore campo* - il valore effettivo che si sta confrontando. Le opzioni sono le stesse del _campo di origine_.
+
+Un'istruzione and/OR consente di aggiungere in modo condizionale ulteriori azioni per gli utenti quando eseguono il modello in base alla valutazione di più regole come vero o Falso. *E* richiedono che tutte le regole siano vere o false, e *o* richiede che solo una delle regole sia vera o falsa.
+
+Quando si utilizza un'istruzione and e OR con le regole, il processo di valutazione segue un ordine matematico standard in cui "AND" precede "OR". Ad esempio:
+
+* <Rule1> O <Rule2> AND <Rule3>
++
+Questa dichiarazione viene valutata nel seguente ordine: <Rule1> O (<Rule2> AND <Rule3>)
+
+

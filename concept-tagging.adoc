@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: concept-tagging.html 
+keywords: tags, overview, conceptual, resource tags, volume tags, AWS tags, Azure tags 
+summary: BlueXP consente di applicare tag alle risorse _esistenti_ per organizzare e gestire tali risorse. I tag sono metadati che è possibile utilizzare per raggruppare le risorse per identificare applicazioni, ambienti, regioni, codici di fatturazione, cloud provider, e molto altro ancora. 
+---
+= Scopri di più sull'etichettatura
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP consente di applicare tag alle risorse _esistenti_ per organizzare e gestire tali risorse. I tag sono metadati che è possibile utilizzare per raggruppare le risorse per identificare applicazioni, ambienti, regioni, codici di fatturazione, cloud provider, e molto altro ancora.
+
+I tag sono costituiti da un *tag key* e da un *tag value*. Ad esempio, è possibile creare una chiave di tag denominata "ambiente" e aggiungere i valori di tag "produzione" e "Test". Una volta applicate alle risorse, è possibile cercare e visualizzare rapidamente le risorse corrispondenti alla coppia chiave/valore.
+
+Quando si crea un ambiente di lavoro o un volume Azure NetApp Files, è possibile aggiungere coppie tag key/value alle _nuove_ risorse. È inoltre possibile definire le coppie di tag chiave/valore in link:task-define-templates.html["Modelli BlueXP creati"] Per gli amministratori dello storage e i tecnici DevOps.
+
+È possibile aggiungere nuovi tag utilizzando il servizio Tagging ed è possibile modificarli o eliminarli.
+
+
+
+== Caratteristiche
+
+Il servizio Tagging offre le seguenti caratteristiche e vantaggi:
+
+* Creare chiavi di tag e valori di tag che corrispondano ai termini utilizzati nell'ambiente
+* Organizza le risorse nel tuo ambiente per semplificare il monitoraggio e la gestione
+* Aggiungere, rimuovere e modificare le chiavi dei tag e i valori dei tag in base al tipo di risorsa
+* Assegnare tag alle risorse e alle risorse ONTAP nel proprio ambiente da AWS e Azure.
+
+
+
+
+== Prezzi e licenze
+
+La possibilità di assegnare tag alle risorse non richiede alcuna licenza ed è libera di essere utilizzata da tutti gli utenti BlueXP con il ruolo account Admin o Workspace Admin.
+
+
+
+== Risorse che è possibile contrassegnare
+
+È possibile applicare tag alle seguenti risorse.
+
+[cols="30,35,35"]
+|===
+| Provider | Servizio | Risorsa 
+
+
+.3+| ONTAP | Cloud Volumes ONTAP | Volume di storage VM aggregato 
+
+
+| ONTAP on-premise | Volume di storage VM aggregato 
+
+
+| Azure NetApp Files | Volume 
+
+
+| NetApp-Service | Sincronizza | Relazione 
+
+
+| AWS | EC2 | Volume subnet VPC del gruppo di sicurezza dell'istanza 
+
+
+.4+| Azure | Calcolo | Macchina virtuale Snapshot 
+
+
+| Rete | Rete virtuale del gruppo di sicurezza 
+
+
+| Risorsa | Gruppo di risorse 
+
+
+| Storage | Account storage 
+
+
+.2+| GCP | Calcolo | Istanza 
+
+
+| Storage | Bucket 
+|===
+Per informazioni sui tag AWS EC2, fare riferimento a. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["Documentazione AWS: Contrassegno delle risorse Amazon EC2"^].
+
+Per informazioni sui tag Azure, fare riferimento a. https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json["Documentazione di Azure: Tagging delle risorse Azure"^].
+
+Per informazioni sulle etichette Google, fare riferimento a. https://cloud.google.com/compute/docs/labeling-resources["Documentazione Google Cloud: Contrassegno delle risorse Google Cloud"^].
+
+
+
+== Prerequisiti
+
+
+
+=== Verificare le autorizzazioni di AWS Connector
+
+Se il connettore è stato creato utilizzando BlueXP versione 3.9.10 o successiva, l'impostazione è completa. Se il connettore è stato creato utilizzando una versione precedente di BlueXP, è necessario aggiungere alcune autorizzazioni necessarie per il ruolo BlueXP IAM per contrassegnare le istanze di AWS EC2:
+
+[source, json]
+----
+{
+  "Action": [
+    "ec2:CreateTags",
+    "ec2:DeleteTags",
+    "ec2:DescribeTags",
+    "tag:getResources",
+    "tag:getTagKeys",
+    "tag:getTagValues",
+    "tag:TagResources",
+    "tag:UntagResources"
+  ],
+  "Resource": "*",
+  "Effect": "Allow",
+  "Sid": "tagServicePolicy"
+}
+----
+
+
+=== Verificare le autorizzazioni di Azure Connector
+
+Se il connettore è stato creato utilizzando BlueXP versione 3.9.10 o successiva, l'impostazione è completa. Se il connettore è stato creato utilizzando una versione precedente di BlueXP, è necessario aggiungere alcune autorizzazioni necessarie per il ruolo IAM dell'operatore BlueXP per contrassegnare le risorse Azure:
+
+[source, json]
+----
+{
+  "id": "<ID>",
+  "properties": {
+    "roleName": "Cloud Manager Operator-<ID>",
+    "description": "Cloud Manager Operator",
+    "assignableScopes": [
+      "/subscriptions/<SUBSCRIPTION-ID>"
+    ],
+    "permissions": [
+      {
+        "actions": [
+          "Microsoft.Resources/tags/read",
+          "Microsoft.Resources/tags/write",
+          "Microsoft.Resources/tags/delete",
+          "Microsoft.ClassicCompute/virtualMachines/read"
+        ],
+        "notActions": [],
+        "dataActions": [],
+        "notDataActions": []
+      }
+    ]
+  }
+}
+----
+
+
+== Regole e restrizioni sui tag
+
+Quando si creano le chiavi dei tag e i valori dei tag, si applicano le seguenti regole:
+
+* Lunghezza massima della chiave: 128 caratteri
+* Lunghezza massima del valore della chiave: 256 caratteri
+* Caratteri tag e tag validi: Lettere, numeri, spazi e caratteri speciali (_, @, &, *, ecc.)
+* I tag sono sensibili al maiuscolo/minuscolo.
+* Numero massimo di tag per risorsa: 30
+* Per ogni risorsa, ogni chiave di tag deve essere univoca
+
+
+
+
+=== Esempi di tag
+
+[cols="50,50"]
+|===
+| Chiave | Valori 
+
+
+| Env | test di produzione 
+
+
+| Dal | eng. vendite finanziarie 
+
+
+| Proprietario | storage di amministrazione 
+|===

@@ -1,0 +1,185 @@
+---
+sidebar: sidebar 
+permalink: task-run-templates.html 
+keywords: templates, resource templates, services templates, volume templates, working environment templates 
+summary: 'Seleziona uno dei modelli applicativi creati dalla tua organizzazione per creare ambienti di lavoro o volumi ottimizzati per carichi di lavoro e applicazioni specifici. I modelli consentono inoltre di attivare il backup e ripristino BlueXP, la classificazione BlueXP e la replica BlueXP (SnapMirror) sui volumi o sui volumi esistenti.' 
+---
+= Creare o modificare le risorse utilizzando i modelli
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Seleziona uno dei modelli applicativi creati dalla tua organizzazione per creare ambienti di lavoro o volumi ottimizzati per carichi di lavoro e applicazioni specifici. I modelli consentono inoltre di attivarli https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classificazione BlueXP"^], e. https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["Replica BlueXP"^] sui volumi creati o sui volumi esistenti.
+
+I modelli consentono di creare volumi per sistemi Cloud Volumes ONTAP, Azure NetApp Files e ONTAP on-premise.
+
+
+
+== Avvio rapido
+
+Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni rimanenti per ottenere dettagli completi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Verificare i prerequisiti richiesti
+[role="quick-margin-list"]
+* Prima di creare un volume per un sistema Cloud Volumes ONTAP, ONTAP on-premise o Azure NetApp Files utilizzando un modello, assicurarsi di avere accesso a un ambiente di lavoro appropriato in cui verrà implementato il volume.
+
+
+[role="quick-margin-list"]
+* Se il modello attiva un servizio cloud sul volume, ad esempio https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^] oppure https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classificazione BlueXP"^], assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Avviare il servizio modelli di applicazione
+[role="quick-margin-para"]
+Selezionare *Health > Remediation* (Salute > rimedio) e fare clic sulla scheda *Templates* (modelli).
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Creare la risorsa eseguendo il modello e definendo i parametri
+[role="quick-margin-para"]
+Selezionare il modello, fare clic su *Esegui modello* e immettere i valori nei campi modificabili per creare la risorsa.
+
+
+
+== Requisiti
+
+Leggere i seguenti requisiti per assicurarsi di disporre di una configurazione supportata.
+
+* Se non si dispone già di un connettore, https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Scopri come creare connettori"^] Per AWS, Azure e GCP.
+* Quando si crea un volume Cloud Volumes ONTAP, assicurarsi di disporre di un ambiente di lavoro Cloud Volumes ONTAP.
+* Quando si crea un volume ONTAP on-premise, assicurarsi di disporre di un ambiente di lavoro ONTAP on-premise.
+* Quando si crea un volume Azure NetApp Files, assicurarsi di disporre di un ambiente di lavoro Azure NetApp Files.
+* Se il modello attiva un servizio cloud sul volume, ad esempio  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classificazione BlueXP"^], o. https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["Replica BlueXP"^], assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.
+
+
+
+
+== Selezionare ed eseguire un modello di volume
+
+Esistono diversi modi per selezionare ed eseguire un modello per creare nuovi volumi:
+
+* Eseguire il modello di volume dall'ambiente di lavoro
+* Eseguire il modello di volume dalla dashboard modelli
+
+
+Indipendentemente dal metodo scelto, i dettagli sui parametri del volume richiesti da definire sono disponibili nelle seguenti sezioni:
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Come eseguire il provisioning dei volumi Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Come eseguire il provisioning dei volumi Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates["Come eseguire il provisioning dei volumi ONTAP on-premise"^]
+
+
+
+
+=== Eseguire un modello di volume dall'ambiente di lavoro
+
+È possibile aggiungere un volume a un ambiente di lavoro esistente dalla pagina _Working Environment_ e dalla pagina _Volume Details_.
+
+.Fasi
+. Dalla pagina _Working Environment_ o dalla pagina _Volume Details_, fare clic su *Add Volume from Template* (Aggiungi volume da modello).
++
+image:screenshot_template_add_vol_from.png["Due screenshot che mostrano come gli utenti possono creare nuovi volumi da un modello."]
+
++
+Viene visualizzata la _dashboard modelli_ che elenca solo i modelli applicabili all'ambiente di lavoro selezionato, ad esempio mostra solo i modelli Cloud Volumes ONTAP.
+
+. Fare clic su image:screenshot_horizontal_more_button.gif["Icona Altro"] E *Esegui modello*.
++
+image:screenshot_template_run_from_dashboard.png["Una schermata che mostra come eseguire un modello dalla dashboard modelli."]
+
++
+Viene visualizzata la pagina _Add Volume from Template_.
+
+. Immettere i valori nei campi modificabili per creare il volume e fare clic su *Esegui modello*.
++
+image:screenshot_run_template_from_canvas.png["Una schermata che mostra i parametri da definire per creare il volume da un modello."]
+
+
+
+
+
+=== Eseguire un modello di volume dalla dashboard modelli
+
+È possibile aggiungere un volume a un ambiente di lavoro esistente dalla _dashboard modelli_.
+
+.Fasi
+. Selezionare *Health > Remediation* (Salute > rimedio) e fare clic sulla scheda *Templates* (modelli).
++
+Viene visualizzata la _Dashboard modelli_.
+
+. Per il modello che si desidera utilizzare, fare clic su image:screenshot_horizontal_more_button.gif["Icona Altro"] E *Esegui modello*.
++
+image:screenshot_template_run_from_dashboard2.png["Una schermata che mostra come eseguire un modello dalla dashboard modelli."]
+
++
+Viene visualizzata la pagina _Run Template_.
+
+. Immettere i valori nei campi modificabili per creare il volume e fare clic su *Esegui modello*.
++
+image:screenshot_run_template_from_dashboard.png["Una schermata che mostra i parametri da definire per creare il volume da un modello."]
+
++
+Quando si esegue il modello dalla dashboard, è necessario selezionare l'ambiente di lavoro e altre variabili (ad esempio, la VM di storage e/o l'aggregato). Quando si esegue il modello dall'ambiente di lavoro, l'ambiente di lavoro viene compilato automaticamente.
+
+
+
+
+
+== Selezionare ed eseguire un modello di ambiente di lavoro
+
+È possibile creare un nuovo ambiente di lavoro dalla _Dashboard modelli_ se l'azienda ha creato un modello per questa funzionalità.
+
+In caso di domande sui dettagli necessari per creare l'ambiente di lavoro, vedere https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["Avvio di Cloud Volumes ONTAP in AWS"^].
+
+.Fasi
+. Selezionare *Health > Remediation* (Salute > rimedio) e fare clic sulla scheda *Templates* (modelli).
++
+Viene visualizzata la _Dashboard modelli_.
+
+. Per il modello che si desidera utilizzare, fare clic su image:screenshot_horizontal_more_button.gif["Icona Altro"] E *Esegui modello*.
++
+image:screenshot_template_run_from_dashboard3.png["Una schermata che mostra come eseguire un modello dalla dashboard modelli."]
+
++
+Viene visualizzata la pagina _Run Template_.
+
+. Immettere i valori nei campi modificabili per creare l'ambiente di lavoro e il primo volume, quindi fare clic su *Esegui modello*.
++
+image:screenshot_template_run_from_dashboard_we.png["Una schermata che mostra i parametri da definire per creare l'ambiente di lavoro da un modello."]
+
+
+
+
+
+== Selezionare ed eseguire un modello che trovi le risorse esistenti
+
+Se l'azienda ha creato un modello che utilizza questa funzionalità, è possibile eseguire un modello per individuare determinate risorse (ad esempio, i volumi) e attivare un servizio cloud su tali risorse (ad esempio, backup e ripristino BlueXP). Quando si esegue il modello, è possibile apportare alcune modifiche di lieve entità in modo da applicare il servizio cloud solo alle risorse appropriate.
+
+.Fasi
+. Selezionare *Health > Remediation* (Salute > rimedio) e fare clic sulla scheda *Templates* (modelli).
++
+Viene visualizzata la _Dashboard modelli_.
+
+. Per il modello che si desidera utilizzare, fare clic su image:screenshot_horizontal_more_button.gif["Icona Altro"] E *Esegui modello*.
++
+image:screenshot_template_run_from_dashboard4.png["Una schermata che mostra come eseguire un modello dalla dashboard modelli."]
+
++
+Viene visualizzata la pagina _Run Template_ che esegue immediatamente la ricerca definita nel modello per trovare i volumi corrispondenti ai criteri.
+
+. Visualizzare l'elenco dei volumi restituiti nell'area _Volume Results_.
++
+image:screenshot_template_find_search_results.png["Una schermata che mostra come i volumi restituiti dai criteri di ricerca Find Resource."]
+
+. Se i risultati sono quelli previsti, selezionare la casella di controllo per ciascun volume per il quale si desidera attivare il backup e il ripristino di BlueXP utilizzando i criteri della sezione _Enable Cloud Backup on Volume_ del modello e fare clic su *Run Template* (Esegui modello).
++
+Se i risultati non sono quelli previsti, fare clic su image:screenshot_edit_icon.gif["icona modifica matita"] Accanto a _Criteri di ricerca_ e perfezionare ulteriormente la ricerca.
+
+
+
+.Risultati
+Il modello verrà eseguito e attiverà il backup e il ripristino BlueXP su ciascun volume controllato in base ai criteri di ricerca.
+
+Qualsiasi errore verrà richiamato nella pagina _esecuzione del modello_ ed è possibile risolvere i problemi, se necessario.
