@@ -2,22 +2,22 @@
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cloud-manager-app-template | NetApp Documentation</title>
-    <atom:link href="https://docs.netapp.com/it-it/cloud-manager-app-template/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>https://docs.netapp.com/it-it/cloud-manager-app-template</link>
+    <title>bluexp-remediation | NetApp Documentation</title>
+    <atom:link href="https://docs.netapp.com/it-it/bluexp-remediation/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://docs.netapp.com/it-it/bluexp-remediation</link>
     <description>The latest updates from NetApp Documentation</description>
     <language>it-it</language>
     <ttl>60</ttl>
-    <pubDate>Wed, 24 May 2023 08:39:14 +0000</pubDate>
-    <lastBuildDate>Wed, 24 May 2023 08:39:14 +0000</lastBuildDate>
+    <pubDate>Wed, 31 May 2023 15:27:56 +0000</pubDate>
+    <lastBuildDate>Wed, 31 May 2023 15:27:56 +0000</lastBuildDate>
     
     
     
     <item>
-      <title>Novità di BlueXP: Soluzioni e tagging (23 May 2023)</title>
-      <pubDate>Tue, 23 May 2023 21:39:54 +0000</pubDate>
-      <link>https://docs.netapp.com/it-it/cloud-manager-app-template/whats-new.html?time=1684877994</link>
-      <guid isPermaLink="false">Tue, 23 May 2023 21:39:54 +0000</guid>
+      <title>Novità di BlueXP: Soluzioni e tagging (31 May 2023)</title>
+      <pubDate>Wed, 31 May 2023 15:23:43 +0000</pubDate>
+      <link>https://docs.netapp.com/it-it/bluexp-remediation/whats-new.html?time=1685546623</link>
+      <guid isPermaLink="false">Wed, 31 May 2023 15:23:43 +0000</guid>
       <description><![CDATA[ Scopri le novità di BlueXP: Rimediation and Tagging. ]]></description>
     </item>
     
