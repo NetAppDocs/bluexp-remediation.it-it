@@ -14,7 +14,7 @@ summary: 'Seleziona uno dei modelli applicativi creati dalla tua organizzazione 
 
 
 [role="lead"]
-Seleziona uno dei modelli applicativi creati dalla tua organizzazione per creare ambienti di lavoro o volumi ottimizzati per carichi di lavoro e applicazioni specifici. I modelli consentono inoltre di attivarli https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classificazione BlueXP"^], e. https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["Replica BlueXP"^] sui volumi creati o sui volumi esistenti.
+Seleziona uno dei modelli applicativi creati dalla tua organizzazione per creare ambienti di lavoro o volumi ottimizzati per carichi di lavoro e applicazioni specifici. I modelli consentono inoltre di attivarli https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^], https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classificazione BlueXP"^], e. https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html["Replica BlueXP"^] sui volumi creati o sui volumi esistenti.
 
 I modelli consentono di creare volumi per sistemi Cloud Volumes ONTAP, Azure NetApp Files e ONTAP on-premise.
 
@@ -30,7 +30,7 @@ Inizia subito seguendo questi passaggi o scorri verso il basso fino alle sezioni
 
 
 [role="quick-margin-list"]
-* Se il modello attiva un servizio cloud sul volume, ad esempio https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^] oppure https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classificazione BlueXP"^], assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.
+* Se il modello attiva un servizio cloud sul volume, ad esempio https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^] oppure https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classificazione BlueXP"^], assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Avviare il servizio modelli di applicazione
@@ -47,11 +47,11 @@ Selezionare il modello, fare clic su *Esegui modello* e immettere i valori nei c
 
 Leggere i seguenti requisiti per assicurarsi di disporre di una configurazione supportata.
 
-* Se non si dispone già di un connettore, https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Scopri come creare connettori"^] Per AWS, Azure e GCP.
+* Se non si dispone già di un connettore, https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Scopri come creare connettori"^] Per AWS, Azure e GCP.
 * Quando si crea un volume Cloud Volumes ONTAP, assicurarsi di disporre di un ambiente di lavoro Cloud Volumes ONTAP.
 * Quando si crea un volume ONTAP on-premise, assicurarsi di disporre di un ambiente di lavoro ONTAP on-premise.
 * Quando si crea un volume Azure NetApp Files, assicurarsi di disporre di un ambiente di lavoro Azure NetApp Files.
-* Se il modello attiva un servizio cloud sul volume, ad esempio  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classificazione BlueXP"^], o. https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["Replica BlueXP"^], assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.
+* Se il modello attiva un servizio cloud sul volume, ad esempio  https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Backup e ripristino BlueXP"^], https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classificazione BlueXP"^], o. https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html["Replica BlueXP"^], assicurarsi che il servizio sia attivo e concesso in licenza nel proprio ambiente.
 
 
 
@@ -66,9 +66,9 @@ Esistono diversi modi per selezionare ed eseguire un modello per creare nuovi vo
 
 Indipendentemente dal metodo scelto, i dettagli sui parametri del volume richiesti da definire sono disponibili nelle seguenti sezioni:
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Come eseguire il provisioning dei volumi Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Come eseguire il provisioning dei volumi Azure NetApp Files"^]
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates["Come eseguire il provisioning dei volumi ONTAP on-premise"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Come eseguire il provisioning dei volumi Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Come eseguire il provisioning dei volumi Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates["Come eseguire il provisioning dei volumi ONTAP on-premise"^]
 
 
 
@@ -131,7 +131,7 @@ Quando si esegue il modello dalla dashboard, è necessario selezionare l'ambient
 
 È possibile creare un nuovo ambiente di lavoro dalla _Dashboard modelli_ se l'azienda ha creato un modello per questa funzionalità.
 
-In caso di domande sui dettagli necessari per creare l'ambiente di lavoro, vedere https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["Avvio di Cloud Volumes ONTAP in AWS"^].
+In caso di domande sui dettagli necessari per creare l'ambiente di lavoro, vedere https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["Avvio di Cloud Volumes ONTAP in AWS"^].
 
 .Fasi
 . Selezionare *Health > Remediation* (Salute > rimedio) e fare clic sulla scheda *Templates* (modelli).
