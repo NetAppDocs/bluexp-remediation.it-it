@@ -351,7 +351,6 @@
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">Se disponi di un account a livello di cliente, puoi aggiungere uno o più account NSS.</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">Se disponi di un account partner o reseller, puoi aggiungere uno o più account NSS, ma non possono essere aggiunti insieme agli account a livello di cliente.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Schermata del menu Help (Guida) in cui Support (Assistenza) è la prima opzione elencata</block>
-  <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp utilizza Microsoft Azure Active Directory come provider di identità per i servizi di autenticazione specifici per il supporto e la concessione di licenze.</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">Nella pagina di accesso, fornire l'indirizzo e-mail e la password registrati del NetApp Support Site per eseguire il processo di autenticazione.</block>
   <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">Queste azioni consentono a BlueXP di utilizzare il tuo account NSS per download di licenze, verifica dell'aggiornamento software e registrazioni di supporto future.</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Tenere presente quanto segue:</block>
@@ -503,7 +502,6 @@
   <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">Risultati</block>
   <block id="08ea921bf1012f71a17a32a3fc1b9db6" category="paragraph">Il modello verrà eseguito e attiverà il backup e il ripristino BlueXP su ciascun volume controllato in base ai criteri di ricerca.</block>
   <block id="ad065cba81dd0205f37aa602c122c6aa" category="paragraph">Qualsiasi errore verrà richiamato nella pagina _esecuzione del modello_ ed è possibile risolvere i problemi, se necessario.</block>
-  <block id="ff1a821ec32f5470f851de8ef3edd6a9" category="summary">Il servizio di correzione BlueXP (AppTemplate) consente di standardizzare la creazione di risorse per gli ambienti di lavoro BlueXP.</block>
   <block id="510f57bbfca743348ff245cb08dc02e3" category="doc">Documentazione di risoluzione dei problemi BlueXP</block>
   <block id="f3fb1dceef01486d91492939582c9e23" category="summary">Scopri le novità di BlueXP: Rimediation and Tagging.</block>
   <block id="a8d3fe6a91db602634ae243a55423c5f" category="doc">Novità di BlueXP: Soluzioni e tagging</block>
@@ -690,8 +688,6 @@
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">Unisciti alla community BlueXP per seguire le discussioni in corso o crearne di nuove.</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentazione</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">La documentazione BlueXP attualmente visualizzata.</block>
-  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">Mailto:ng-cloudmanager-feedback@netapp.com[email di feedback]</block>
-  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">Diamo valore al tuo contributo. Invia un feedback per aiutarci a migliorare BlueXP.</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Crea un caso con il supporto NetApp</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Oltre alle opzioni di supporto autonomo sopra descritte, puoi collaborare con uno specialista del supporto NetApp per risolvere eventuali problemi dopo l'attivazione del supporto.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Prima di iniziare</block>
@@ -743,24 +739,6 @@
   <block id="4a37630008b707a26bac4e9b9d2d91bc" category="sidebar">Organizzare le risorse utilizzando tag</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">Concetti</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conoscenza e supporto</block>
-  <block id="35f98b47133ad8954f63b25aef2dad3a" category="sidebar">Ulteriori informazioni su Tagging</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Novità</block>
-  <block id="12b8ed36a576a6d4769c8d350b438a8a" category="sidebar">Creare modelli</block>
-  <block id="59cccee54a9c1422dca33d7662d37b76" category="sidebar">Ambiente di lavoro Cloud Volumes ONTAP</block>
-  <block id="f829fef4575b38109cd246bafbd6718e" category="sidebar">Volume Cloud Volumes ONTAP</block>
-  <block id="217aec976bd66d37571f1fe0e44a4e77" category="sidebar">Volume Azure NetApp Files</block>
-  <block id="21dc3aafb4a3e393dccd900e9ba42118" category="sidebar">Volume ONTAP on-premise</block>
-  <block id="bdada2beda611e5479ba79eddd7f3b9f" category="sidebar">Aggiunta di funzionalità di backup, classificazione o replica a un volume</block>
-  <block id="c8ca3079f96c0e324b876d7055a67c46" category="sidebar">Creare risorse utilizzando modelli</block>
-  <block id="70deba7f047a2bcc0d20e5ef94a2abf8" category="sidebar">Volume per CVO, on-premise e ANF</block>
-  <block id="f8de1ec8d7766950989e3205a63d91d9" category="sidebar">Gestire le risorse utilizzando modelli e tag</block>
-  <block id="e85920abe34a4184988f078bd1e73279" category="sidebar">Verifica delle risorse per la conformità dei modelli (deriva)</block>
-  <block id="441c6d31d8063270a27b242c68cc0e6e" category="sidebar">Eseguire un modello che trovi le risorse esistenti</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blog e community</block>
-  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
-  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
-  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">Tutta la documentazione BlueXP</block>
   <block id="8b6065ebfe1dc5ad36b1f573c520ca7b" category="list-text">Attivare<block ref="238f65d8124d9fce2c3e9e1c7b70b0d8" category="inline-link-rx"></block> On Volumes (non applicabile per Azure NetApp Files)</block>
   <block id="ca8a7d472600ff02b2221730ba6c0910" category="list-text">Attivare<block ref="9f1ec2087e0d1ce18384b513ed9384ac" category="inline-link-rx"></block> sui volumi</block>
   <block id="765d104c194ef63622ce482bcbb5b331" category="list-text">Attivare<block ref="b48eb40e80af321c061fb9bb5bdc57e8" category="inline-link-rx"></block> On Volumes (non applicabile per Azure NetApp Files)</block>
@@ -857,4 +835,6 @@
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Ottieni supporto per un file service del cloud provider</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">Per supporto tecnico relativo a un file service di un cloud provider, alla sua infrastruttura o a una soluzione che utilizza il servizio, fare riferimento a "Guida in linea" nella documentazione BlueXP relativa a quel prodotto.</block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">Per ricevere supporto tecnico specifico di BlueXP e delle relative soluzioni e servizi storage, utilizza le opzioni di supporto descritte di seguito.</block>
+  <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di autenticazione specifici per il supporto e la licenza.</block>
+  <block id="5010faf2ce0072bc73496fec6f09f024" category="summary">Il servizio di correzione di BlueXP ti permette di standardizzare la creazione di risorse per i tuoi ambienti di lavoro BlueXP.</block>
 </blocks>

@@ -47,50 +47,6 @@ sidebar:
       url: "/task-get-help.html"
   - title: Note legali
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: Inizia subito
-    links:
-    - title: Scopri di più sulla soluzione BlueXP
-      url: concept-resource-templates.html
-    - title: Ulteriori informazioni su Tagging
-      url: concept-tagging.html
-    - title: Novità
-      url: whats-new.html
-  - title: Creare modelli
-    links:
-    - title: Ambiente di lavoro Cloud Volumes ONTAP
-      url: task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment
-    - title: Volume Cloud Volumes ONTAP
-      url: task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-volume
-    - title: Volume Azure NetApp Files
-      url: task-define-templates.html#create-a-template-for-an-azure-netapp-files-volume
-    - title: Volume ONTAP on-premise
-      url: task-define-templates.html#create-a-template-for-an-on-premises-ontap-volume
-    - title: Aggiunta di funzionalità di backup, classificazione o replica a un volume
-      url: task-define-templates.html#examples-of-enabling-services-using-templates
-  - title: Creare risorse utilizzando modelli
-    links:
-    - title: Ambiente di lavoro Cloud Volumes ONTAP
-      url: task-run-templates.html#select-and-run-a-working-environment-template
-    - title: Volume per CVO, on-premise e ANF
-      url: task-run-templates.html#select-and-run-a-volume-template
-  - title: Gestire le risorse utilizzando modelli e tag
-    links:
-    - title: Verifica delle risorse per la conformità dei modelli (deriva)
-      url: task-check-template-compliance.html
-    - title: Eseguire un modello che trovi le risorse esistenti
-      url: task-run-templates.html#select-and-run-a-template-that-finds-existing-resources
-    - title: Gestisci i tag per le tue risorse
-      url: task-using-tags.html
-  - title: Blog e community
-    links:
-    - title: Community NetApp
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: Blog BlueXP
-      url: https://bluexp.netapp.com/blog
-    - title: Webinar sul cloud
-      url: https://bluexp.netapp.com/events
 product-family:
   name: BlueXP
   repo: bluexp-family
